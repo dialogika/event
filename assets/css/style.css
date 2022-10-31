@@ -1071,7 +1071,7 @@ span.rounded-yellow {
   margin: 10px;
   width: 100px;
   padding: 15px 0;
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.10);
   border-top: 7px solid #931c2b;
 }
 
@@ -1079,6 +1079,7 @@ span.rounded-yellow {
   font-weight: 700;
   font-size: 44px;
   margin-bottom: 15px;
+  color: #0e2a50;
 }
 
 #hero .countdown div h4 {
@@ -1096,6 +1097,7 @@ span.rounded-yellow {
   #hero .countdown div h3 {
     font-size: 28px;
     margin-bottom: 10px;
+    color: #0e2a50;
   }
 
   #hero .countdown div h4 {
@@ -1997,11 +1999,11 @@ section {
   background: none;
   font-size: 18px;
   font-weight: 400;
-  color: #f9c62e;
+  color: #931c2b;
   padding: 12px 0;
   margin-bottom: -2px;
   border-radius: 0;
-  font-family: #f9c62e;
+  font-family: 'nunito', sans-serif;
 }
 
 .about .nav-link.active {
@@ -4007,8 +4009,8 @@ section {
 }
 
 .contact .php-email-form  .small-checkbox {
-  width: 10px; 
-  height: 10px;
+  width: 20px; 
+  height: 20px;
   margin-right: 8px;
 }
 
