@@ -54,21 +54,21 @@
       crossorigin="anonymous"></script>
     <script>
       function SubForm (){
-        $.ajax({
-        url:"https://api.apispreadsheets.com/data/JYfPTNSLW4GoVohc/",
+      $.ajax({
+        url:"https://api.apispreadsheets.com/data/1NveDGaAkYYb7PTI/",
         type:"post",
         data:$("#myForm").serializeArray(),
         headers:{
-          accessKey: "b5216464a11be561ae0b40f9ed98ee90",
-          secretKey: "038c9369d3b221f2387c9d8f3f3e488d"},
-          success: function(){ 
-            alert("Data Telah Tersimpan :)")
-          },
-          error: function(){
-            alert("There was an error :(")
-          }
-        });
-      }
+          accessKey: "e9b822656c26f8cc501d95ba97f8528c",
+          secretKey: "77e218bb672adc43927c6f6edc4d70ea"},
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+      });
+    }
 
       function SubFormModal (){
         $.ajax({
@@ -1242,8 +1242,9 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2 class="tengah">Form Pendaftaran</h2>
-          <p>Tombol akan menyala setelah data diinputkan dengan benar</p>
+          <h2 class="tengah">Cara Membeli</h2>
+          <p><b>Isi Form</b> Dibawah Ini → <b>Ketuk</b> Kirim Form Whatsapp Send, Selanjutnya Diarahkan oleh Admin</p>
+          
         </div>
 
         <div class="row align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="100">
@@ -1269,49 +1270,19 @@
                     <div class="validate"></div>
                 </div>
               </div>
-              <!-- <div class="row">
-                <div class="col-md-4 form-group">
-                  <select name="Experience" id="experience" class="form-select" required>
-                    <option value="" selected disabled value="">Pernah Wawancara</option>
-                    <optgroup label="==============">
-                      <option>Pernah</option>
-                      <option>Belum</option>
-                    </optgroup>
-                  </select>
-                </div>
-                <div class="col-md-4 form-group">
-                  <select name="Work-Exp" id="workexp" class="form-select" required>
-                    <option value="" selected disabled value="">Pernah Berkerja</option>
-                    <optgroup label="==============">
-                      <option>Pernah</option>
-                      <option>Belum</option>
-                    </optgroup>
-                  </select>
-                </div>
-                <div class="col-md-4 form-group">
-                  <select name="Work-Exp" id="workexp" class="form-select" required>
-                    <option value="" selected disabled value="">Kesulitan Di Public Speaking</option>
-                    <optgroup label="==============">
-                      <option>Ya</option>
-                      <option>Agak</option>
-                      <option>Tidak</option>
-                    </optgroup>
-                  </select>
-                </div>
-              </div> -->
               <div class="row">
                 <div class="col-md-8 align-items-center align-items-stretch">
                   <div class="form-check">
-                    <input class="small-checkbox" type="checkbox" value="" id="cvinggris" onclick="cvmocking()">
+                    <input class="small-checkbox" name="CV" type="checkbox" value="checked" id="cvinggris" onclick="cvmocking()">
                     <label class="form-check-label" for="cvinggris">
                       Include: Dibuatin CV Bahasa Inggris
                     </label>
-                    <a href="#more-cvinggris" data-bs-toggle="modal" data-bs-target="#more-cvinggris"><b>More</b>
+                    <a href="#more-cvinggris" data-bs-toggle="modal" data-bs-target="#more-cvinggris"><b>More</b></a>
                   </div>
                 </div>
                 <div class="col-md-8 align-items-center align-items-stretch">
                   <div class="form-check">
-                    <input class="small-checkbox" type="checkbox" value="" id="mockingint" onclick="cvmocking()">
+                    <input class="small-checkbox" name="Interview" type="checkbox" value="checked" id="mockingint" onclick="cvmocking()">
                     <label class="form-check-label" for="mockingint">
                       Include: Mocking Interview Online
                     </label>
@@ -1320,7 +1291,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <input class="form-control" id="totalharga" type="text"  value="Total: IDR 179.000" aria-label="readonly input example" readonly>
+                <input class="form-control" name="Total" id="totalharga" type="text"  value="Total: IDR 179.000" aria-label="readonly input example" readonly>
                 <div class="validate"></div>
               </div>
               <script>
@@ -1328,11 +1299,11 @@
                 {
                   if (document.getElementById('mockingint').checked && document.getElementById('cvinggris').checked) 
                   {
-                      document.getElementById('totalharga').value = 'Total: IDR 452.000'; 
-                      //  179+75+198 = 254 | 257+75+198 = 332 | 289+75+198 = 364 | 357+75+198 = 432
+                      document.getElementById('totalharga').value = 'Total: IDR 492.000'; 
+                      //  179+115+198 = 492 | 257+115+198 = 570 | 289+115+198 = 602 | 357+115+198 = 670
                   } else if (document.getElementById('mockingint').checked) {
-                       document.getElementById('totalharga').value = 'Total: IDR 254.000'; 
-                      //  179+75 = 254 | 257+75 = 332 | 289 + 75 = 364 | 357 + 75 = 432
+                       document.getElementById('totalharga').value = 'Total: IDR 294.000'; 
+                      //  179+115 = 294 | 257+115 = 372 | 289+115 = 404 | 357 + 115 = 472
                   } else if (document.getElementById('cvinggris').checked)  {
                       document.getElementById('totalharga').value = 'Total: IDR 377.000'; 
                       //  179+198 = 377 | 257+198 = 455 | 289 + 198 = 487 | 357 + 198 = 555
@@ -1350,7 +1321,7 @@
                 *Tombol akan menyala apabila nama, nomor hp, profesi dan domisili telah terisi.
               </div>
               <div class="text-center">
-                <button type="submit" id="submits" class="send_contact" data-bs-toggle="modal" data-bs-target="#notifications" onclick="SubForm()">Send Whatsapp</button>
+                <button type="submit" id="submits" class="send_contact" onclick="SubForm()">Kirim Form Ke Whatsapp</button>
               </div>
             </form>
           </div>
