@@ -355,7 +355,7 @@
           <p>Kamu bisa bertransformasi menjadi lebih baik, <span class="yellow">lebih percaya diri,</span> berbicara lancar dan tidak kaku, tidak terlalu <b>template.</b></p>
           <p>Menjadi diri sendiri adalah cara jitu Kamu untuk bisa <span class="yellow">tampil percaya diri</span> dihadapan HRD. Plus tidak membuat apapun yang Kamu katakan sesuai template.</p>
           <br>
-          <a href="#department" class="red-btn">Saya Ingin Daftar</a>
+          <a href="#cta" class="red-btn">Saya Ingin Daftar</a>
         </div>
       </div>
     </section><!-- End cta Section --> 
@@ -377,7 +377,7 @@
               <li><i class="bi bi-chevron-right"></i> Plus beragam bonus lainnya</li>
             </ul>
             
-            <a class="yellow-btn align-self-start" href="#department">Saya Daftar</a>
+            <a class="yellow-btn align-self-start" href="#menu">Saya Daftar</a>
           </div>
 
           <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -1276,8 +1276,8 @@
                     <input class="small-checkbox" name="CV" type="checkbox" value="checked" id="cvinggris" onclick="cvmocking()">
                     <label class="form-check-label" for="cvinggris">
                       Include: Dibuatin CV Bahasa Inggris
-                    </label>
-                    <a href="#more-cvinggris" data-bs-toggle="modal" data-bs-target="#more-cvinggris"><b>More</b></a>
+                    </label><br>
+                    <a href="#more-cvinggris" data-bs-toggle="modal" data-bs-target="#more-cvinggris"><b>More Info</b></a>
                   </div>
                 </div>
                 <div class="col-md-8 align-items-center align-items-stretch">
@@ -1285,8 +1285,8 @@
                     <input class="small-checkbox" name="Interview" type="checkbox" value="checked" id="mockingint" onclick="cvmocking()">
                     <label class="form-check-label" for="mockingint">
                       Include: Mocking Interview Online
-                    </label>
-                    <a href="#more-mockingint" data-bs-toggle="modal" data-bs-target="#more-mockingint"><b>More</b></a>
+                    </label><br>
+                    <a href="#more-mockingint" data-bs-toggle="modal" data-bs-target="#more-mockingint"><b>More Info</b></a>
                   </div>
                 </div>
               </div>
@@ -1314,6 +1314,12 @@
                   }
                 }
               </script>
+              <div class="form-group d-none">
+                <select name="Program" id="programs" class="form-select d-none" required>
+                    <option selected >Workshop Offline: Persiapan Interview</option>
+                </select>
+                <div class="validate"></div>
+              </div>
               <select class="d-none" name="Timestamp">
                 <option id="timestamp"></option>
               </select>

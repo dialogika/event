@@ -20,8 +20,8 @@ $(document).on('click','.send_contact', function(){
     var input_name2     = $("#names").val(),
         input_domisili2 = $("#locations").val(),
         input_job2      = $("#works").val(),
-        input_cv2       = $("#cvinggris :checked").val(),
-        input_mocking2  = $("#mockingint :checked").val(),
+        input_cv2       = $("#cvinggris :selected").text(),
+        input_mocking2  = $("#mockingint :selected").text(),
         input_total2    = $("#totalharga").val(),
         input_program2  = $("#programs :selected").text(),
         input_message2  = $("#messages").val();
