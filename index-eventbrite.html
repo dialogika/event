@@ -1,444 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Eventor Homepage Conference (Light) V1.0</title>
-
+   
    <!-- google font -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-   <!-- Favicons -->
-	<link href="assets/img/favicon.png" rel="icon">
-	<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-
+   
    <!-- animation -->
    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
+   
    <!-- magnific popup -->
    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-
+   
    <!-- font awesome -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-      crossorigin="anonymous" referrerpolicy="no-referrer">
-
+   integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+   crossorigin="anonymous" referrerpolicy="no-referrer">
+   
    <!-- slik carousel -->
    <link rel="stylesheet" href="assets/css/slick-theme.css">
    <link rel="stylesheet" href="assets/css/slick.css">
-
+   
    <!-- bootstrap -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+   
    <!-- css -->
    <link rel="stylesheet" href="assets/css/style.css">
-   <link rel="stylesheet" href="assets/css/style-dialogika.css">
 
-   	<!-- Vendor CSS Files -->
-	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
-	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-	<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
-	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
-	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-	<!-- Vendor Epora -->
-	<!-- <link rel="stylesheet" href="assets/vendor/epora/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/meanmenu.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/animate.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/slick.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/backtotop.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/magnific-popup.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/nice-select.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/ui-icon.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/elegentfonts.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/font-awesome-pro.css">
-	<link rel="stylesheet" href="assets/vendor/epora/css/spacing.css">
-	<link href="assets/vendor/epora/css/style.css" rel="stylesheet" /> -->
-
-   <!-- Color switch Alternatives -->
+	<!-- Color switch Alternatives -->
    <link rel="stylesheet" type="text/css" href="color-switch/css/switch.css">
-   <link href="color-switch/css/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
-   <link href="color-switch/css/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
-   <link href="color-switch/css/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
-   <link href="color-switch/css/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
-   <link href="color-switch/css/color-6.css" rel="alternate stylesheet" type="text/css" title="color-6">
-   <link href="color-switch/css/color-7.css" rel="alternate stylesheet" type="text/css" title="color-7">
-   <link href="color-switch/css/color-8.css" rel="alternate stylesheet" type="text/css" title="color-8">
-
+	<link href="color-switch/css/color-2.css" rel="alternate stylesheet" type="text/css" title="color-2">
+	<link href="color-switch/css/color-3.css" rel="alternate stylesheet" type="text/css" title="color-3">
+	<link href="color-switch/css/color-4.css" rel="alternate stylesheet" type="text/css" title="color-4">
+	<link href="color-switch/css/color-5.css" rel="alternate stylesheet" type="text/css" title="color-5">
+	<link href="color-switch/css/color-6.css" rel="alternate stylesheet" type="text/css" title="color-6">
+	<link href="color-switch/css/color-7.css" rel="alternate stylesheet" type="text/css" title="color-7">
+	<link href="color-switch/css/color-8.css" rel="alternate stylesheet" type="text/css" title="color-8">
+   
 </head>
-
 <body>
-   <!-- header area start -->
-
-      <!-- top bar -->
-      
-         <div id="topbar" class="d-flex align-items-center fixed-top">
-            <div class="container d-flex justify-content-between">
-               <div class="contact-info d-flex align-items-center">
-                  <i class="bi bi-envelope"></i> <a href="mailto:hello@dialogika.co">hello@dialogika.co</a>
-                  <i class="bi bi-phone"></i> <a href="https://link.dialogika.co/wasap-2597-dialogika-co">+62
-                     851-6299-2597</a>
-               </div>
-               <div class="d-none d-lg-flex social-links align-items-center">
-                  <a href="https://link.dialogika.co/facebook" class="facebook"><i class="bi bi-facebook"></i></a>
-                  <a href="https://link.dialogika.co/instagram" class="instagram"><i class="bi bi-instagram"></i></a>
-                  <a href="https://link.dialogika.co/linkedin" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-               </div>
-            </div>
-         </div>
-      <!-- top bar end -->
-      
-      <!-- start header -->
-         <header id="header" class="fixed-top">
-            <div class="container d-flex align-items-center">
-               <a href="https://dialogika.co/" class="logo me-auto"><img src="assets/img/logo.png" alt=""
-                     class="img-fluid"></a>
-
-               <nav id="navbar" class="navbar order-last order-lg-0">
-                  <ul id="navbar-navlist">
-                     <li><a class="nav-link scrollto active" data-scroll href="https://dialogika.co/">Home</a></li>
-                     <li class="nav-categories"><a href="../program/index.html"><span>Program</span><i
-                              class='bx bx-chevron-down-circle'></i></a>
-                        <ul>
-                           <li>
-                              <span class="badge rounded-blue">Online</span>&nbsp;
-                              <span class="badge rounded-blue">Subscribe</span>&nbsp;
-                           </li>
-                           <li>
-                              <span class="badge rounded-blue">Online</span>&nbsp;
-                              <span class="badge rounded-blue">Package</span>
-                           </li>
-                           <li>
-                              <span class="badge rounded-red">Private</span>&nbsp;
-                              <span class="badge rounded-blue">Package</span>&nbsp;
-                           </li>
-                           <li>
-                              <span class="badge rounded-blue">Online</span>&nbsp;
-                              <span class="badge rounded-orange">Advance</span>&nbsp;
-                           </li>
-                           <li>
-                              <a href="../corporate/">
-                                 <span class="badge rounded-green">Corporate</span>&nbsp;
-                                 <span class="badge rounded-blue">Training</span>&nbsp;
-                              </a>
-                           </li>
-                           <li><a href="../subscribe/action-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Action
-                                 Play</a>
-                           </li>
-                           <li>
-                              <a href="../program/kids-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids
-                                 Class</a>
-                              <span class="badge rounded-blue-turtle">Kids</span>
-                           </li>
-                           <li>
-                              <a href="../private/basic-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;Basic
-                                 Private</a>
-                              <span class="badge rounded-blue">Online</span>
-                           </li>
-                           <li><a href="../program/presentation-class.html"><i
-                                    class='bx bxs-chevron-right'></i>&nbsp;Presentation Class</a>
-                           </li>
-                           <li><a href="../corporate/basic-training.html"><i
-                                    class='bx bxs-chevron-right'></i>&nbsp;Basic
-                                 Training</a>
-                           </li>
-                           <li>
-                              <a href="../subscribe/kids-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids
-                                 Play</a>
-                              <span class="badge rounded-blue-turtle">Kids</span>
-                           </li>
-                           <li>
-                              <a href="../program/basic-plus.html"><i class='bx bxs-chevron-right'></i>&nbsp;Basic
-                                 Plus</a>
-                           </li>
-                           <li>
-                              <a href="../private/first-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;First
-                                 Private</a>
-                              <span class="badge rounded-green">Jogja</span>
-                           </li>
-                           <li>
-                              <a href="../program/voice-over.html"><i class='bx bxs-chevron-right'></i>&nbsp;Voice
-                                 Over</a>
-                           </li>
-                           <li>
-                              <a href="../corporate/advance-training.html"><i
-                                    class='bx bxs-chevron-right'></i>&nbsp;Advance
-                                 Training</a>
-                           </li>
-                           <li>
-                              <span class="badge rounded-green">Offline</span>&nbsp;
-                              <span class="badge rounded-blue">Subscribe</span>&nbsp;
-                           </li>
-                           <li>
-                              <span class="badge rounded-green">Offline</span>&nbsp;
-                              <span class="badge rounded-blue">Package</span>&nbsp;
-                           </li>
-                           <li>
-                              <a href="../private/first-private.html"><i class='bx bxs-chevron-right'></i>&nbsp;Kids
-                                 Private</a>
-                              <span class="badge rounded-blue-turtle">Kids</span>&nbsp;
-                              <span class="badge rounded-blue">Online</span>&nbsp;
-                           </li>
-                           <li>
-                              <span class="badge rounded-green">Offline</span>&nbsp;
-                              <span class="badge rounded-blue">Subscribe</span>&nbsp;
-                           </li>
-                           <li>
-                              <a href="../corporate/certified-training.html"><i
-                                    class='bx bxs-chevron-right'></i>&nbsp;Certified
-                                 Training</a>
-                              <span class="badge rounded-grey">Coming Soon</span>
-                           </li>
-                           <li>
-                              <a href="../subscribe/jogja-play.html"><i class='bx bxs-chevron-right'></i>&nbsp;Jogja
-                                 Play</a>
-                           </li>
-                           <li>
-                              <a href="../program/first-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;First
-                                 Class</a>
-                              <span class="badge rounded-green">Jogja</span>
-                           </li>
-                           <li>
-                              &nbsp;
-                           </li>
-                           <li>
-                              <a href="../program/emcee-class.html"><i class='bx bxs-chevron-right'></i>&nbsp;Master
-                                 of
-                                 Ceremony</a>
-                           </li>
-                           <li></li>
-                           <li>&nbsp;</li>
-                           <li>
-                              <a href="../program/royal-class-jakarta.html"><i
-                                    class='bx bxs-chevron-right'></i>&nbsp;Royal
-                                 Class</a><span class="badge rounded-green">Jakarta</span>
-                           </li>
-                           <li>&nbsp;</li>
-                           <li></li>
-                           <li></li>
-                        </ul>
-                     </li>
-                     <li class="dropdown"><a href="../service/"><span>Service</span><i
-                              class='bx bx-chevron-down-circle'></i></a>
-                        <ul>
-                           <li class="dropdown">
-                              <a href="../service/counseling/"><span>Counseling</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                              <ul>
-                                 <li><a href="../service/counseling/relationship.html">
-                                       <span>Relationship
-                                          <sup>&nbsp;</sup>
-                                       </span>
-                                    </a></li>
-                                 <li><a href="../service/counseling/parenting.html">
-                                       <span>Parenting
-                                          <sup>&nbsp;</sup>
-                                       </span>
-                                    </a></li>
-                                 <li><a href="../service/counseling/children.html">
-                                       <span>Children
-                                          <sup>&nbsp;</sup>
-                                       </span>
-                                    </a></li>
-                                 <li class="dropdown-divider"></li>
-                                 <li><a href="../service/counseling/request.html">
-                                       <span>Request</span>
-                                    </a></li>
-                              </ul>
-                           </li>
-                           <li class="dropdown">
-                              <a href="../service/mentoring/"><span>Mentoring</span> <i
-                                    class="bi bi-chevron-right"></i></a>
-                              <ul>
-                                 <li><a href="../service/mentoring/teenager.html"><span>Teenager</span></a></li>
-                                 <li><a href="../service/mentoring/self-development.html"><span>Self
-                                          Development</span></a>
-                                 </li>
-                                 <li class="dropdown-divider"></li>
-                                 <li><a href="../service/mentoring/request.html"><span>Request</span></a></li>
-                              </ul>
-                           </li>
-                           <li class="dropdown">
-                              <a href="../service/agency/"><span>Agency</span> <i class="bi bi-chevron-right"></i></a>
-                              <ul>
-                                 <li><a href="../service/agency/emcee.html"><span>Master of Ceremony</span></a></li>
-                                 <li><a href="../service/agency/host.html"><span>Host</span></a></li>
-                                 <li><a href="../service/agency/voice-over.html"><span>Voice Over</span></a></li>
-                                 <li class="dropdown-divider"></li>
-                                 <li><a href="../service/agency/request.html"><span>Request</span></a></li>
-                              </ul>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="dropdown"><a href="../shop/"><span>Shop</span><i
-                              class='bx bx-chevron-down-circle'></i></a>
-                        <ul>
-                           <li><a href="../shop/book.html">Book</a></li>
-                           <li><a href="../shop/module.html">Module</a></li>
-                           <li class="dropdown-divider"></li>
-                           <li><a href="../shop/">Discover</a></li>
-                        </ul>
-                     </li>
-                     <li><a class="nav-link" href="../event/">Event</a></li>
-                     <li><a class="nav-link" href="../blog/">Blog</a></li>
-                  </ul>
-                  <i class="bi bi-list mobile-nav-toggle"></i>
-               </nav><!-- .navbar -->
-
-               <a href="../promo/" target="__blank" class="blue-btn position-relative"><span class="d-none d-md-inline">
-                     Claim</span> Promo
-                  <span class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-danger">
-                     <i class='bx bxs-alarm-exclamation bx-tada'></i>
-                     <em class="countdown" data-count="2025/12/2" data-template="&nbsp;%m:%s"
-                        style="font-family: 'Nunito',sans-serif;font-style: normal;"></em>
-                     <span class="visually-hidden">unread messages</span>
-                  </span>
-               </a>
-            </div>
-         </header>
-      <!-- End Header -->
-      <!-- sidebar-mobile -->
-      <div class="offcanvas offcanvas-start d-block d-sm-none" id="sidebar-mobile" data-bs-scroll="true">
-		<div class="offcanvas-header">
-			&nbsp;<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-		</div>
-		<div class="offcanvas-body">
-			<div class="nav-menu">
-				<ul>
-					<li>
-						<a href="https://dialogika.co/" class="nav-link scrollto ">
-							<i class="fa fa-home" style="margin-left: 10px;"></i>
-							<span>Home</span>
-						</a>
-					</li>
-					<li><a href="#online-collapse" data-bs-toggle="collapse" class="nav-link ">
-							<i class="fa-solid fa-house-signal" style="margin-left: 10px;"></i>
-							<span>Online</span>
-						</a>
-					</li>
-					<div class="collapse" id="online-collapse" data-bs-parent="">
-						<li>
-							<a href="../program/basic-plus.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
-								<span>Basic Plus</span>
-							</a>
-						</li>
-						<li>
-							<a href="../subscribe/action-play.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
-								<span>Action Play</span>
-							</a>
-						</li>
-					</div>
-					<li>
-						<a href="#offline-collapse" data-bs-toggle="collapse" class="nav-link ">
-							<i class="fa-solid fa-hand-wave" style="margin-left: 10px;"></i>
-							<span>Offline</span>
-						</a>
-					</li>
-					<div class="collapse" id="offline-collapse" data-bs-parent="">
-						<li>
-							<a href="../program/first-class.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
-								<span>First Class</span>
-							</a>
-						</li>
-						<li>
-							<a href="../program/royal-class-jakarta.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
-								<span>Royal Class</span>
-							</a>
-						</li>
-						<li>
-							<a href="../subscribe/jogja-play.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
-								<span>Jogja Play</span>
-							</a>
-						</li>
-					</div>
-					<li>
-						<a href="#kids-collapse" data-bs-toggle="collapse" class="nav-link ">
-							<i class="fa-solid fa-family-pants" style="margin-left: 10px;"></i>
-							<span>Kids</span>
-						</a>
-					</li>
-					<div class="collapse" id="kids-collapse" data-bs-parent="">
-						<li>
-							<a href="../program/kids-class.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-check" style="margin-left: 10px;"></i>
-								<span>Kids Class</span>
-							</a>
-						</li>
-						<li>
-							<a href="../subscribe/kids-play.html" style="background-color: #f2f3f5;">
-								<i class="fa-solid fa-shield-xmark" style="margin-left: 10px;"></i>
-								<span>Kids Play</span>
-							</a>
-						</li>
-					</div>
-					<li>
-						<a href="../corporate/" class="nav-link">
-							<i class="fa-solid fa-building" style="margin-left: 10px;"></i>
-							<span>Corporate</span>
-						</a>
-					</li>
-					<li>
-						<a href="../event/" class="nav-link">
-							<i class="fa-solid fa-calendar-star" style="margin-left: 10px;"></i>
-							<span>Event</span>
-						</a>
-					</li>
-					<li>
-						<a href="../blog/" class="nav-link">
-							<i class="fa-brands fa-blogger-b" style="margin-left: 10px;"></i>
-							<span>Blog</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-      <!-- end sidebar -->
    <!-- This code is use for color chooser, you can delete -->
-   <div id="switch-color" class="color-switcher">
-      <div class="open"><i class="fas fa-cog"></i></div>
-      <h4>COLOR OPTION</h4>
-      <ul>
-         <li><a class="color-1" onclick="setActiveStyleSheet('main'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-6" onclick="setActiveStyleSheet('color-6'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-7" onclick="setActiveStyleSheet('color-7'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-         <li><a class="color-8" onclick="setActiveStyleSheet('color-8'); return false;" href="#"><i
-                  class="fas fa-cog"></i></a> </li>
-      </ul>
-   </div>
+	<div id="switch-color" class="color-switcher">
+		<div class="open"><i class="fas fa-cog"></i></div>
+		<h4>COLOR OPTION</h4>
+		<ul>
+			<li><a class="color-1" onclick="setActiveStyleSheet('main'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-2" onclick="setActiveStyleSheet('color-2'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-3" onclick="setActiveStyleSheet('color-3'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-4" onclick="setActiveStyleSheet('color-4'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-5" onclick="setActiveStyleSheet('color-5'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-6" onclick="setActiveStyleSheet('color-6'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-7" onclick="setActiveStyleSheet('color-7'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+			<li><a class="color-8" onclick="setActiveStyleSheet('color-8'); return false;" href="#"><i class="fas fa-cog"></i></a> </li>
+		</ul>
+	</div>
    <!-- end color switch -->
 
 
    <div class="body-wrap">
-      
-      <!-- hero sec start -->
-         <section class="hero-sec" style="background-image: url(assets/images/banner/group.png);">
-            <div class="hero-slider-wrap">
+      <!-- header area start -->
+      <header class="header-area">
+         <nav class="header-nav navbar fixed-top navbar-expand-lg position-absolute w-100">
+            <div class="container header-nav-menu">
+               <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/logo.png" alt="Header Logo">
+               </a>
+              
+               <div class="collapse navbar-collapse d-none d-lg-block">
+                  <ul class="navbar-nav m-auto">
+                     <li class="nav-item">
+                        <a href="index.html" class="nav-link py-3">Homepages</a>
+                        <div class="drop-down">
+                           <div class="row drop-down-wrap g-0">
+                              <div class="col-7">
+                                 <ul class="drop-down-menu">
+                                    <li class="dropdown-item d-flex align-items-center">
+                                       <div class="item-icon">
+                                          <img src="assets/images/icon/icon.svg" alt="icon Images">
+                                       </div>
+                                       <a href="index.html" class="item-content">
+                                          <h5 class="item-title">Homepage Conference</h5>
+                                          <span class="item-sub">Sessions Overview</span>
+                                       </a>
+                                    </li>
+                                    <li class="dropdown-item d-flex align-items-center">
+                                       <div class="item-icon">
+                                          <img src="assets/images/icon/icon2.svg" alt="icon Images">
+                                       </div>
+                                       <a href="index-music.html" class="item-content">
+                                          <h5 class="item-title">Homepage Music</h5>
+                                          <span class="item-sub">Sessions Overview</span>
+                                       </a>
+                                    </li>
+                                    <li class="dropdown-item d-flex align-items-center">
+                                       <div class="item-icon">
+                                          <img src="assets/images/icon/icon3.svg" alt="icon Images">
+                                       </div>
+                                       <a href="index-eventbrite.html" class="item-content">
+                                          <h5 class="item-title">Homepage Eventbrite</h5>
+                                          <span class="item-sub">Sessions Overview</span>
+                                       </a>
+                                    </li>
+                                    <li class="dropdown-item d-flex align-items-center">
+                                       <div class="item-icon">
+                                          <img src="assets/images/icon/icon4.svg" alt="icon Images">
+                                       </div>
+                                       <a href="index-dark.html" class="item-content">
+                                          <h5 class="item-title">Homepage Dark</h5>
+                                          <span class="item-sub">Sessions Overview</span>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="col-5">
+                                 <div class="dropdown-thumb position-relative" style="background-image: url(assets/images/banner/home-conference-dropdown-bg.jpg);">
+                                    <a class="dropdown-sub position-absolute" href="#">Register Now</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#about" class="nav-link py-3">About</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#schedule" class="nav-link py-3">Schedule</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#sponsors" class="nav-link py-3">Sponsors</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#speakers" class="nav-link py-3">Speakers</a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#pricing" class="nav-link py-3">Pricing</a>
+                     </li>
+                  </ul>
+                  <div class="mode-and-button d-flex align-items-center">
+                     <div class="mode me-md-3">
+                        <img src="assets/images/icon/sun.svg" alt="Sun" class="fa-sun" style="display: none;">
+                        <img src="assets/images/icon/moon.svg" alt="Moon" class="fa-moon">
+                     </div>
+                     <button class="header-btn custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
+                  </div>
+               </div>
 
+               <!-- mobile menu -->
+               <div class="mobile-view-header d-block d-lg-none d-flex gap-3 align-items-center">
+                  <div class="mode me-md-3">
+                     <img src="assets/images/icon/sun.svg" alt="Sun" class="fa-sun" style="display: none;">
+                     <img src="assets/images/icon/moon.svg" alt="Moon" class="fa-moon">
+                  </div>
+                  <button class="header-btn custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
+
+                  <a class="border rounded-1 py-1 px-2 bg-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                     <span class="navbar-toggler-icon nav-toggler-icon"></span>
+                  </a>
+
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" >
+                     <div class="offcanvas-header">
+                        <a class="navbar-brand" href="index.html">
+                           <img src="assets/images/logo/logo.png" alt="Header Logo">
+                        </a>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                     </div>
+                     <div class="offcanvas-body">
+                        <div class="dropdown mt-3">
+                           <ul class="navbar-nav m-auto">
+                              <li class="nav-item">
+                                 <a href="index.html" class="nav-link py-3">Homepages</a>
+                                 <div class="drop-down">
+                                    <div class="row drop-down-wrap g-0">
+                                       <div class="col-7">
+                                          <ul class="drop-down-menu">
+                                             <li class="dropdown-item d-flex align-items-center">
+                                                <div class="item-icon">
+                                                   <img src="assets/images/icon/icon.svg" alt="icon Images">
+                                                </div>
+                                                <a href="#" class="item-content">
+                                                   <h5 class="item-title">Homepage Conference</h5>
+                                                   <span class="item-sub">Sessions Overview</span>
+                                                </a>
+                                             </li>
+                                             <li class="dropdown-item d-flex align-items-center">
+                                                <div class="item-icon">
+                                                   <img src="assets/images/icon/icon2.svg" alt="icon Images">
+                                                </div>
+                                                <a href="#" class="item-content">
+                                                   <h5 class="item-title">Homepage Conference</h5>
+                                                   <span class="item-sub">Sessions Overview</span>
+                                                </a>
+                                             </li>
+                                             <li class="dropdown-item d-flex align-items-center">
+                                                <div class="item-icon">
+                                                   <img src="assets/images/icon/icon3.svg" alt="icon Images">
+                                                </div>
+                                                <a href="#" class="item-content">
+                                                   <h5 class="item-title">Homepage Conference</h5>
+                                                   <span class="item-sub">Sessions Overview</span>
+                                                </a>
+                                             </li>
+                                             <li class="dropdown-item d-flex align-items-center">
+                                                <div class="item-icon">
+                                                   <img src="assets/images/icon/icon4.svg" alt="icon Images">
+                                                </div>
+                                                <a href="#" class="item-content">
+                                                   <h5 class="item-title">Homepage Conference</h5>
+                                                   <span class="item-sub">Sessions Overview</span>
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                       <div class="col-5">
+                                          <div class="dropdown-thumb position-relative" style="background-image: url(assets/images/banner/home-conference-dropdown-bg.jpg);">
+                                             <span class="dropdown-sub position-absolute">Register Now</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#about" class="nav-link py-3">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#schedule" class="nav-link py-3">Schedule</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#sponsors" class="nav-link py-3">Sponsors</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#speakers" class="nav-link py-3">Speakers</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a href="#pricing" class="nav-link py-3">Pricing</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- end mobile menu -->
+
+            </div>
+         </nav>
+         
+         <!-- hero sec start -->
+         <section class="hero-sec"  style="background-image: url(assets/images/banner/group.png);">
+            <div class="hero-slider-wrap">
+               
                <div class="hero-slider-item overflow-hidden">
                   <div class="container">
                      <div class="row align-items-center">
@@ -453,13 +268,10 @@
                                     Join us for Eventor Collaborative: Virtual Sessions on October 2023
                                  </p>
                                  <div class="button-group">
-                                    <button class="custom-btn2" data-bs-toggle="modal"
-                                       data-bs-target="#exampleModal">Register</button>
-                                    <button class="custom-btn item-btn" data-bs-toggle="modal"
-                                       data-bs-target="#staticBackdrop">Watch Video</button>
+                                    <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</button>
+                                    <button class="custom-btn item-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Watch Video</button>
                                  </div>
-                                 <img src="assets/images/dots/dots.png" alt="Shadow Image"
-                                    class="dots-1 opacity-50 img-moving-anim2">
+                                 <img src="assets/images/dots/dots.png" alt="Shadow Image" class="dots-1 opacity-50 img-moving-anim2">
                               </div>
                            </div>
                         </div>
@@ -471,8 +283,7 @@
                               <div class="img-2 img-moving-anim2">
                                  <img src="assets/images/banner-slider/1.jpg" alt="Event template">
                               </div>
-                              <img src="assets/images/dots/dots2.png" alt="Shadow Image"
-                                 class="dots-2 img-moving-anim3">
+                              <img src="assets/images/dots/dots2.png" alt="Shadow Image" class="dots-2 img-moving-anim3">
                            </div>
                         </div>
                      </div>
@@ -481,7 +292,7 @@
                      </div>
                   </div>
                </div>
-
+               
                <div class="hero-slider-item overflow-hidden">
                   <div class="container position-relative">
                      <div class="row align-items-center slide-2">
@@ -493,8 +304,7 @@
                                     conference of the year
                                  </h3>
                                  <div class="conference-video">
-                                    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                                          class="fa-solid fa-play"></i></a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-play"></i></a>
                                  </div>
                                  <div class="highlight-text2 img-moving-anim4">
                                     <strong class="big-title"><span class="text">CONF 2023</span></strong>
@@ -509,7 +319,7 @@
                   </div>
                   <img src="assets/images/dots/dots5.png" alt="Shadow Image" class="dots-3 img-moving-anim3">
                </div>
-
+               
                <div class="hero-slider-item overflow-hidden">
                   <div class="container">
                      <div class="row align-items-center slide-3">
@@ -524,13 +334,10 @@
                                     Join us for Eventor Collaborative: Virtual Sessions on October 2023
                                  </p>
                                  <div class="button-group">
-                                    <button class="custom-btn2" data-bs-toggle="modal"
-                                       data-bs-target="#exampleModal">Register</button>
-                                    <button class="custom-btn item-btn" data-bs-toggle="modal"
-                                       data-bs-target="#staticBackdrop">Watch Video</button>
+                                    <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Register</button>
+                                    <button class="custom-btn item-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Watch Video</button>
                                  </div>
-                                 <img src="assets/images/dots/dots.png" alt="Shadow Image"
-                                    class="dots-1 img-moving-anim3">
+                                 <img src="assets/images/dots/dots.png" alt="Shadow Image" class="dots-1 img-moving-anim3">
                               </div>
                            </div>
                         </div>
@@ -538,8 +345,7 @@
                            <div class="item-video">
                               <div class="img-3 img-moving-anim1">
                                  <img src="assets/images/banner-slider/3.jpg" alt="Event template">
-                                 <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#"><i
-                                       class="fa-solid fa-play"></i></a>
+                                 <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#"><i class="fa-solid fa-play"></i></a>
                               </div>
                            </div>
                            <img src="assets/images/dots/dots2.png" alt="Shadow Image" class="dots-5 img-moving-anim3">
@@ -550,12 +356,14 @@
                      </div>
                   </div>
                </div>
-
+               
             </div>
          </section>
-      <!-- hero sec end -->
+         <!-- hero sec start -->
+      </header>
       <!-- header area end -->
-
+      
+      
       <!-- info sec start -->
       <div class="info-sec">
          <div class="container">
@@ -591,7 +399,7 @@
          </div>
       </div>
       <!-- info sec end -->
-
+      
       <!-- about sec start -->
       <section id="about" class="about-sec">
          <div class="container">
@@ -602,9 +410,7 @@
                   is focused on programming topics
                </h1>
                <p class="desc mx-3">
-                  Eventor Collaborative, brought to you by IBM, Google and AWS, is where the most inventive and
-                  forward-thinking nonprofit leaders come together to discover emerging trends in fundraising and
-                  technology.
+                  Eventor Collaborative, brought to you by IBM, Google and AWS, is where the most inventive and forward-thinking nonprofit leaders come together to discover emerging trends in fundraising and technology.
                </p>
             </div>
             <div class="about-items-wrap" data-aos="fade-right" data-aos-duration="1000">
@@ -619,13 +425,10 @@
                                  <h5 class="title">Virtual sessions. Eventor Live@MAX</h5>
                               </div>
                               <div class="about-video">
-                                 <a class="video-btn1 popup-video" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop"
-                                    href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span><i
-                                          class="fas fa-play"></i></span></a>
+                                 <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span><i class="fas fa-play"></i></span></a>
                               </div>
                            </div>
-                        </div>
+                        </div>      
                      </div>
                   </div>
                   <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-duration="700">
@@ -638,12 +441,10 @@
                                  <h5 class="title">Opening</h5>
                               </div>
                               <div class="about-video">
-                                 <a class="video-btn1 popup-video" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop" href=""><span><i
-                                          class="fas fa-play"></i></span></a>
+                                 <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href=""><span><i class="fas fa-play"></i></span></a>
                               </div>
                            </div>
-                        </div>
+                        </div> 
                      </div>
                   </div>
                   <div class="col-sm-6 col-lg-3" data-aos="fade-right" data-aos-duration="600">
@@ -656,13 +457,10 @@
                                  <h5 class="title">Inspiration Art</h5>
                               </div>
                               <div class="about-video">
-                                 <a class="video-btn1 popup-video" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop"
-                                    href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span><i
-                                          class="fas fa-play"></i></span></a>
+                                 <a class="video-btn1 popup-video" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span><i class="fas fa-play"></i></span></a>
                               </div>
                            </div>
-                        </div>
+                        </div> 
                      </div>
                   </div>
                   <div class="dots img-moving-anim5">
@@ -679,7 +477,7 @@
       <div class="container mt-5">
          <hr>
       </div>
-
+      
       <!-- schedule sec start -->
       <section id="schedule" class="schedule-sec">
          <div class="container">
@@ -693,41 +491,31 @@
             <div class="schedule-content-wrap">
                <ul class="nav nav-pills schedule-nav-tab mb-5" id="pills-tab" role="tablist">
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link active" id="pills-day-1-tab" data-bs-toggle="pill"
-                        data-bs-target="#pills-day-1" type="button" role="tab" aria-controls="pills-day-1"
-                        aria-selected="true">Day 01</button>
+                     <button class="nav-link active" id="pills-day-1-tab" data-bs-toggle="pill" data-bs-target="#pills-day-1" type="button" role="tab" aria-controls="pills-day-1" aria-selected="true">Day 01</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-2-tab" data-bs-toggle="pill" data-bs-target="#pills-day-2"
-                        type="button" role="tab" aria-controls="pills-day-2" aria-selected="false">Day 02</button>
+                     <button class="nav-link" id="pills-day-2-tab" data-bs-toggle="pill" data-bs-target="#pills-day-2" type="button" role="tab" aria-controls="pills-day-2" aria-selected="false">Day 02</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-3-tab" data-bs-toggle="pill" data-bs-target="#pills-day-3"
-                        type="button" role="tab" aria-controls="pills-day-3" aria-selected="false">Day 03</button>
+                     <button class="nav-link" id="pills-day-3-tab" data-bs-toggle="pill" data-bs-target="#pills-day-3" type="button" role="tab" aria-controls="pills-day-3" aria-selected="false">Day 03</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-4-tab" data-bs-toggle="pill" data-bs-target="#pills-day-4"
-                        type="button" role="tab" aria-controls="pills-day-4" aria-selected="true">Day 04</button>
+                     <button class="nav-link" id="pills-day-4-tab" data-bs-toggle="pill" data-bs-target="#pills-day-4" type="button" role="tab" aria-controls="pills-day-4" aria-selected="true">Day 04</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-5-tab" data-bs-toggle="pill" data-bs-target="#pills-day-5"
-                        type="button" role="tab" aria-controls="pills-day-5" aria-selected="false">Day 05</button>
+                     <button class="nav-link" id="pills-day-5-tab" data-bs-toggle="pill" data-bs-target="#pills-day-5" type="button" role="tab" aria-controls="pills-day-5" aria-selected="false">Day 05</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-6-tab" data-bs-toggle="pill" data-bs-target="#pills-day-6"
-                        type="button" role="tab" aria-controls="pills-day-6" aria-selected="false">Day 06</button>
+                     <button class="nav-link" id="pills-day-6-tab" data-bs-toggle="pill" data-bs-target="#pills-day-6" type="button" role="tab" aria-controls="pills-day-6" aria-selected="false">Day 06</button>
                   </li>
                   <li class="nav-item schedule-nav-item" role="presentation">
-                     <button class="nav-link" id="pills-day-7-tab" data-bs-toggle="pill" data-bs-target="#pills-day-7"
-                        type="button" role="tab" aria-controls="pills-day-7" aria-selected="false">Day 07</button>
+                     <button class="nav-link" id="pills-day-7-tab" data-bs-toggle="pill" data-bs-target="#pills-day-7" type="button" role="tab" aria-controls="pills-day-7" aria-selected="false">Day 07</button>
                   </li>
-
+                  
                </ul>
                <div class="tab-content schedule-tab-content" id="pills-tabContent">
-                  <div class="tab-pane fade show active" id="pills-day-1" role="tabpanel"
-                     aria-labelledby="pills-day-1-tab" tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                  <div class="tab-pane fade show active" id="pills-day-1" role="tabpanel" aria-labelledby="pills-day-1-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb item-thumb">
@@ -744,18 +532,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -772,18 +557,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -800,18 +582,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -828,21 +607,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-2" role="tabpanel" aria-labelledby="pills-day-2-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                  <div class="tab-pane fade" id="pills-day-2" role="tabpanel" aria-labelledby="pills-day-2-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -859,19 +634,16 @@
                            <div class="d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-buttoncol-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -888,19 +660,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -917,18 +686,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -945,21 +711,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-3" role="tabpanel" aria-labelledby="pills-day-3-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                  <div class="tab-pane fade" id="pills-day-3" role="tabpanel" aria-labelledby="pills-day-3-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -976,19 +738,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1005,18 +764,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1033,19 +789,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1062,21 +815,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-4" role="tabpanel" aria-labelledby="pills-day-4-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                  <div class="tab-pane fade" id="pills-day-4" role="tabpanel" aria-labelledby="pills-day-4-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1093,19 +842,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1122,19 +868,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1151,19 +894,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1180,21 +920,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-5" role="tabpanel" aria-labelledby="pills-day-5-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                  <div class="tab-pane fade"  id="pills-day-5" role="tabpanel" aria-labelledby="pills-day-5-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1211,19 +947,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1240,18 +973,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1268,19 +998,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1297,21 +1024,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-6" role="tabpanel" aria-labelledby="pills-day-6-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                  <div class="tab-pane fade" id="pills-day-6" role="tabpanel" aria-labelledby="pills-day-6-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1328,18 +1051,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1356,18 +1076,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1384,18 +1101,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1412,21 +1126,17 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="tab-pane fade" id="pills-day-7" role="tabpanel" aria-labelledby="pills-day-7-tab"
-                     tabindex="0">
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                  <div class="tab-pane fade" id="pills-day-7" role="tabpanel" aria-labelledby="pills-day-7-tab" tabindex="0">
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1443,19 +1153,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Events and Networking</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule1.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1472,18 +1179,15 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Presentation and Keynotes</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1500,19 +1204,16 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Sessions and Labs</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
                      </div>
-
-                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear"
-                        data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
+                     
+                     <div class="row schedule-item" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" style="background-image: url(assets/images/banner/schedule2.png);">
                         <div class="col-lg-4">
                            <div class="d-flex align-items-center justify-content-around">
                               <div class="card-thumb">
@@ -1529,12 +1230,10 @@
                            <div class=" d-flex align-items-center justify-content-between">
                               <div class="card-title-area col-7">
                                  <h4 class="title">Luminary Sessions</h4>
-                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by
-                                    creative leaders.<a href="#">Read More</a></p>
+                                 <p class="title-desc">Discover the latest trends in creativity and get inspired by creative leaders.<a href="#">Read More</a></p>
                               </div>
                               <div class="card-button col-5">
-                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy
-                                    Tickets</button>
+                                 <button class="custom-btn2" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               </div>
                            </div>
                         </div>
@@ -1554,12 +1253,11 @@
          </div>
       </section>
       <!-- schedule sec end -->
-
+      
       <!-- brand sec start -->
       <div id="sponsors" class="brand-sec">
          <div class="container">
-            <div class="brand-items-wrap d-md-flex text-center justify-content-around align-items-center"
-               data-aos="fade-up" data-aos-duration="1000">
+            <div class="brand-items-wrap d-md-flex text-center justify-content-around align-items-center" data-aos="fade-up" data-aos-duration="1000">
                <div class="brand-item mb-3">
                   <div class="icon">
                      <img src="assets/images/brand/1.png" alt="Brand Image 1"> Logoipsum
@@ -1589,7 +1287,7 @@
          </div>
       </div>
       <!-- brand sec end -->
-
+      
       <!-- video sec start -->
       <section class="video-sec" data-src="assets/images/banner/home-conference-video-bg.svg" data-parallax>
          <div class="container">
@@ -1600,9 +1298,8 @@
                         <img src="assets/images/video/video1.jpg" alt="Video Image 1">
                      </div>
                      <div class="video-play">
-                        <img src="assets/images/video/video2.jpg" alt="Video Image 2" data-bs-backdrop="static">
-                        <a class="video-btn1 popup-video" href="" data-bs-toggle="modal"
-                           data-bs-target="#staticBackdrop"><span><i class="fas fa-play"></i></span></a>
+                        <img src="assets/images/video/video2.jpg" alt="Video Image 2"  data-bs-backdrop="static">
+                        <a class="video-btn1 popup-video" href=""  data-bs-toggle="modal" data-bs-target="#staticBackdrop"><span><i class="fas fa-play"></i></span></a>
                      </div>
                      <div class="dots img-moving-anim2">
                         <img src="assets/images/dots/dots6.png" alt="Shadow Image">
@@ -1615,8 +1312,7 @@
                         Be inspired by expert speakers in design, video, and more
                      </h2>
                      <p class="desc">
-                        Plan your week to make the most of all the sessions and labs, Community Eventor activities, and
-                        fun ways to connect with other creatives.
+                        Plan your week to make the most of all the sessions and labs, Community Eventor activities, and fun ways to connect with other creatives.
                         <br><br>
                         Join us in person or attend virtually for free. Register now, in-person attendance is limited.
                      </p>
@@ -1634,7 +1330,7 @@
          </div>
       </section>
       <!-- video sec end -->
-
+      
       <!-- speakers sec start -->
       <section id="speakers" class="speakers-gallery-sec position-relative">
          <div class="container">
@@ -1648,8 +1344,7 @@
             <div class="speakers-gallery-items-wrap">
                <div class="row">
                   <div class="col-md-6 col-lg-4 col-xl-3">
-                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear"
-                        data-aos-duration="400">
+                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="400">
                         <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
                            <img src="assets/images/gallery/gallery1.jpg" alt="Gallery Image 1">
                         </div>
@@ -1673,8 +1368,7 @@
                      </div>
                   </div>
                   <div class="col-md-6 col-lg-4 col-xl-3">
-                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear"
-                        data-aos-duration="600">
+                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="600">
                         <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
                            <img src="assets/images/gallery/gallery2.jpg" alt="Gallery Image 2">
                         </div>
@@ -1696,8 +1390,7 @@
                      </div>
                   </div>
                   <div class="col-md-6 col-lg-4 col-xl-3">
-                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear"
-                        data-aos-duration="800">
+                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="800">
                         <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
                            <img src="assets/images/gallery/gallery3.jpg" alt="Gallery Image 3">
                         </div>
@@ -1719,8 +1412,7 @@
                      </div>
                   </div>
                   <div class="col-md-6 col-lg-4 col-xl-3">
-                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear"
-                        data-aos-duration="1000">
+                     <div class="speakers-gallery-item" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                         <div class="speakers-gallery-item-thumb overflow-hidden position-relative">
                            <img src="assets/images/gallery/gallery4.jpg" alt="Gallery Image 4">
                         </div>
@@ -1783,7 +1475,7 @@
          </div>
       </section>
       <!-- cta sec end-->
-
+      
       <!-- review sec start -->
       <section class="review-sec" style="background-image: url(assets/images/banner/review.png);">
          <div class="container" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
@@ -1794,8 +1486,7 @@
                <div class="review-card-items-wrap">
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1817,8 +1508,7 @@
                   </div>
                   <div class="review-card-item ">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1840,8 +1530,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1863,8 +1552,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1886,8 +1574,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1909,8 +1596,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1932,8 +1618,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1955,8 +1640,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -1978,8 +1662,7 @@
                   </div>
                   <div class="review-card-item">
                      <p class="card-desc">
-                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also
-                        watching other sessions and interacting with attendees.”
+                        “Thank you for running the event so smoothly – I had a great time, not only presenting, but also watching other sessions and interacting with attendees.”
                      </p>
                      <div class="profile">
                         <div class="thumb">
@@ -2011,7 +1694,7 @@
          </div>
       </section>
       <!-- review sec end -->
-
+      
       <!-- pricing sec start -->
       <section id="pricing" class="pricing-sec">
          <div class="container">
@@ -2029,65 +1712,54 @@
             <div class="pricing-cart-wrap">
                <div class="row row-cols-1 row-cols-lg-3 g-4">
                   <div class="col col-md-6 col-lg-4">
-                     <div class="card  h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                     <div class="card  h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="card-body">
-                           <span class="card-lable"><i class="fa-sharp fa-solid fa-circle"></i>Out of Pocket
-                              Discount</span>
+                           <span class="card-lable"><i class="fa-sharp fa-solid fa-circle"></i>Out of Pocket Discount</span>
                            <h3 class="price-pacage">$190 <span class="regular-price">/ regular price</span>
                            </h3>
                            <ul>
                               <li><a href=""><i class="fa-solid fa-check"></i>Regular price: $190 until Sept 20</a></li>
-                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a>
-                              </li>
+                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a></li>
                            </ul>
                            <div class="card-btn">
-                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Buy Tickets</button>
+                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               <span class="card-footer-label">When you don't need a VAT invoice</span>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="col col-md-6 col-lg-4">
-                     <div class="card h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                     <div class="card h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="card-body">
-                           <span class="card-lable"><i class="fa-sharp fa-solid fa-circle"></i>Professional
-                              Discount</span>
+                           <span class="card-lable"><i class="fa-sharp fa-solid fa-circle"></i>Professional Discount</span>
                            <h3 class="price-pacage">$290 <span class="regular-price">/ regular price</span>
                            </h3>
                            <ul>
                               <li><a href=""><i class="fa-solid fa-check"></i>Regular price: $190 until Sept 20</a></li>
-                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a>
-                              </li>
+                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a></li>
                            </ul>
                            <div class="card-btn">
-                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Buy Tickets</button>
+                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               <span class="card-footer-label">When you don't need a VAT invoice</span>
                            </div>
                         </div>
                      </div>
                   </div>
                   <div class="col col-md-6 col-lg-4">
-                     <div class="card h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="2000">
+                     <div class="card h-100" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                         <div class="card-body">
                            <span class="card-lable"><i class="fa-sharp fa-solid fa-circle"></i>Company Discount</span>
                            <h3 class="price-pacage">$390 <span class="regular-price">/ regular price</span>
                            </h3>
                            <ul>
                               <li><a href=""><i class="fa-solid fa-check"></i>Regular price: $190 until Sept 20</a></li>
-                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a>
-                              </li>
+                              <li><a href=""><i class="fa-solid fa-check"></i>Last minute price: $490 until the end</a></li>
                            </ul>
                            <div class="card-btn">
-                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Buy Tickets</button>
+                              <button class="custom-btn custom-btn2 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Buy Tickets</button>
                               <span class="card-footer-label">When you don't need a VAT invoice</span>
                            </div>
-
+                           
                         </div>
                      </div>
                   </div>
@@ -2116,11 +1788,10 @@
                         about the conference
                      </h2>
                      <p class="desc mb-5">
-                        Eventor Collaborative, brought to you by IBM, is where the most inventive and forward-thinking
-                        nonprofit leaders come together
+                        Eventor Collaborative, brought to you by IBM, is where the most inventive and forward-thinking nonprofit leaders come together
                         to discover emerging trends in fundraising and technology.
                      </p>
-
+                     
                      <button class="faq-btn custom-btn">Learn More</button>
                   </div>
                </div>
@@ -2129,69 +1800,49 @@
                      <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                            <h2 class="accordion-header" id="headingOne">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                              <button class="accordion-button" type="button"          data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                  Is this Eventor Conference 2023 for me?
                               </button>
                            </h2>
-                           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                              data-bs-parent="#accordionExample">
+                           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 Are you a developer interested in building web applications and at the same time
-                                 thinking about multiple parts of the stack needed to build them? Then this conference
-                                 is for you. Many of the sessions either touch a specific concept or go about multiple
-                                 parts of the stack.
+                                 Are you a developer interested in building web applications and at the same time thinking about multiple parts of the stack needed to build them? Then this conference is for you. Many of the sessions either touch a specific concept or go about multiple parts of the stack.
                               </div>
                            </div>
                         </div>
                         <div class="accordion-item">
                            <h2 class="accordion-header" id="headingTwo">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                  Can I change the attendee name on the ticket?
                               </button>
                            </h2>
-                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                              data-bs-parent="#accordionExample">
+                           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 Are you a developer interested in building web applications and at the same time
-                                 thinking about multiple parts of the stack needed to build them? Then this conference
-                                 is for you. Many of the sessions either touch a specific concept or go about multiple
-                                 parts of the stack.
+                                 Are you a developer interested in building web applications and at the same time thinking about multiple parts of the stack needed to build them? Then this conference is for you. Many of the sessions either touch a specific concept or go about multiple parts of the stack.
                               </div>
                            </div>
                         </div>
                         <div class="accordion-item">
                            <h2 class="accordion-header" id="headingThree">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                  Can I change the attendee name on the ticket?
                               </button>
                            </h2>
-                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                              data-bs-parent="#accordionExample">
+                           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 Are you a developer interested in building web applications and at the same time
-                                 thinking about multiple parts of the stack needed to build them? Then this conference
-                                 is for you. Many of the sessions either touch a specific concept or go about multiple
-                                 parts of the stack.
+                                 Are you a developer interested in building web applications and at the same time thinking about multiple parts of the stack needed to build them? Then this conference is for you. Many of the sessions either touch a specific concept or go about multiple parts of the stack.
                               </div>
                            </div>
                         </div>
                         <div class="accordion-item">
                            <h2 class="accordion-header" id="headingFour">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                 data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                  What is included in the ticket prices?
                               </button>
                            </h2>
-                           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                              data-bs-parent="#accordionExample">
+                           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                               <div class="accordion-body">
-                                 Are you a developer interested in building web applications and at the same time
-                                 thinking about multiple parts of the stack needed to build them? Then this conference
-                                 is for you. Many of the sessions either touch a specific concept or go about multiple
-                                 parts of the stack.
+                                 Are you a developer interested in building web applications and at the same time thinking about multiple parts of the stack needed to build them? Then this conference is for you. Many of the sessions either touch a specific concept or go about multiple parts of the stack.
                               </div>
                            </div>
                         </div>
@@ -2208,51 +1859,51 @@
       <!-- gallery sec start -->
       <section class="gallery-sec" data-aos="fade-up" data-aos-duration="1200">
          <div class="container-fluid">
-            <div class="col-xl-8 section-head text-center m-auto mb-5">
-               <span class="label">Contact The Eventor Sales Team</span>
-               <h2 class="title ">
-                  Relive the best moments from the Conference 2022
-                  through video and photos in our gallery
-               </h2>
-            </div>
-
-            <div class="image-gallery-wrap zoom-gallery d-flex align-items-center">
-
-               <div class="row g-4">
-                  <div class="col-md-6 col-lg-4">
-                     <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="1000">
-                        <a class="item-thumb" href="assets/images/gallery/img-gallery1.png">
-                           <img src="assets/images/gallery/img-gallery1.png" alt="Image Gallery 1">
-                           <span class="view">VIEW</span>
-                        </a>
-
-                     </div>
+         <div class="col-xl-8 section-head text-center m-auto mb-5">
+            <span class="label">Contact The Eventor Sales Team</span>
+            <h2 class="title ">
+               Relive the best moments from the Conference 2022
+               through video and photos in our gallery
+            </h2>
+         </div>
+         
+         <div class="image-gallery-wrap zoom-gallery d-flex align-items-center">
+            
+            <div class="row g-4">
+               <div class="col-md-6 col-lg-4">
+                  <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="1000">
+                     <a class="item-thumb" href="assets/images/gallery/img-gallery1.png">
+                        <img src="assets/images/gallery/img-gallery1.png" alt="Image Gallery 1"> 
+                        <span class="view">VIEW</span>
+                     </a>
+                     
                   </div>
-                  <div class="col-md-6 col-lg-4">
-                     <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="800">
-                        <a class="item-thumb" href="assets/images/gallery/img-gallery2.png">
-                           <img src="assets/images/gallery/img-gallery2.png" alt="Image Gallery 2">
-                           <span class="view">VIEW</span>
-                        </a>
-                     </div>
+               </div>
+               <div class="col-md-6 col-lg-4">
+                  <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="800">
+                     <a class="item-thumb" href="assets/images/gallery/img-gallery2.png">
+                        <img src="assets/images/gallery/img-gallery2.png" alt="Image Gallery 2">
+                        <span class="view">VIEW</span>
+                     </a>
                   </div>
-                  <div class="col-md-6 col-lg-4">
-                     <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="600">
-                        <a class="item-thumb" href="assets/images/gallery/img-gallery3.png">
-                           <img src="assets/images/gallery/img-gallery3.png" alt="Image Gallery 3">
-                           <span class="view">VIEW</span>
-                        </a>
-                     </div>
+               </div>
+               <div class="col-md-6 col-lg-4">
+                  <div class="image-gallery-item" data-aos="fade-up" data-aos-duration="600">
+                     <a class="item-thumb" href="assets/images/gallery/img-gallery3.png">
+                        <img src="assets/images/gallery/img-gallery3.png" alt="Image Gallery 3">
+                        <span class="view">VIEW</span>
+                     </a>
                   </div>
                </div>
             </div>
-            <div class="shape">
-               <img src="assets/images/shape/6.svg" alt="Shape">
-            </div>
          </div>
+         <div class="shape">
+            <img src="assets/images/shape/6.svg" alt="Shape">
+         </div>
+      </div>
       </section>
       <!-- gallery sec end -->
-
+      
       <!-- contact sec start -->
       <section class="contact-sec" data-aos="zoom-in" data-aos-duration="1000">
          <div class="container">
@@ -2269,18 +1920,16 @@
                </div>
                <div class="contact-wrap row py-4 px-3 contact align-items-center m-0">
                   <div class="col-lg-4">
-                     <div class="contact-thumb-wrap"
-                        style="background-image: url(assets/images/banner/contact-bg.png);">
+                     <div class="contact-thumb-wrap" style="background-image: url(assets/images/banner/contact-bg.png);">
                         <div class="contact-content">
                            <h5 class="title text-white">Contact Us</h5>
                            <p class="desc">
-                              Get in touch and let us know how
+                              Get in touch and let us know how 
                               we can help.
                            </p>
                            <div class="info">
                               <a class="icon d-block mb-3">
-                                 <img src="assets/images/icon/mail1.svg" alt="Mail" style="color: #fff;">
-                                 conference@eventor.com
+                                 <img src="assets/images/icon/mail1.svg" alt="Mail" style="color: #fff;"> conference@eventor.com
                               </a>
                               <a class="location d-block mb-3">
                                  <img src="assets/images/icon/map-pin2.svg" alt="Map"> conference@eventor.com
@@ -2298,38 +1947,33 @@
                         <div class="row gy-3">
                            <div class="col-lg-6">
                               <label for="exampleFormControlInput1" class="form-label">First Name</label>
-                              <input type="text" class="form-control" id="exampleFormControlInput1"
-                                 placeholder="Your First Name" required>
+                              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Your First Name" required>
                            </div>
                            <div class="col-lg-6">
                               <label for="exampleFormControlInput2" class="form-label">Last Name</label>
-                              <input type="text" class="form-control" id="exampleFormControlInput2"
-                                 placeholder="Your Last Name" required>
+                              <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Your Last Name" required>
                            </div>
                            <div class="col-lg-6">
                               <label for="exampleFormControlInput3" class="form-label">Email address</label>
-                              <input type="email" class="form-control" id="exampleFormControlInput3"
-                                 placeholder="Enter Email" required>
+                              <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="Enter Email" required>
                            </div>
                            <div class="col-lg-6">
                               <label for="exampleFormControlInput4" class="form-label">Subject</label>
-                              <input type="text" class="form-control" id="exampleFormControlInput4"
-                                 placeholder="Enter Subject" required>
+                              <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Enter Subject" required>
                            </div>
                         </div>
                         <div class="mb-3">
-
+                           
                         </div>
                         <div class="text-area col-12 mb-3">
                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                              placeholder="Enter Your Comment"></textarea>
+                           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter Your Comment" ></textarea>
                         </div>
                         <button class=" custom-btn2" type="submit">Submit</button>
                      </form>
                   </div>
                </div>
-
+              
                <div class="dots">
                   <img src="assets/images/dots/dots14.png" alt="Shadow Image" class="contact-dots-2 img-moving-anim3">
                </div>
@@ -2366,9 +2010,7 @@
                            <h5 class="card-title">
                               Event Technology Awards coveted People’s Choice Award voting open
                            </h5>
-                           <p class="card-desc">Voting has opened today for #EventProfs to choose their favourite
-                              #EventTech supplier to win this year’s 10th anniversary edition of the People’s Choice
-                              Award.</p>
+                           <p class="card-desc">Voting has opened today for #EventProfs to choose their favourite #EventTech supplier to win this year’s 10th anniversary edition of the People’s Choice Award.</p>
                            <a class="blog-btn">Read More</a>
                         </div>
                      </div>
@@ -2384,8 +2026,7 @@
                            <h5 class="card-title">
                               Events Industry Council announces Recipients of 2022 Global Awards
                            </h5>
-                           <p class="card-desc">The Events Industry Council (EIC), the global voice of the business
-                              events industry,has today announced the Recipients of its annual Global Awards.</p>
+                           <p class="card-desc">The Events Industry Council (EIC), the global voice of the business events industry,has today announced the Recipients of its annual Global Awards.</p>
                            <a class="blog-btn">Read More</a>
                         </div>
                      </div>
@@ -2401,17 +2042,14 @@
                            <h5 class="card-title">
                               The Business of Events confirms ICC Wales as latest official partner
                            </h5>
-                           <p class="card-desc">The Business of Events has confirmed ICC Wales as its latest official
-                              partner for its 2022 programme. ICC Wales joins the Department for Digital, Culture, Media
-                              & Sport.</p>
+                           <p class="card-desc">The Business of Events has confirmed ICC Wales as its latest official partner for its 2022 programme.  ICC Wales joins the Department for Digital, Culture, Media & Sport.</p>
                            <a class="blog-btn">Read More</a>
                         </div>
-                        <img src="assets/images/dots/dots16.png" alt="Shadow Image"
-                           class="blog-dots-2 img-moving-anim1">
+                        <img src="assets/images/dots/dots16.png" alt="Shadow Image" class="blog-dots-2 img-moving-anim1">
                      </div>
                   </div>
                </div>
-
+               
             </div>
          </div>
          <div class="shape">
@@ -2419,561 +2057,174 @@
          </div>
       </section>
       <!-- blog sec end -->
+      
+      <!-- footer area start -->
+      <footer class="footer-area" style="background-image: url(assets/images/banner/Footer.png);">
+         <div class="container">
+            <div class="footer-top">
+               <div class="row">
+                  <div class=" col-lg-6">
+                     <div class="row">
+                        <div class="col-sm-6 col-lg-8 ">
+                           <div class="footer-info">
+                              <a href="index.html" class="footer-logo">
+                                 <img src="assets/images/logo/footerlogo.png" alt="Footer Logo">
+                              </a>
+                              <p class="footer-desc">
+                                 Join 5,000+ dev and designers professionals for the world’s largest virtual conference series with 4+ fully immersive events covering the newest technology innovations, best practices, and more.
+                              </p>
+                              <ul class="footer-social social">
+                                 <li>
+                                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                                 </li>
+                                 <li>
+                                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                                 </li>
+                                 <li>
+                                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                           <div class="footer-about custom-item">
+                              <h5 class="title">About</h5>
+                              <ul class="about-item">
+                                 <li><a href="">Conference Schedule</a></li>
+                                 <li><a href="">Buy Tickets</a></li>
+                                 <li><a href="">Sponsoring</a></li>
+                                 <li><a href="">Volunteer</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class=" col-lg-6">
+                     <div class="row">
+                        
+                        <div class="col-sm-6">
+                           <div class="footer-enterprise custom-item">
+                              <h5 class="title">Enterprise</h5>
+                              <ul class="enterprise-item">
+                                 <li><a href="">Committees</a></li>
+                                 <li><a href="">Advisory Boards</a></li>
+                                 <li><a href="">Apply to Speak</a></li>
+                                 <li><a href="">Register</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-sm-6">
+                           <div class="footer-contact custom-item">
+                              <h5 class="title">Contact</h5>
+                              <ul class="contact-item">
+                                 <li><a href="">Help Desk</a></li>
+                                 <li><a href="">Comntact Us</a></li>
+                                 <li><a href="">Documentation</a></li>
+                                 <li><a href="">Newsletter</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <hr>
+            <div class="footer-copyright-area text-center pb-3">
+               <span>© 2022 Eventor. All rights reserved. Theme made with passion by jThemes Studio</span> 
+            </div>
+         </div>
+      </footer>
+      <!-- footer area end -->
+      
+      
 
-	<footer id="footer">
-		<div class="footer-top">
-			<div class="container">
-				<div class="row justify-content-between">
-
-					<div class="col-lg-3 col-md-6 footer-contact">
-						<h3><img src="assets/img/white-logo.png" class="footer-logo"
-								alt="Kelas Public Speaking Jogja" />
-						</h3>
-						<p>
-							Wadah pengembangan diri membangun aura positif sekaligus meningkatkan kualitas skill, karir
-							hingga
-							level
-							kehidupan Anda.
-						</p><br>
-						<p>Kami memberikan pelatihan Kelas Public Speaking karena dengan menguasai Public Speaking,
-							mental,
-							perilaku,
-							penampilan hingga sikap Anda terbentuk.</p><br>
-						<h4 class="d-flex justify-content-between">Contact Us<i
-								class='bx bx-chevron-down d-md-none'></i>
-						</h4>
-						<div class="social-link d-flex mt-3">
-							<a href="https://link.dialogika.co/wasap-2597-dialogika-co"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bx bxl-whatsapp"></i></a>
-							<a href="mailto:hello@dialogika.co"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bi bi-envelope"></i></a>
-						</div>
-						<hr />
-						<p>Punya pertanyaan mengenai Dialogika?</p>
-						<br>
-						<p>
-							<strong>Phone:</strong> +62 851-6299-2597<br>
-							<strong>Email:</strong> hello@dialogika.co<br>
-						</p>
-						<br><br>
-						<h4 class="d-flex justify-content-between">Follow Us<i class='bx bx-chevron-down d-md-none'></i>
-						</h4>
-						<div class="social-link d-flex mt-3">
-							<a href="https://link.dialogika.co/twitter"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bi bi-twitter"></i></a>
-							<a href="https://link.dialogika.co/facebook"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bi bi-facebook"></i></a>
-							<a href="https://link.dialogika.co/instagram"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bi bi-instagram"></i></a>
-							<a href="https://link.dialogika.co/linkedin"
-								class="d-flex align-items-center justify-content-center"><i
-									class="bi bi-linkedin"></i></a>
-						</div>
-					</div>
-
-					<div class="col-lg-2 col-md-6 footer-links accordion">
-						<div class="d-none d-md-block">
-							<h4>Best Program</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/basic-plus.html">Online Class</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/first-class.html">Offline Class</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/kids-class.html">Kids Class</a>
-								</li>
-							</ul><br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-best-program" class="d-flex justify-content-between "
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Best Program</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-best-program"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/basic-plus.html">Online Class</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/first-class.html">Offline Class</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../program/kids-class.html">Kids Class</a>
-								</li>
-							</ul>
-						</div><br>
-
-						<div class="d-none d-md-block">
-							<h4>Corporate Program</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/workshop.html">Workshop</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/webinar.html">Webinar</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/class.html">Class</a>
-								</li>
-							</ul><br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-corporate-program" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Corporate Program</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-corporate-program">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/workshop.html">Workshop</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/webinar.html">Webinar</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../corporate/class.html">Class</a>
-								</li>
-							</ul>
-						</div><br>
-
-
-						<div class="widget d-none d-md-block">
-							<h4>Private Program</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/basic-private.html">Online Private</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/first-private.html">Offline Private</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/kids-private.html">Kids Private</a>
-								</li>
-							</ul><br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-private-program" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Private Program</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-private-program"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/basic-private.html">Online Private</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/first-private.html">Offline Private</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../private/kids-private.html">Kids Private</a>
-								</li>
-							</ul>
-						</div><br>
-
-
-						<div class="widget d-none d-md-block">
-							<h4>Career Info</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/registration.html">Team</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../mentor/registration.html">Mentor</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../intern/index.html">Internship</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-career-info" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Career Info</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-career-info"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/registration.html">Team</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../mentor/registration.html">Mentor</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../intern/index.html">Internship</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-
-						<div class="widget d-none d-md-block">
-							<h4>Useful Link</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../blog">Blog Dialogika</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../mentor">Mentor Dialogika</a>
-								</li>
-							</ul>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-useful-link" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Useful Link</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-useful-link"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../blog/index.html">Blog Dialogika</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../mentor/index.html">Mentor Dialogika</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-
-
-					<div class="col-lg-3 col-md-6 footer-links">
-						<div class="widget d-none d-md-block">
-							<h4>Our Service</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/">Counseling</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/mentoring/">Mentoring</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/">Agency</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-our-service" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Our Service</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-our-service"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/">Counseling</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/mentoring/">Mentoring</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/">Agency</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-
-
-						<div class="widget d-none d-md-block">
-							<h4>Event Agency</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/emcee.html">Master of Ceremony</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/host.html">Host</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/moderator.html">Moderator</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-event-agency" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Event Agency</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-event-agency"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/emcee.html">Master of Ceremony</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/host.html">Host</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/agency/moderator.html">Moderator</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-
-
-						<div class="widget d-none d-md-block">
-							<h4>Counseling</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/relationship.html">Relationship</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/parenting.html">Parenting</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/kids.html">Children</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-counseling-program" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>Counseling</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-counseling-program"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/relationship.html">Relationship</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/parenting.html">Parenting</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../service/counseling/kids.html">Children</a>
-								</li>
-							</ul>
-							<br>
-						</div>
-
-
-						<div class="widget d-none d-md-block">
-							<h4>About Dialogika</h4>
-							<ul>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/">About Us</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/faq.html">FAQ</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/help.html">Help Center</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/privacy.html">Privacy Policy</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/terms.html">Terms & Agreements</a>
-								</li>
-							</ul>
-						</div>
-						<div class="d-block d-md-none">
-							<a href="#footer-about-dialogika" class="d-flex justify-content-between"
-								data-bs-toggle="collapse" id="footer-accordion">
-								<h4>About Dialogika</h4><i class='bx bx-chevron-down d-md-none'></i>
-							</a>
-							<ul class="accordion-collapse collapse showw" id="footer-about-dialogika"
-								data-bs-parent=".footer-links">
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/">About Us</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/faq.html">FAQ</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/help.html">Help Center</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/privacy.html">Privacy Policy</a>
-								</li>
-								<li><i class="bx bx-chevron-right"></i>
-									<a href="../about/terms.html">Terms & Agreements</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-md-6 footer-newsletter">
-						<h4 class="d-flex justify-content-between">Join Whatsapp Group Community<i
-								class='bx bx-chevron-down d-md-none'></i></h4>
-						<p>Secara Berkala Kami Akan Bagi-Bagi Tips & Trik Gratis, Dan Info Promo Lainnya</p>
-						<form action="javascript:void" role="form" id="subcriptions" method="post">
-							<input type="tel" name="Surel" placeholder="Nomor Whatsapp"><input type="submit"
-								value="Join Now" onclick="Subcription()">
-						</form>
-						<br><br>
-						<h4 class="d-flex justify-content-between">Payment Method<i
-								class='bx bx-chevron-down d-md-none'></i>
-						</h4>
-						<p><i class="bx bx-chevron-down"></i> Bank Transfer</p>
-						<img src="assets/img/bank.png" />
-						<br><br>
-						<p><i class="bx bx-chevron-down"></i> E-Wallet</p>
-						<img src="assets/img/wallet.png" />
-
-						<div class="card">
-							<div class="card-body">
-								<h6 class="card-subtitle mb-2 text-muted" style="color:#fff;">Telah Terdaftar Oleh</h6>
-								<img src="assets/img/ham.png" class="" /><br>
-								<p>
-									<strong>Nomor:</strong> AHU-0118640.AH.01.11.TAHUN 2022<br>
-									<strong>Registrasi: </strong>4022062334106037<br />
-								</p>
-							</div>
-						</div>
-
-					</div>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="container d-md-flex py-4">
-
-			<div class="me-md-auto text-center text-md-start">
-				<div class="copyright">
-					&copy; Copyright <strong><span>Dialogika</span></strong> | PT. Dialogika Persona Indonesia
-				</div>
-
-			</div>
-			<div class="social-links text-center text-md-right pt-3 pt-md-0">
-				<a href="https://link.dialogika.co/twitter" class="twitter"><i class="bi bi-twitter"></i></a>
-				<a href="https://link.dialogika.co/facebook" class="facebook"><i class="bi bi-facebook"></i></a>
-				<a href="https://link.dialogika.co/instagram" class="instagram"><i class="bi bi-instagram"></i></a>
-				<a href="https://link.dialogika.co/wasap-2597-dialogika-co" class="google-plus"><i
-						class="bx bxl-whatsapp"></i></a>
-				<a href="https://link.dialogika.co/linkedin" class="linkedin"><i class="bx bxl-linkedin"></i></i></a>
-			</div>
-		</div>
-	</footer><!-- End Footer -->
-
+      
       <!-- Modal -->
-      <div class="modal fade popup-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-         tabindex="-1" aria-hidden="true">
+      <div class="modal fade popup-modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog modal-lg popup-dialogue modal-dialog-centered">
             <div class="modal-content popup-content p-4 bg-white">
-               <button type="button" class="btn btn-secondary  ms-auto" data-bs-dismiss="modal"><i
-                     class="fa-solid fa-xmark"></i></button>
-
+               <button type="button" class="btn btn-secondary  ms-auto" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
+               
                <div class="modal-body popup-body">
-                  <iframe width="100%" height="400" src="https://www.youtube.com/embed/1dtzSRlfBDk"
-                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                     allowfullscreen></iframe>
+                  <iframe width="100%" height="400" src="https://www.youtube.com/embed/1dtzSRlfBDk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                </div>
-
+               
             </div>
          </div>
       </div>
-
+      
       <!-- Button trigger modal -->
-
+      
       <!-- Modal 2 -->
       <div class="modal  popup-box fade" id="exampleModal" tabindex="-1" aria-hidden="true">
          <div class="modal-dialog popup-box-dialog modal-dialog-centered">
             <div class="modal-content popup-box-content">
                <div class="popup-card" style="width:100%">
-                  <button type="button" class="btn popup2-btn  ms-auto" data-bs-dismiss="modal"><i
-                        class="fa-solid fa-xmark"></i></button>
+                  <button type="button" class="btn popup2-btn  ms-auto" data-bs-dismiss="modal"><i class="fa-solid fa-xmark"></i></button>
                   <img src="assets/images/popup.png" class="card-img-top" alt="popup-bg">
                   <div class="card-body popup-card-body">
                      <div class="popup-title-area">
                         <p class="popup-sub">October 2, 2023</p>
                         <h5 class="card-title popup-title">Virtual sessions. Eventor Live@MAX</h5>
                      </div>
-                     <a href="#" class="btn popup-play" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                           class="fa-solid fa-play"></i></a>
+                     <a href="#" class="btn popup-play" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-play"></i></a>
                   </div>
-                  <form action="#" class="popup-form">
-                     <div class="row gy-3 mb-3">
-                        <div class="col-lg-6">
-                           <label for="exampleFormControlInput5" class="form-label">Full Name</label>
-                           <input type="text" class="form-control" id="exampleFormControlInput5"
-                              placeholder="Your Full Name" required>
-                        </div>
-                        <div class="col-lg-6">
-                           <label for="exampleFormControlInput6" class="form-label">Email</label>
-                           <input type="email" class="form-control" id="exampleFormControlInput6"
-                              placeholder="Enter Email" required>
-                        </div>
-                        <div class="col-lg-6">
-                           <label for="exampleFormControlInput7" class="form-label">Phone</label>
-                           <input type="text" class="form-control" id="exampleFormControlInput7"
-                              placeholder="Enter Phone" required>
-                        </div>
-                        <div class="col-lg-6">
-                           <label for="exampleFormControlInput8" class="form-label">Conference</label>
-                           <input type="text" class="form-control" id="exampleFormControlInput8"
-                              placeholder="Select Event" required>
-                        </div>
-                     </div>
-                     <button class="custom-btn2">Buy Now</button>
+                              
+                     <div id="eventbrite-widget-container-443112520477"></div>
+
+                     <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+                     
+                     <script type="text/javascript">
+                        var exampleCallback = function() {
+                           console.log('Order complete!');
+                        };
+                     
+                        window.EBWidgets.createWidget({
+                           // Required
+                           widgetType: 'checkout',
+                           eventId: '443112520477',
+                           iframeContainerId: 'eventbrite-widget-container-443112520477',
+                     
+                           // Optional
+                           iframeContainerHeight: 425,  // Widget height in pixels. Defaults to a minimum of 425px if not provided
+                           onOrderComplete: exampleCallback  // Method called when an order has successfully completed
+                        });
+                     </script>
+      
                   </form>
                </div>
             </div>
          </div>
       </div>
-
-
-
+      
+      
+      
    </div>
    <!-- jquery -->
    <script src="assets/js/jquery.min.js"></script>
    <script src="assets/js/jquery.countdown.min.js"></script>
-
+   
    <!-- animation -->
    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
+   
    <!-- magnific popup -->
    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-
+   
    <!-- bootstrap -->
    <script src="assets/js/bootstrap.min.js"></script>
-
+   
    <!-- slick -->
    <script src="assets/js/slick.min.js"></script>
-
+   
    <!-- parallax js -->
    <script src="assets/js/parallax.min.js"></script>
-
+   
    <!-- javaScript -->
    <script src="assets/js/main.js"></script>
-   
 
    <!-- color switch -->
    <script src="color-switch/switch.js"></script>
-
-   <!-- Vendor JS Files -->
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
-	<script src="assets/vendor/purecounter/purecounter.js"></script>
-	<script src="assets/vendor/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
-	<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-	<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-
-
-	<!-- Vendor Epora JS -->
-	<script src="assets/vendor/epora/js/vendor/jquery.js"></script>
-	<script src="assets/vendor/epora/js/vendor/waypoints.js"></script>
-	<script src="assets/vendor/epora/js/bootstrap-bundle.js"></script>
-	<script src="assets/vendor/epora/js/meanmenu.js"></script>
-	<script src="assets/vendor/epora/js/slick.js"></script>
-	<script src="assets/vendor/epora/js/magnific-popup.js"></script>
-	<script src="assets/vendor/epora/js/parallax.js"></script>
-	<script src="assets/vendor/epora/js/backtotop.js"></script>
-	<script src="assets/vendor/epora/js/nice-select.js"></script>
-	<script src="assets/vendor/epora/js/counterup.js"></script>
-	<script src="assets/vendor/epora/js/wow.js"></script>
-	<script src="assets/vendor/epora/js/isotope-pkgd.js"></script>
-	<script src="assets/vendor/epora/js/imagesloaded-pkgd.js"></script>
-	<script src="assets/vendor/epora/js/ajax-form.js"></script>
-	<script src="assets/vendor/epora/js/main.js"></script>
-
+   
+   
 </body>
-
 </html>
