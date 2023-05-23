@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Gordita-400";
+  src: url("../fonts/Gordita-Regular.woff2") format("woff2"), url("../fonts/Gordita-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+
+  --tp-ff-body: Gordita-400;
+}
+
+header {
+  font-family: Gordita-400;
+  font-size: 14px;
+  font-weight: normal;
+  color: #231F20;
+  line-height: 26px;
+}
+footer {
+  font-family: Gordita-400;
+  font-size: 14px;
+  font-weight: normal;
+  color: #231F20;
+  line-height: 26px;
+}
