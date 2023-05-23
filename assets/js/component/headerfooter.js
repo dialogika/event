@@ -306,49 +306,6 @@ class Footer extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-<!-- ======= Counter-Area ======= -->
-  <section class="tp-counter-area pt-90" style="background-color:#212121;">
-    <div class="counter-b-border">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-3 col-md-6">
-            <div class="counter-item mb-70">
-              <div class="counter-item__content counter-white-text">
-                <h4 class="counter-item__title counter-left-title"><span class="counter">700</span>+</h4>
-                <p>Member Se Indonesia</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <div class="counter-item mb-70">
-              <div class="counter-item__content counter-white-text">
-                <h4 class="counter-item__title counter-left-title"><span class="counter">2</span>+</h4>
-                <p>Pengalaman Mengajar</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <div class="counter-item mb-70">
-              <div class="counter-item__content counter-white-text">
-                <h4 class="counter-item__title counter-left-title"><span class="counter">9</span>+</h4>
-                <p>Professional Mentor</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-md-6">
-            <div class="counter-item mb-70">
-              <div class="counter-item__content counter-white-text">
-                <h4 class="counter-item__title counter-left-title"><span class="counter">39</span>+</h4>
-                <p>Education Event</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- ======= Counter-Area-End ======= -->
-
 <!-- ======= Footer ======= -->
   <footer id="footer">
 
