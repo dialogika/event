@@ -36,19 +36,18 @@ class Header extends HTMLElement {
             <ul>
               <li class="dropdown"><a href="#"><span>Online</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
+                  <li><a href="../program/basic-play.html">Basic Play <span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
                   <li><a href="../program/basic-plus.html">Basic Plus</a></li>
-                  <li><a href="../program/kids-plus.html">Kids Plus</a></li>
-                  <li><hr/></li>
                   <li><a href="../program/basic-private.html">Basic Private</a></li>
-                  <li><a href="../program/basic-plus.html">Kids Private</a></li>
                   <li><hr/></li>
-                  <li><a href="../program/action-play.html">Action Play</a></li>
                   <li><a href="../program/kids-play.html">Kids Play</a></li>
+                  <li><a href="../program/kids-plus.html">Kids Plus<span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
+                  <li><a href="../program/kids-private.html">Kids Private</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#"><span>Offline</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../program/first-class.html">First Class</a></li>
+                  <li><a href="../program/first-class.html">First Class <span class="badge rounded-pill text-bg-success">Best Buy</span></a></li>
                   <li><a href="../program/first-kids.html">First Kids</a></li>
                   <li><hr/></li>
                   <li><a href="../program/first-private.html">First Private</a></li>
@@ -57,10 +56,10 @@ class Header extends HTMLElement {
               <li><hr/></li>
               <li class="dropdown"><a href="#"><span>Area</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="../area/yogyakarta.html">Yogyakarta</a></li>
-                  <li><a href="../area/bintaro.html">Bintaro</a></li>
-                  <li><a href="../area/surabaya.html">
-                    <span>Surabaya</span> 
+                  <li><a href="../program/index-jogja.html">Yogyakarta</a></li>
+                  <li><a href="../program/index-tangsel.html">Bintaro</a></li>
+                  <li><a href="../program/index-surabaya.html" onclick="return false;">
+                    <span>Surabaya</span>
                     <span class="badge rounded-pill text-bg-secondary">Coming Soon</span></a>
                   </li>
                 </ul>
@@ -76,7 +75,7 @@ class Header extends HTMLElement {
         <i class="bi bi-list d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"></i>
        </nav><!-- .navbar -->
 
-      <a href="#favorite" class="appointment-btn">Promo <span class="d-none d-md-inline">Class</span></a>
+      <a href="../promo/" class="appointment-btn">Promo <span class="d-none d-md-inline">Class</span></a>
 
     </div>
   </header><!-- End Header -->
@@ -108,19 +107,25 @@ class Header extends HTMLElement {
                     <i class='bx bxs-chevron-down bx-tada'></i>
                   </div>
                     <div class="collapse" id="program-online">
-                      <a href="../program/basic-plus.html"><div class="card card-body">Basic Plus</div></a>
+                      <a href="../program/basic-play.html"><div class="card card-body">Basic Play</div></a>
+                      <a href="../program/basic-plus.html">
+                        <div class="card card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>Basic Plus</span>
+                                <span class="badge bg-warning rounded-pill text-dark">Best Buy</span>
+                            </div>
+                        </div>
+                      </a>
+                      <a href="../program/basic-private.html"><div class="card card-body">Basic Private</div></a>
+                      <hr/>
+                      <a href="../program/kids-play.html"><div class="card card-body">Kids Play</div></a>
                       <a href="../program/kids-plus.html"><div class="card card-body">
                         <div class="justify-content-between d-flex">
                           <span>Kids Plus </span>
                           <span class="badge bg-info rounded-pill">New</span>
                         </div>
                       </div></a>
-                      <hr/>
-                      <a href="../program/basic-private.html"><div class="card card-body">Basic Private</div></a>
                       <a href="../program/kids-plus.html"><div class="card card-body">Kids Private</div></a>
-                      <hr/>
-                      <a href="../program/action-play.html"><div class="card card-body">Action Play</div></a>
-                      <a href="../program/kids-play.html"><div class="card card-body">Kids Play</div></a>
                     </div>
                 </div>
               </a>
@@ -131,7 +136,14 @@ class Header extends HTMLElement {
                     <i class='bx bxs-chevron-down bx-tada'></i>
                   </div>
                     <div class="collapse" id="program-offline">
-                      <a href="../program/first-class.html"><div class="card card-body">First Class</div></a>
+                      <a href="../program/first-class.html">
+                        <div class="card card-body">
+                            <div class="justify-content-between d-flex">
+                                <span>First Class</span>
+                                <span class="badge bg-warning rounded-pill text-dark">Best Buy</span>
+                            </div>
+                        </div>
+                      </a>
                       <a href="../program/first-kids.html"><div class="card card-body">
                         <div class="justify-content-between d-flex">
                           <span>First Kids </span>
@@ -256,7 +268,7 @@ class Footer extends HTMLElement {
               </a>
               <ul class="accordion-collapse collapse show" id="footer-corporate-program">
                 <li><i class="bx bx-chevron-right"></i>
-                  <a href="../area/yogyakarta.html">
+                  <a href="../program/index-jogja.html">
                     Yogyakarta
                     <span class="badge rounded-pill text-bg-info">Best Selling</span>
                   </a>
@@ -265,7 +277,7 @@ class Footer extends HTMLElement {
                   <a href="../corporate/index.html">Corporate</a>
                 </li>
                 <li><i class="bx bx-chevron-right"></i>
-                  <a href="../area/bintaro.html">
+                  <a href="../program/index-tangsel.html">
                     Bintaro
                     <span class="badge rounded-pill text-bg-warning">Private Only</span>
                   </a>
