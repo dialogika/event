@@ -407,10 +407,10 @@ class Footer extends HTMLElement {
             <br><br>
             <h4 class="d-flex justify-content-between">Payment Method<i class='bx bx-chevron-down d-md-none'></i></h4>
             <p><i class="bx bx-chevron-down"></i> Bank Transfer</p>
-            <img src="assets/img/bank.webp" />
+            <img src="assets/img/bank.webp" style="width:100%;"/>
             <br><br>
             <p><i class="bx bx-chevron-down"></i> E-Wallet</p>
-            <img src="assets/img/wallet.webp" />
+            <img src="assets/img/wallet.webp" style="width:100%;"/>
 
             <ul class="list-group border-warning" style="background: transparent;">
               <li class="list-group-item">
