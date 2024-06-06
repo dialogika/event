@@ -58,6 +58,7 @@ class Header extends HTMLElement {
                 <ul>
                   <li><a href="../program/index-jogja.html">Yogyakarta</a></li>
                   <li><a href="../program/index-tangsel.html">Bintaro</a></li>
+                  <li><a href="../program/index-solo.html">Solo</a></li>
                   <li><a href="../program/index-surabaya.html" onclick="return false;">
                     <span>Surabaya</span>
                     <span class="badge rounded-pill text-bg-secondary">Coming Soon</span></a>
