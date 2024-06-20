@@ -223,7 +223,7 @@ class Footer extends HTMLElement {
             <br>
             <p>
               <strong>Phone:</strong> +62 857-8000-7799<br>
-              +62 851-6299-2597<br>
+              <strong>Phone:</strong> +62 851-6299-2597<br>
               <strong>Email:</strong> hello@dialogika.co<br>
             </p>
             <br><br>
