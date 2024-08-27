@@ -247,7 +247,6 @@ h6 {
   display: flex;
   list-style: none;
   align-items: center;
-  border-radius: 0px 0px 10px 10px;
 }
 
 .navbar li {
@@ -271,7 +270,6 @@ h6 {
   transition: 0.3s;
   border-bottom: 2px solid #fff;
   padding: 5px 2px;
-  
 }
 
 .navbar a i,
@@ -300,8 +298,7 @@ h6 {
   opacity: 0;
   visibility: hidden;
   background: #fff;
-  /*  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);*/
-  box-shadow: 0px 5px 16px -6px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
   transition: 0.3s;
 }
 
@@ -393,8 +390,7 @@ h6 {
   width: calc(100% - 70px);
 }
 
-.navbar-canvas .offcanvas-body {
-}
+
 
 .navbar-canvas .card {
   margin: 10px;
@@ -414,14 +410,6 @@ h6 {
   -moz-box-shadow: 0px 5px 16px -6px rgba(114, 4, 207, 1);
 }
 
-.navbar-canvas .card-body.zero {
-  border-radius: 10px;
-  color:#aaaaaa;
-  background: #fff;
-  text-align:center;
-  border-color:#aaaaaa;
-}
-
 .navbar-canvas .offcanvas-header img.offcanvas-title {
   font-size: 30px;
   max-height: 30px;
@@ -435,15 +423,16 @@ h6 {
   padding: 20px 0;
   background-color: #f1f7fd;
   min-height: 40px;
-  margin-top: 140px;
+  margin-top: 130px;
   color:#0B2B6A;
+  margin-bottom: -150px;
   position: relative;
   z-index: 1;
 }
 
 @media (max-width: 992px) {
   .breadcrumbs {
-    margin-top: 130px;
+    margin-top: 127px;
   }
 }
 
@@ -500,7 +489,7 @@ h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url('https://i.ytimg.com/vi/xLYoj-yJK20/maxresdefault.jpg') top center;
+  background: url('https://www.theladders.com/wp-content/uploads/stress-190717.jpg') top center;
   background-size: cover;
   margin-bottom: -70px;
   z-index: 2;
@@ -637,11 +626,6 @@ section {
   background-color: #f1f7fd;
 }
 
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
@@ -719,7 +703,7 @@ section {
 }
 
 .section-title span {
-  color: #0163ea;
+  color: #ffd400;
 }
 
 .section-title p {
@@ -755,6 +739,7 @@ section {
     padding: 6px 18px;
   }
 }
+
 
 
 
@@ -869,7 +854,7 @@ section {
 # Clients
 --------------------------------------------------------------*/
 .clients .clients-slider .swiper-slide img {
-  opacity: 1;
+  opacity: 0.5;
   transition: 0.3s;
 }
 
@@ -900,14 +885,20 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about {
+  background: rgb(241,247,253);
+  background: linear-gradient(0deg, rgba(241,247,253,1) 0%, rgba(241,247,253,1) 19%, rgba(255,255,255,1) 100%);
+}
+
 .about .icon-boxes h4 {
-  font-size: 18px;
+  font-size: 28px;
   color: #4b7dab;
   margin-bottom: 15px;
+  height: 90vh;
 }
 
 .about .icon-boxes h3 {
-  font-size: 28px;
+  font-size: 35px;
   font-weight: 700;
   color: #0b2b6a;
   margin-bottom: 15px;
@@ -979,9 +970,11 @@ section {
 
 .about .video-box {
   background: url("../img/about.webp") center center no-repeat;
-  background-size: cover;
+  background-size: 75%;
   min-height: 500px;
 }
+
+
 
 .about .play-btn {
   width: 94px;
@@ -1079,6 +1072,11 @@ section {
     margin: 0 15px 0 0;
     padding: 6px 18px;
   }
+  .about .video-box {
+  background: url("../img/about.webp") center center no-repeat;
+  background-size: cover;
+}
+
 }
 
 @keyframes pulsate-btn {
@@ -1369,11 +1367,6 @@ section {
   animation: fadeIn 0.5s ease-out;
 }
 
-.departments .tab-pane .details img {
-    width: 600px;
-    height: 525px;
-}
-
 .departments .details h3 {
   font-size: 26px;
   font-weight: 700;
@@ -1416,7 +1409,6 @@ section {
   -moz-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
 }
 
-
 @media (max-width: 992px) {
   .departments .nav-link {
     border: 0;
@@ -1436,9 +1428,7 @@ section {
 /*--------------------------------------------------------------
 # Inner Page
 --------------------------------------------------------------*/
-.inner-page {
 
-}
 
 .inner-page img {
   max-height: 120px;
@@ -1970,10 +1960,7 @@ section {
   border-radius: 50px;
 }
 
-@media (max-width: 767px) {
-  .faq .video-bg {
-  }
-}
+
 
 .faq .videos-faq .swiper-slide {
   border-radius: 10px;
@@ -2472,11 +2459,11 @@ section {
   -moz-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
 }
 
-
 /*baru*/
 
 .form-presensi button.presensi-button {
   color: #fff;
+  border:0px;
   border-radius: 50px;
   padding: 8px 25px;
   white-space: nowrap;
@@ -2487,4 +2474,20 @@ section {
   box-shadow: 0px 5px 16px -6px rgba(114, 4, 207, 1);
   -webkit-box-shadow: 0px 5px 16px -6px rgba(114, 4, 207, 1);
   -moz-box-shadow: 0px 5px 16px -6px rgba(114, 4, 207, 1);
+}
+
+.form-presensi button.presensi-button:hover {
+  background: linear-gradient(to bottom, #0b2b6a 5%, #0f61a8 100%);
+  background-color: #0b2b6a;
+  color: #fff;
+  box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+}
+
+@media (max-width: 768px) {
+  .form-presensi button.presensi-button {
+    margin: 0 15px 0 0;
+    padding: 6px 18px;
+  }
 }
