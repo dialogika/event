@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     
     buttonLink.addEventListener('mouseenter', () => {
-      buttonLinkYellow.style.backgroundColor = 'transparent'; 
+      buttonLinkYellow.style.backgroundColor = '#FFFFFF'; 
     });
   
     

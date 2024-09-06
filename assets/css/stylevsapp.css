@@ -7713,8 +7713,8 @@ Box
 	border-radius: 50px;
     height: 60px;
     width: 100%;
-    background-color: #ffd400;
-    color: #ffffff;
+    background-color: #F6B12B;
+    color: #000000;;
     border: none;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
@@ -7758,7 +7758,7 @@ Box
     text-decoration: none;
     transform: translateY(-2px);
     background-color: #F6B12B;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -7770,7 +7770,7 @@ Box
     text-decoration: none;
     transform: translateY(-2px);
     background-color: #F6B12B;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transform: translateY(-2px);
 }
@@ -8269,7 +8269,7 @@ Box
 }
 
 .section--skin-1 {
-    background-image: url(../img/vsapp/sectin2back.png);
+    background-image: url("../img/vsapp/sectin2back.png");
 	background-size: cover; /* Ensures the image covers the entire area */
 	background-position: center; /* Centers the image */
 	background-repeat: no-repeat; /* Ensures the image doesn't repeat */
