@@ -10,23 +10,29 @@
 <body>
     <h2>🚀 Upload PDF 🚀 ClickUp 🚀</h2>
     
+     <!-- Form untuk mengumpulkan data dari pengguna -->
     <form id="uploadForm">
+        <!-- Input untuk nama -->
         <label for="name">Nama:</label>
         <input type="text" id="name" name="name" required>
         <br><br>
-        
+
+        <!-- Input untuk umur -->
         <label for="umur">Umur:</label>
         <input type="number" id="umur" name="umur" required>
         <br><br>
 
+         <!-- Input untuk tanggal lahir -->
         <label for="birthDate">Birth Date:</label>
         <input type="date" id="birthDate" name="birthDate" required>
         <br><br>
 
+        <!-- Input untuk email -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
         <br><br>
 
+        <!-- Pilihan untuk tipe kerja (WFO/WFH) -->
         <label for="workType">WFO/WFH:</label>
         <select id="workType" name="workType" required>
             <option value="82f98b19-00a7-4a11-b769-d60c49995d75">WFO</option>
@@ -34,8 +40,10 @@
             <option value="57fa5521-b794-462f-b771-82b0d1c1a773">HYBRID</option>
         </select>
         <br><br>
-        
+
+        <!-- Checkbox untuk memilih channel komunikasi -->
         <label for="channel">Channel:</label>
+         <!-- Setiap channel memiliki nilai yang berbeda untuk disimpan di database -->
         <div id="channel">
             <label><input type="checkbox" name="channel" value="6fe7288e-bde8-481e-a4d6-1a6513d969f0"> Whatsapp</label><br>
             <label><input type="checkbox" name="channel" value="b68ee282-0a93-4a66-abf3-eb168d81d4bf"> Instagram</label><br>
@@ -44,14 +52,16 @@
         </div>
         <br><br>
 
+        <!-- Input untuk URL LinkedIn -->
         <label for="linkedin">LinkedIn URL:</label>
             <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/your-profile" required>
         <br><br>
 
+        <!-- Input untuk lokasi pengguna -->
         <label for="location">Location:</label>
         <input type="text" id="location" name="location" required>
         
-        
+        <!-- Dropdown untuk memilih posisi pekerjaan -->
         <label for="position">Position:</label>
         <select id="position" name="position" required>
             <option value="f6f8a0ea-187f-461b-afe0-3eeca2b53b07">Assistant CEO</option>
@@ -70,18 +80,21 @@
             <option value="2b1eb9ea-ed05-415c-ae7f-21fee1dea57a">People Development</option>
             <option value="96a682a0-1163-4131-8303-fdb731565c6d">Video Editor</option>
             <option value="93cb93c5-fb2a-4efc-aa08-4bb0baebc5de">Brand Ambassador</option>
+            <!-- Tambahkan opsi lainnya sesuai kebutuhan -->
         </select>
         <br><br>
 
-        
+        <!-- Input textarea untuk motivasi -->
         <label for="motivate">Motivasi:</label>
         <textarea id="motivate" name="motivate" required></textarea>
         <br><br>
-        
+
+        <!-- Input untuk mengunggah file PDF -->
         <label for="pdf">Upload PDF:</label>
         <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
         <br><br>
-        
+
+        <!-- Tombol submit untuk mengirimkan form -->
         <button type="submit">Submit</button>
     </form>
 
@@ -98,7 +111,7 @@
         </svg>
         <p>File berhasil diunggah!</p>
     </div>
-
+    <!-- Menghubungkan file JavaScript untuk menangani event dan pengunggahan -->
     <script src="assets/js/clickup-task.js"></script>
 </body>
 </html>

@@ -34,6 +34,8 @@
  *	2. Blocks
  *		- 2.1. Accordion
  *		- 2.2. Box
+
+ 
  *		- 2.3. Button
  *		- 2.4. Carousel
  *		- 2.5. Contact Form
@@ -155,6 +157,7 @@ a {
  */
 a:active,
 a:hover {
+	
 	outline-width: 0;
 }
 /* Text-level semantics
@@ -184,6 +187,12 @@ strong {
 b,
 strong {
 	font-weight: bolder;
+}
+
+
+.breadcrumbs{
+	margin-bottom: 0px;
+    margin-top: 140px;
 }
 /**
  * Add the correct font style in Android 4.3-.
@@ -7570,20 +7579,54 @@ body.logged-in .YouTubePopUp-Wrap {
 	background: rgba(51, 51, 51, 0.9);
 }
 /* ==========================================================================
-   Block
-   ========================================================================== */
+Box
+ ========================================================================== */
+
+
+.box {
+	border-radius: 14px;
+    background: #ffffff;
+    width: 75px;
+    height: 75px;
+    box-shadow: 0px 13px 20px 4px rgb(90 90 90 / 75%);
+    display: flex;
+    text-align: center;
+    line-height: 75px;
+    margin-right: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    transform: scale(1.1); /* Slightly scale up on hover */
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+
+.box svg {                              
+    width: 40px;                      
+    height: 40px;                      
+    fill: #F6B12B;                      
+    transition: fill 0.3s ease;         
+}
+
 /* ==========================================================================
    Block: Accordion
    Dependencies: no dependencies
    ========================================================================== */
 .accordion__item {
-    -webkit-box-shadow: 0px 1px 4px 0px rgba(204, 204, 204, 0.75);
-    box-shadow: 0px 1px 4px 0px rgba(204, 204, 204, 0.75);
-    /* padding: 0 40px 0 20px; */
+	width: 100%;
+    padding-bottom: 20px;
 }
 
 .accordion__title {
-	gap: 1rem;
+	box-shadow: 0px 13px 20px 4px rgb(90 90 90 / 75%);
+	height: 100px;
+	background: #FFFFFF;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+    gap: 1rem;
     font-size: 16px;
     margin: 0;
     padding: 25px 20px 25px 20px;
@@ -7596,6 +7639,13 @@ body.logged-in .YouTubePopUp-Wrap {
     justify-content: space-between;
 }
 
+.accordion__title svg {
+	flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    fill: #F6B12B;
+}
+
 .accordion__icon-wrapper {
 	width: 5%;
     /* display: flex; */
@@ -7603,6 +7653,14 @@ body.logged-in .YouTubePopUp-Wrap {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+
+.accordion__icon-wrapper svg{
+	flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    fill: #F6B12B;
+
 }
 
 .accordion__icon {
@@ -7617,8 +7675,12 @@ body.logged-in .YouTubePopUp-Wrap {
 }
 
 .accordion__content {
+	box-shadow: 0px 13px 20px 4px rgb(90 90 90 / 75%);
+	border-bottom-left-radius: 14px;
+	border-bottom-right-radius: 14px;
+	background-color: #FFFFFF;
     display: none;
-    padding: 15px 20px 30px 20px;
+	padding: 40px 20px 30px 20px;
     line-height: 1.5;
     font-size: 14px;
 }
@@ -7629,41 +7691,54 @@ body.logged-in .YouTubePopUp-Wrap {
 
 
 /* ==========================================================================
-   Block: Box
+   Block: Button
+   
    Dependencies: no dependencies
    ========================================================================== */
-.box {
-	background: white;
-	width: 75px;
-	height: 75px;
-	-webkit-box-shadow: 0px 1px 4px 0px rgba(204, 204, 204, 0.75);
-	box-shadow: 0px 1px 4px 0px rgba(204, 204, 204, 0.75);
-	display: inline-block;
-	zoom: 1;
-	*display: inline;
-	text-align: center;
-	line-height: 75px;
-	margin-right: 15px;
+
+
+/* Button Edit*/
+
+
+.button--small {
+	font-size: 14px;
+	padding: 8px 16px;
 }
 
-.box__icon {
-	height: 40px;
-	vertical-align: middle;
+.button--inline {
+	display: inline-block;
 }
-/* ==========================================================================
-   Block: Button
-   Dependencies: no dependencies
-   ========================================================================== */
-.button__input,
+
+.button__linkyellow {
+	border-radius: 50px;
+    height: 60px;
+    width: 100%;
+    background-color: #ffd400;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(9 53 123);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
 .button__link {
+	background-color: white;
 	border-radius: 50px;
 	height: 60px;
 	width: 100%;
-	background:#ffd400;
-	color: black;
+	color: #000000;
 	border: none;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	outline: none;
 	font-weight: 600;
 	letter-spacing: 0.01em;
@@ -7672,28 +7747,73 @@ body.logged-in .YouTubePopUp-Wrap {
 	display: block;
 	line-height: 60px;
 	text-align: center;
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(9 53 123);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
+
+.button__linkyellow:hover{
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(10 47 115);
+    background-color: #07276B;
+    color: #ffd400;
+    text-decoration: none;
+    transform: translateY(-2px);
+    background-color: #F6B12B;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.button__link:hover {
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(10 47 115);
+    background-color: #07276B;
+    color: #ffd400;
+    text-decoration: none;
+    transform: translateY(-2px);
+    background-color: #F6B12B;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.button__link:hover + .button__linkyellow {
+	background-color: transparent; /* Menjadi transparan saat di-hover */
+	box-shadow: 2px 2px 6px #ffd400, -2px -2px 6px #ffd400; /* Efek glowing saat hover */
+}
+
+.button__link:active,
+.button__linkyellow:active {
+	transform: translateY(1px); /* Geser sedikit ke bawah saat aktif */
+	box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2), inset -2px -2px 6px rgba(255, 255, 255, 0.7);
+}
+
+
+/* Button Edit End */
+
 
 .button--small .button__input,
 .button--small .button__link {
-	height: 50px;
-	line-height: 50px;
+	height: 60px;
+	line-height: 60px;
 }
+
 
 .button--dark .button__input,
 .button--dark .button__link {
 	background: #14171c;
 }
 
+
 .pricing--featured .button__input,
 .pricing--featured .button__link {
 	background: #1eb858;
 }
 
+
 .button--blue .button__input,
 .button--blue .button__link {
 	background: #ffffff;
 }
+
 
 .button--transparent .button__input,
 .button--transparent .button__link {
@@ -7707,22 +7827,19 @@ body.logged-in .YouTubePopUp-Wrap {
 .button--inline {
 	display: inline-block;
 	vertical-align: top;
-	margin-right: 30px;
+	
 }
 
 .button--inline:last-child {
 	margin: 0;
 }
 
+.button__linkyellow,
 .button--inline .button__link,
 .button--inline .button__input {
-	padding: 0 50px;
+	padding: 0 70px;
 }
 
-.button--shadow {
-	border-radius: 50px;
-	box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.2);
-}
 
 .button--subscribe {
 	-webkit-box-shadow: 0px 2px 10px 0px rgba(16, 16, 16, 0.86);
@@ -7862,24 +7979,37 @@ body.logged-in .YouTubePopUp-Wrap {
 }
 
 .device__image {
-	border-radius: 40px;
-	-webkit-box-shadow: 0px 2px 75px 0px rgba(0, 0, 12, 0.5);
-	box-shadow: 0px 2px 75px 0px rgba(0, 0, 12, 0.5);
+	background: black;
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 2px 75px 0px rgba(0, 0, 12, 0.5);
+    box-shadow: 3px 3px 9px 6px rgba(0, 0, 12, 0.5);
 }
 /* ==========================================================================
    Block: Download Button
    Dependencies: no dependencies
    ========================================================================== */
 .download-button {
-	background-color: white;
-	position: relative;
-	padding: 20px 20px 20px 80px;
-	display: block;
-	max-width: 275px;
-	margin: 0 auto 0 auto;
-	-webkit-box-shadow: 0px 2px 8px 0px rgba(221, 221, 221, 0.75);
-	box-shadow: 0px 2px 8px 0px rgba(221, 221, 221, 0.75);
+    border-radius: 14px;
+    background-color: white;
+    position: relative;
+    padding: 20px 20px 20px 80px;
+    display: block;
+    max-width: 275px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 2px 8px 0px rgba(221, 221, 221, 0.75);
+    box-shadow: 0px 2px 8px 0px rgb(90 90 90 / 75%);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Tambahkan transisi transform */
 }
+
+.download-button:hover {
+   
+    -webkit-box-shadow: 0px 4px 12px 0px rgba(221, 221, 221, 0.75); /* Bayangan lebih besar saat hover */
+    box-shadow: 0px 4px 12px 0px rgb(90 90 90 / 75%); /* Bayangan lebih besar saat hover */
+    color: white; /* Ganti warna teks saat hover */
+    transform: scale(1.1); /* Memperbesar tombol saat hover */
+}
+
+
 
 .download-button__icon {
 	height: 40px;
@@ -8122,25 +8252,28 @@ body.logged-in .YouTubePopUp-Wrap {
    Dependencies: no dependencies
    ========================================================================== */
 .hero {
-	padding-top: 150px;
-	background-image: url("../assets/img/common/backgrounds/hero.jpg");
+	padding-bottom: 50px;
+	background-image: url("../img/vsapp/background.png");
 	background-size: cover;
 	background-position: center center;
 }
 
 .hero--skin-1 {
-	background-image: url("../../assets/vsapp/latar-halaman-1.1.webp");
-	padding: 150px 0;
+	background-image: url("../img/vsapp/background.png");
 }
 
-.hero--skin-2 {
-	background-image: url("../assets/img/common/backgrounds/hero-3.jpg");
-	padding: 150px 0;
-	min-height: 740px;
-}
+
 
 .hero--center {
 	text-align: center;
+}
+
+.section--skin-1 {
+    background-image: url(../img/vsapp/sectin2back.png);
+	background-size: cover; /* Ensures the image covers the entire area */
+	background-position: center; /* Centers the image */
+	background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+	
 }
 /* ==========================================================================
    Block: Input
@@ -8316,11 +8449,23 @@ body.logged-in .YouTubePopUp-Wrap {
    Block: List
    Dependencies: no dependencies
    ========================================================================== */
+
+
 /* General List Styling */
+
+
+
+.list--check{
+    gap: 1rem;
+} 
+
+
 .list {
 	margin-bottom: 40px;
 	position: relative;
 }
+
+
 
 
 /* Boxed List Items */
@@ -8332,12 +8477,39 @@ body.logged-in .YouTubePopUp-Wrap {
 /* General List Item Styling */
 .list__item {
 	gap: 1rem;
-	display: flex;
-	padding: 7px 0 7px 25px;
-	line-height: 25px;
-	font-size: 16px;
-	position: relative; /* Ensure proper positioning for :before */
+    display: flex;
+    padding: 10px 20px 10px 20px;
+    line-height: 25px;
+    font-size: 16px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
+
+.list__itema svg {
+	flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    fill: #F6B12B;
+}
+
+
+
+li.list__itema {
+	border-radius: 14px;
+    padding: 25px;
+    gap: 1rem;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 13px 20px 4px rgb(90 90 90 / 75%);
+}
+
+li.list__itema p{
+	margin: 0;
+}
+
 
 /* Logo Link Styling */
 .logo__link {
@@ -9078,6 +9250,7 @@ a[href^="https://maps.google.com/maps"] {
    Dependencies: no dependencies
    ========================================================================== */
 .screens-preview {
+	border-radius: 14px;
 	padding: 20px;
 	border: 1px dotted rgba(183, 184, 184, 0.5);
 	max-width: 350px;
@@ -9094,6 +9267,7 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .screens-preview__primary {
+	border-radius: 14px;
 	z-index: 10;
 	position: relative;
 	-webkit-box-shadow: 0px 5px 20px 0px rgba(86, 86, 86, 0.6);
@@ -9101,6 +9275,7 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .screens-preview__secondary {
+	border-radius: 14px;
 	position: absolute;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
@@ -9138,19 +9313,45 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 .section-subtitle--hero {
+	font-family: 'Poppins';
+	font-size: 16px;
 	text-transform: none;
-	color: rgb(0, 0, 0);
-	opacity: .3;
+	color: rgb(255, 255, 255);
+	opacity:
 }
+
+.section-title {
+    font-size: 48px; /* Adjust font size as needed */
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Allows positioning for the highlight */
+    line-height: 1.2; /* Adjust line height for spacing */
+}
+
+/* .linemodif{
+	color: #000000;
+    height: 10px;
+    align-content: end;
+    background-color: #a8ebc5;
+    position: relative;
+    display: inline-flex;
+    box-decoration-break: clone;
+    align-items: flex-end;
+} */
+
+
 /* ==========================================================================
    Block: Section Title
    Dependencies: no dependencies
    ========================================================================== */
 .section-title {
-	font-size: 26px;
+	color: black;
+	font-family: 'Poppins';
+	font-size: 40px;
 	font-weight: 700;
 	margin-bottom: 20px;
-	line-height: 34px;
+
 }
 
 .section-title--center {
@@ -9166,7 +9367,7 @@ a[href^="https://maps.google.com/maps"] {
    Dependencies: Fontello.less
    ========================================================================== */
 .section {
-	padding: 90px 0;
+	/* padding: 90px 0; */
 	position: relative;
 }
 
@@ -9178,26 +9379,6 @@ a[href^="https://maps.google.com/maps"] {
 	background-color: #1c57ff;
 	padding: 115px 0;
 }
-
-.section--skin-1 {
-	background-image: url("../../assets/vsapp/sectin2back.webp");
-	background-size: 100% 965px;
-	
-	background-repeat: no-repeat;
-}
-
-.section--skin-2 {
-	background-image: url("../assets/img/common/backgrounds/skin-2.jpg");
-	background-size: 100% 965px;
-	background-position: center 130px;
-	background-repeat: no-repeat;
-}
-
-.section--skin-3 {
-	background-image: url("../assets/img/common/backgrounds/skin-3.jpg");
-	background-repeat: repeat;
-}
-
 .section--large {
 	padding: 170px 0;
 }
@@ -9827,7 +10008,7 @@ a[href^="https://maps.google.com/maps"] {
 }
 
 div.video:before {
-	background-image: url('../../assets/vsapp/garis gradient radial.png'); 
+	background-image: url('../img/vsapp/garis-gradient-radial.png'); 
     background-size: cover; 
     background-position: center; 
 	display: block;
@@ -10063,9 +10244,10 @@ div.video:before {
 }
 
 @media all and (max-width: 768px) {
-	.box {
-		margin: 0;
-		padding-left: 0;
+	
+
+	.box:hover {
+		transform: perspective(500px) scale(1.1);
 	}
 
 	.contact-form {
@@ -10213,3 +10395,440 @@ div.video:before {
 		margin-bottom: 20px;
 	}
 }
+
+/*--------------------------------------------------------------
+# new
+--------------------------------------------------------------*/
+.form-clickup-section{
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	padding: 40px;
+}
+
+
+.form-clickup-title{
+	display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+
+.container-clickup{
+	background: red;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.from-maps{
+	gap: 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+}
+
+.uploadForm1{
+    border-radius: 8px;
+    background-color: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#uploadForm{
+	gap: 1rem;
+    display: flex;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 5px 16px -6px rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+}
+
+
+.form-clickup-section1{
+	margin-top: 2rem;
+    display: flex;
+}
+
+.wrap-maps{
+	width: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fromright{
+	display: flex;
+    gap: 1rem;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fromleft{
+	display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/* Gaya untuk input file upload */
+#pdfUpload {
+	padding: 10px;
+    border: 2px solid #d8e6fe;
+    border-radius: 14px;
+    background-color: #d8e6fe;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+#pdfUpload:hover {
+    background-color: #d8e6fe;
+}
+
+
+@media (max-width: 1369px) {
+    .from-maps {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+	.fromleft {
+		width: 50%;
+	}
+}
+
+@media (max-width: 885px) {
+    #uploadForm{
+        display: flex;
+        flex-direction: column;
+    }
+	.fromright{
+		width: 100%;
+	}
+	.fromleft{
+		width: 100%;
+	}
+}
+
+
+@media (max-width: 500px) {
+    .channel{
+        display: flex;
+        flex-direction: column;
+    }
+	
+}
+
+@media (max-width: 414px) {
+    div #channel{
+        display: inline;
+    }
+	
+}
+
+
+
+
+/* Gaya untuk tombol submit */
+#submitBtn {
+	display: flex;
+    border-radius: 50px;
+    height: 50px;
+    width: 100%;
+    background-color: #F6B12B;
+    color: #ffffff;
+    border: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#submitBtn:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(255 212 0);
+    background-color: #07276B;
+    color: #ffd400;
+    text-decoration: none;
+    transform: translateY(-2px);
+    background-color: #07276B;
+    color: #ffd400;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+label[for="motivate"], label[for="pdf"] {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+#form-clickup
+--------------------------------------------------------------*/
+
+
+#name{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#umur{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+/* Styling untuk input dengan ID 'birthDate' */
+#birthDate {
+    border: none;
+    outline: none;
+    background-color: #D9E6FE; /* Warna latar belakang */
+    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    color: #333; /* Warna teks */
+    border-radius: 14px;
+    box-sizing: border-box; /* Memastikan padding tidak melebihi lebar */
+}
+
+/* Placeholder styling ketika tipe input adalah 'text' */
+input[type="text"]::placeholder {
+    color: #999; /* Warna placeholder */
+}
+
+/* Menyembunyikan format default pada 'date' input saat tidak valid */
+input[type="date"]:invalid {
+    color: transparent; /* Menyembunyikan format tanggal jika kosong */
+}
+
+/* Menampilkan teks kembali saat fokus pada input 'date' */
+input[type="date"]:focus:invalid {
+    color: #333; /* Warna teks saat user mulai mengisi input */
+}
+
+
+#email{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#motivate{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#workType{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#channel{
+	gap: 1rem;
+    display: flex;
+    border: none;
+    outline: none;
+    background-color: #D9E6FE;
+    width: 100%;
+    font-size: 15px;
+    color: #757575;
+    border-radius: 14px;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel{
+	color: #333333;
+	padding-left: 10px;
+    border-radius: 14px;
+    background: #d8e6fe;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#linkedin{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#location{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+#position{
+	border: none;
+	outline: none;
+	background-color: #D9E6FE; /* Warna latar belakang */
+	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	color: #333; /* Warna teks */
+	border-radius: 14px;
+}
+
+select.workType {
+    padding: 10px; /* Memberikan jarak pada konten */
+    border: 2px solid #ccc; /* Menambahkan border */
+    border-radius: 8px; /* Membuat sisi elemen lebih melengkung */
+    background-color: #f9f9f9; /* Mengubah warna latar belakang */
+    font-size: 16px; /* Menambah ukuran teks */
+    color: #333; /* Warna teks */
+    width: 100%; /* Mengatur lebar elemen */
+}
+
+select.workType:focus {
+    border-color: #4CAF50; /* Mengubah warna border ketika elemen fokus */
+    outline: none; /* Menghilangkan garis biru default */
+}
+
+
+/* Animasi loading */
+
+
+.loading {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-spinner {
+    border: 10px solid #f3f3f3; /* Warna dasar */
+    border-top: 10px solid #007bff; /* Warna bagian yang berputar */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animasi sukses */
+
+.success {
+    border-radius: 14px;
+    min-width: 100px;
+    display: flex;
+    align-items: center; /* Menempatkan konten secara vertikal di tengah */
+    justify-content: center; /* Menempatkan konten secara horizontal di tengah */
+    flex-direction: column; /* Untuk menyusun elemen vertikal (ikon dan teks) */
+    animation: fadeIn 1s ease-in-out;
+    background-color: #28a745;
+    padding: 20px;
+    height: 100vh; /* Membuat elemen penuh di tinggi layar */
+}
+
+.success svg {
+    margin-bottom: 10px;
+    fill: white;
+    height: 100px;
+    width: 100px;
+}
+
+.success p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+
+.success svg {
+    margin-bottom: 10px;
+	fill: white;
+	height: 100px;
+	width: 100px;
+}
+
+.success p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.9); /* Mulai dengan ukuran sedikit lebih kecil */
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1); /* Kembali ke ukuran normal */
+    }
+}
+

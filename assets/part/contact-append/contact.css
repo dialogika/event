@@ -1,11 +1,12 @@
 /* Contact Section - Home Page
 ------------------------------*/
 .contact-append .info-item {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgb(255 255 255); 
   box-shadow: 0px 5px 16px -6px rgba(0, 0, 0, 0.8);
   padding: 17px;
   margin-top: 10px;
   border-radius: 10px;
+   
 }
 
 .contact-append .info-item i {
