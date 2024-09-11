@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF to ClickUp</title>
+    <link rel="stylesheet" href="assets/css/clickup-style.css">
+
+</head>
+<body>
+    <!-- Form untuk mengumpulkan data dari pengguna -->
+    <form id="uploadForm">
+        <!-- Input untuk Nama Tugas -->
+        <label for="taskName">Nama Tugas:</label>
+        <input type="text" id="taskName" name="taskName" required>
+        <br><br>
+
+        <!-- Checkbox untuk status Verifikasi -->
+        <label for="verified">Verified:</label>
+        <input type="checkbox" id="verified" name="verified">
+        <br><br>
+
+        <label for="price">Price (IDR):</label>
+        <input type="text" id="price" name="price" placeholder="Rp 0" onkeyup="formatCurrency(this)">
+        <br><br>
+        <script>
+            /**
+             * Fungsi untuk memformat input angka menjadi format mata uang Rupiah (IDR)
+             * Fungsi ini langsung mengambil elemen input dengan id 'price'
+             */
+            function formatCurrency() {
+                // 1. Ambil elemen input dengan id 'price'
+                const input = document.getElementById('price');
+                
+                // 2. Menghapus semua karakter non-angka, kecuali tanda koma (,) dan desimal (.).
+                // Gunakan regex untuk menghapus semua karakter selain angka dan koma.
+                let value = input.value.replace(/[^,\d]/g, '');
+        
+                // 3. Pisahkan angka sebelum dan sesudah tanda koma desimal.
+                // Jika ada koma, bagian kiri dari koma dianggap integer (angka bulat) dan bagian kanan dianggap sebagai desimal.
+                const parts = value.split(',');
+        
+                // 4. Format bagian integer (angka sebelum koma desimal) dengan menambahkan titik untuk pemisah ribuan.
+                // Gunakan regex untuk menambahkan titik di antara setiap tiga digit angka dari kanan.
+                let integerPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        
+                // 5. Gabungkan kembali bagian integer dan desimal (jika ada).
+                // Jika ada bagian desimal setelah koma, kita gabungkan integer yang sudah diformat dengan bagian desimal, dipisahkan oleh koma.
+                if (parts[1] !== undefined) {
+                    // Format dengan desimal, contoh: Rp 1.000,50
+                    input.value = 'Rp ' + integerPart + ',' + parts[1];
+                } else {
+                    // Format tanpa desimal, contoh: Rp 1.000
+                    input.value = 'Rp ' + integerPart;
+                }
+            }
+        </script>
+
+        <!-- Input untuk Rating -->
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="1">⭐</option>
+            <option value="2">⭐⭐</option>
+            <option value="3">⭐⭐⭐</option>
+            <option value="4">⭐⭐⭐⭐</option>
+            <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+        <br><br>
+
+        <!-- Input untuk Umur -->
+        <label for="umur">Umur:</label>
+        <input type="number" id="umur" name="umur" required min="1">
+        <br><br>
+
+        <!-- Input untuk Tanggal Lahir -->
+        <label for="birthDate">Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+        <br><br>
+
+        <!-- Input untuk Email -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <!-- Pilihan untuk Tipe Kerja (WFO/WFH) -->
+        <label for="workType">WFO/WFH:</label>
+        <select id="workType" name="workType" required>
+            <option value="82f98b19-00a7-4a11-b769-d60c49995d75">WFO</option>
+            <option value="ebd50421-4ede-4b59-8a4e-e98a1f747689">WFH</option>
+            <option value="57fa5521-b794-462f-b771-82b0d1c1a773">HYBRID</option>
+        </select>
+        <br><br>
+
+        <!-- Checkbox untuk memilih channel komunikasi -->
+        <label for="channel">Channel:</label>
+        <div id="channel">
+            <label><input type="checkbox" name="channel" value="6fe7288e-bde8-481e-a4d6-1a6513d969f0"> Whatsapp</label><br>
+            <label><input type="checkbox" name="channel" value="b68ee282-0a93-4a66-abf3-eb168d81d4bf"> Instagram</label><br>
+            <label><input type="checkbox" name="channel" value="bbbf13c5-c776-43c3-aa4e-52bc2f27272a"> Twitter</label><br>
+        </div>
+        <br><br>
+
+        <!-- Input untuk Prioritas -->
+        <label for="priority">Priority:</label>
+        <select id="priority" name="priority" required autocomplete="off">
+            <option value="1">Low</option>
+            <option value="2">Normal</option>
+            <option value="3">High</option>
+            <option value="4">Urgent</option>
+        </select>
+        <br><br>
+
+        <!-- Input untuk URL LinkedIn -->
+        <label for="linkedin">LinkedIn URL:</label>
+        <input type="url" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/in/your-profile" required>
+        <br><br>
+
+        <!-- Input untuk Lokasi -->
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <br><br>
+
+        <!-- Input untuk Motivasi -->
+        <label for="motivate">Motivasi:</label>
+        <textarea id="motivate" name="motivate" required></textarea>
+        <br><br>
+
+        <!-- Input untuk mengunggah file PDF -->
+        <input type="file" id="pdfUpload" accept="application/pdf">
+        <br><br>
+
+        <!-- Tombol submit untuk mengirimkan form -->
+        <button type="submit">Submit</button>
+        
+    </form>
+
+    
+    
+    <!-- Menghubungkan file JavaScript untuk menangani event dan pengunggahan -->
+    <script src="assets/js/dokumentasi-clickup-js-file/clickup-form-template.js"></script>
+</body>
+</html>
