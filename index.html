@@ -2,667 +2,958 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Overcoming Your Fear of Public Speaking</title>
-  <meta content="Event Dialogika" name="description">
-  <meta content="skill, public speaking, training, kelas, pelatihan, inhouse training" name="keywords">
+	<title>Mastering Impromptu Speaking - Event Kelas Public Speaking Dialogika</title>
+	<meta content="Event Dialogika" name="description">
+	<meta content="skill, public speaking, training, kelas, pelatihan, inhouse training" name="keywords">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.webp" rel="icon">
-  <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
-
-  <!-- OG Meta Tags to share -->
-  <meta property="og:site_name" content="Kelas Public Speaking" />
-  <meta property="og:site" content="www.dialogika.co" />
-  <meta property="og:title" content="Overcome Overthinking | Event Dialogika" />
-  <meta property="og:description" content="Event Dialogika" />
-  <meta property="og:image" content="assets/img/hero-bg.webp" />
-  <meta property="og:url" content="www.dialogika.co/event" />
-  <meta property="og:type" content="page" />
-
-  <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-    rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.css" rel="stylesheet">
+	<!-- Favicons -->
+	<link href="assets/img/favicon.webp" rel="icon">
+	<link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon">
 
 
-  <!-- Part CSS Files -->
-  <link href="assets/part/theme-counter/theme-counter.css" rel="stylesheet">
-  <link href="assets/part/testimoni-insurin/testi.css" rel="stylesheet">
-  <link href="assets/part/breadcrumbs-banner/banner.css" rel="stylesheet">
-  <link href="assets/part/course-mentor/course.css" rel="stylesheet">
-  <link href="assets/part/team-impact/team.css" rel="stylesheet">
-  <link href="assets/part/counting-down/count.css" rel="stylesheet">
-  <link href="assets/part/schedule-event/schedule.css" rel="stylesheet">
-  <link href="assets/part/contact-append/contact.css" rel="stylesheet">
-  <link href="assets/part/popup-box/popup.css" rel="stylesheet">
-  <link href="assets/part/video-sec/video.css" rel="stylesheet">
+
+	<!-- OG Meta Tags to share -->
+	<meta property="og:site_name" content="Kelas Public Speaking" />
+	<meta property="og:site" content="www.dialogika.co" />
+	<meta property="og:title" content="Overcome Overthinking | Event Dialogika" />
+	<meta property="og:description" content="Event Dialogika" />
+	<meta property="og:image" content="assets/img/hero-bg.webp" />
+	<meta property="og:url" content="www.dialogika.co/event" />
+	<meta property="og:type" content="page" />
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+		rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+	<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.css" rel="stylesheet">
 
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+	<!-- Part CSS Files -->
+	<link href="assets/part/theme-counter/theme-counter.css" rel="stylesheet">
+	<link href="assets/part/testimoni-insurin/testi.css" rel="stylesheet">
+	<link href="assets/part/breadcrumbs-banner/banner.css" rel="stylesheet">
+	<link href="assets/part/course-mentor/course.css" rel="stylesheet">
+	<link href="assets/part/team-impact/team.css" rel="stylesheet">
+	<link href="assets/part/counting-down/count.css" rel="stylesheet">
+	<link href="assets/part/schedule-event/schedule.css" rel="stylesheet">
+	<link href="assets/part/contact-append/contact.css" rel="stylesheet">
+	<link href="assets/part/popup-box/popup.css" rel="stylesheet">
+	<link href="assets/part/video-sec/video.css" rel="stylesheet">
 
-  <!--  ========================================================  -->
-  <!-- Spreadsheet API Form Pendaftaran -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <script>
-    function HeroForm() {
-      $.ajax({
-        url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
-        type: "post",
-        data: $("#heroForm").serializeArray(),
-        headers: {
-          accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
-          secretKey: "68a998592183dc30cdc2b07576759f04"
-        },
-        success: function () {
-          alert("Anda Telah Mendaftar :)")
-        },
-        error: function () {
-          alert("There was an error :(")
-        }
-      });
-    }
+	<link href="assets/part/international-phone-number/intlTelInput.css" rel="stylesheet">
 
-    function SubForm() {
-      $.ajax({
-        url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
-        type: "post",
-        data: $("#myForm").serializeArray(),
-        headers: {
-          accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
-          secretKey: "68a998592183dc30cdc2b07576759f04"
-        },
-        success: function () {
-          alert("Anda Telah Mendaftar :)")
-        },
-        error: function () {
-          alert("There was an error :(")
-        }
-      });
-    }
 
-    function Subcription() {
-      $.ajax({
-        url: "https://api.apispreadsheets.com/data/18511/",
-        type: "post",
-        data: $("#subcriptions").serializeArray(),
-        success: function () {
-          // $('#subcription-modal').modal('show');
-          // open("https://link.dialogika.co/open-whatsapp-group");
-          window.location.href = "https://link.dialogika.co/open-whatsapp-group";
-        },
-        error: function () {
-          alert("There was an error :(")
-        }
-      });
-    }
-  </script>
-  <!-- End Spreadsheet API Form Pendaftaran -->
+	<!-- Template Main CSS File -->
+	<link href="assets/css/new.css" rel="stylesheet">
+	<link href="assets/css/stylevsapp.css" rel="stylesheet">
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function (f, b, e, v, n, t, s) {
-      if (f.fbq) return; n = f.fbq = function () {
-        n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-      };
-      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-      n.queue = []; t = b.createElement(e); t.async = !0;
-      t.src = v; s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s)
-    }(window, document, 'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '916674555903437');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=916674555903437&ev=PageView&noscript=1" /></noscript>
-  <!-- End Meta Pixel Code -->
 
-  <!-- Pixel Quora -->
-  <!-- DO NOT MODIFY -->
-  <!-- Quora Pixel Code (JS Helper) -->
-  <script>
-    !function (q, e, v, n, t, s) { if (q.qp) return; n = q.qp = function () { n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments); }; n.queue = []; t = document.createElement(e); t.async = !0; t.src = v; s = document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, 'script', 'https://a.quora.com/qevents.js');
-    qp('init', 'cae6711903da464ab62f03df5f66aedc');
-    qp('track', 'ViewContent');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-      src="https://q.quora.com/_/ad/cae6711903da464ab62f03df5f66aedc/pixel?tag=ViewContent&noscript=1" /></noscript>
-  <!-- End of Quora Pixel Code -->
-  <script>qp('track', 'GenerateLead');</script>
-  <!-- End Pixel Quora -->
+	<!--  ========================================================  -->
+	<!-- Spreadsheet API Form Pendaftaran -->
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script>
+		function HeroForm() {
+			$.ajax({
+				url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
+				type: "post",
+				data: $("#heroForm").serializeArray(),
+				headers: {
+					accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
+					secretKey: "68a998592183dc30cdc2b07576759f04"
+				},
+				success: function () {
+					alert("Anda Telah Mendaftar :)")
+				},
+				error: function () {
+					alert("There was an error :(")
+				}
+			});
+		}
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HV60XT856G"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+		function SubForm() {
+			$.ajax({
+				url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
+				type: "post",
+				data: $("#myForm").serializeArray(),
+				headers: {
+					accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
+					secretKey: "68a998592183dc30cdc2b07576759f04"
+				},
+				success: function () {
+					alert("Anda Telah Mendaftar :)")
+				},
+				error: function () {
+					alert("There was an error :(")
+				}
+			});
+		}
 
-    gtag('config', 'UA-148836422-2');
-    gtag('config', 'G-HV60XT856G');
-  </script>
-  <!-- End Global site tag (gtag.js) - Google Analytics -->
+		function Subcription() {
+			$.ajax({
+				url: "https://api.apispreadsheets.com/data/18511/",
+				type: "post",
+				data: $("#subcriptions").serializeArray(),
+				success: function () {
+					// $('#subcription-modal').modal('show');
+					// open("https://link.dialogika.co/open-whatsapp-group");
+					window.location.href = "https://link.dialogika.co/open-whatsapp-group";
+				},
+				error: function () {
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+	<!-- End Spreadsheet API Form Pendaftaran -->
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KGK9D6H');</script>
-  <!-- End Google Tag Manager -->
+	<!-- Meta Pixel Code -->
+	<script>
+		!function (f, b, e, v, n, t, s) {
+			if (f.fbq) return; n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+			n.queue = []; t = b.createElement(e); t.async = !0;
+			t.src = v; s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '916674555903437');
+		fbq('track', 'PageView');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=916674555903437&ev=PageView&noscript=1" /></noscript>
+	<!-- End Meta Pixel Code -->
 
-  <!-- Hotjar Tracking Code for https://dialogika.co -->
-  <script>
-    (function (h, o, t, j, a, r) {
-      h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-      h._hjSettings = { hjid: 2828594, hjsv: 6 };
-      a = o.getElementsByTagName('head')[0];
-      r = o.createElement('script'); r.async = 1;
-      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-      a.appendChild(r);
-    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-  </script>
-  <!-- End Hotjar -->
-  <!--  ========================================================  -->
+	<!-- Pixel Quora -->
+	<!-- DO NOT MODIFY -->
+	<!-- Quora Pixel Code (JS Helper) -->
+	<script>
+		!function (q, e, v, n, t, s) { if (q.qp) return; n = q.qp = function () { n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments); }; n.queue = []; t = document.createElement(e); t.async = !0; t.src = v; s = document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, 'script', 'https://a.quora.com/qevents.js');
+		qp('init', 'cae6711903da464ab62f03df5f66aedc');
+		qp('track', 'ViewContent');
+	</script>
+	<noscript><img height="1" width="1" style="display:none"
+			src="https://q.quora.com/_/ad/cae6711903da464ab62f03df5f66aedc/pixel?tag=ViewContent&noscript=1" /></noscript>
+	<!-- End of Quora Pixel Code -->
+	<script>qp('track', 'GenerateLead');</script>
+	<!-- End Pixel Quora -->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV60XT856G"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-148836422-2');
+		gtag('config', 'G-HV60XT856G');
+	</script>
+	<!-- End Global site tag (gtag.js) - Google Analytics -->
+
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KGK9D6H');</script>
+	<!-- End Google Tag Manager -->
+
+	<!-- Hotjar Tracking Code for https://dialogika.co -->
+	<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 2828594, hjsv: 6 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+	<!-- End Hotjar -->
+
 </head>
 
 <body>
 
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGK9D6H" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe>
-  </noscript><!-- End Google Tag Manager (noscript) -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGK9D6H" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe>
+	</noscript><!-- End Google Tag Manager (noscript) -->
 
-  <!-- ======= Top Bar, Header, Side Bar ======= -->
-  <main-header></main-header>
-  <!-- ======= Top Bar, Header, Side Bar ======= -->
+	<!-- ======= Top Bar, Header, Side Bar ======= -->
+	<main-header></main-header>
+	<!-- ======= Top Bar, Header, Side Bar ======= -->
 
-  <!-- ======= Breadcrumbs Section ======= -->
-  <section class="breadcrumbs">
-    <div class="container">
+	<!-- ======= Breadcrumbs Section ======= -->
+	<section class="breadcrumbs">
+		<div class="container">
 
-      <div class="d-flex justify-content-between align-items-center">
-        <h2>Event</h2>
-        <ol>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Event</a></li>
-          <li>Overcoming Your Fear of Public Speaking</li>
-        </ol>
-      </div>
+			<div class="d-flex justify-content-between align-items-center">
+				<h2>Event</h2>
+				<ol>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="index.html">Event</a></li>
+					<li>Mastering Impromptu Speaking </li>
+				</ol>
+			</div>
 
-    </div>
-  </section><!-- End Breadcrumbs Section -->
+		</div>
+	</section><!-- End Breadcrumbs Section -->
 
-  <main id="main">
+	<main id="main">
+		<div class="hero hero--skin-1 ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-14">
+						<!-- Push -->
+						<div class="push push--150  "> </div>
+						<!-- End of Push -->
+						<!-- Section Title -->
+						<h2 class="section-title section-title--left section-title--light">Webinar Dialogika 11.0 :
+							Mastering <span>Impromptu</span> Speaking
+						</h2>
+						<!-- End of Section Title -->
+						<!-- Section Subtitle -->
+						<p class="section-subtitle section-subtitle--left section-subtitle--hero "> Tiba-tiba ditunjuk
+							untuk berbicara pasti menakutkan bagi semua orang. Selain tidak ada persiapan, kamu tetap
+							dituntut untuk tampil dengan baik. Jangan takut! Dialogika kembali mengadakan webinar khusus
+							agar kamu nggak takut lagi kalau disuruh bicara depan umum dadakan!
+						</p>
+						<!-- End of Section Subtitle -->
+						<!-- Button -->
+						<div class="group-button">
+							<!-- Button -->
+							<div class="button button--small button--inline button--shadow">
+								<a href="#features" class="button__linkyellow">See more</a>
+							</div>
+							<!-- End of Button -->
+							<!-- Button -->
+							<div class="button button--small button--inline button--shadow">
+								<a href="#" class="button__link">Download</a>
+							</div>
+						</div>
+						<!-- End of Button -->
+					</div>
+					<div class="col-md-10">
+						<!-- Device -->
+						<div class="device device--right  ">
+							<img src="assets/img/vsapp/mockup-hp.webp" class="device__image" alt="Device Image">
+						</div>
+						<!-- End of Device -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End of Hero -->
+		<!-- Section -->
+		<!-- <section class="section section--grey " id='download'>
+			<div class="container">
+				<div class="row" style="display: flex; justify-content: center;">
+					<div class="col-md-24">
+						<h2 class="section-title section-title--center "> Download this
+							<span class='linemodif'>awesome</span> app
+						</h2>
+						<p class="section-subtitle section-subtitle--center "> available on all modern operating systems
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-8 col-lg-offset-2" style="margin: 0;">
+						<a class="download-button  " href="#">
+							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
+							<span class="download-button__platform">Android app on</span>
+							<span class="download-button__store">Google Play</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-md-8 col-lg-offset-1" style="margin: 0;">
+						<a class="download-button  " href="#">
+							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
+							<span class="download-button__platform">Desktop app on</span>
+							<span class="download-button__store">Mac App Store</span>
+						</a>
+					</div>
+					<div class="col-lg-6 col-md-8 col-lg-offset-1" style="margin: 0;">
+						<a class="download-button  " href="#">
+							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
+							<span class="download-button__platform">IOS app on</span>
+							<span class="download-button__store">App Store</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<!-- End of Section -->
+		<!-- Section -->
+		<section class="section section--skin-1 " id='features'>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12">
+						<!-- Push -->
+						<div class="push push--60  "> </div>
+						<!-- End of Push -->
+						<!-- Section Title -->
+						<h2 class="section-title "> Detail Webinar </h2>
+						<!-- End of Section Title -->
+						<!-- Section Subtitle -->
+						<p class="section-subtitle "> Terbuka untuk seluruh intern Dialogika, member Dialogika, dan umum
+						</p>
+						<!-- End of Section Subtitle -->
+						<!-- List -->
+						<ul class="list list--check">
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
-      <div class="container text-center text-md-start">
+							<li class="list__itema">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-calendar-day" viewBox="0 0 16 16">
+									<path
+										d="M4.684 11.523v-2.3h2.261v-.61H4.684V6.801h2.464v-.61H4v5.332zm3.296 0h.676V8.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a2 2 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43m.094 5.093h.672V7.418h-.672z" />
+									<path
+										d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+								</svg>
+								<p>
+								<div>
+									<p>Jumat, 27 September 2024</p>
+									<p>19.00 - 20.30</p>
+								</div>
+								</p>
+							</li>
 
-        <h1>Overcoming Your Fear of <br class="d-md-block d-none">Public Speaking.</h1>
-        <hr class="d-md-none d-block" />
-        <h2>Bersama Dialogika<br>Kelas Public Speaking Terbaik.</h2>
-        <a href="#contact" class="btn-get-started">
-          <span>Daftar Sekarang</span>
-        </a>
-      </div>
-    </section><!-- End Hero -->
+							<li class="list__itema">
+								<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+									viewBox="0,0,256,256">
+									<g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+										stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+										stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+										font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+										<g transform="scale(5.33333,5.33333)">
+											<circle cx="24" cy="24" r="20" fill="#f6b12b"></circle>
+											<path d="M29,31h-15c-1.657,0 -3,-1.343 -3,-3v-11h15c1.657,0 3,1.343 3,3z"
+												fill="#ffffff"></path>
+											<path d="M37,31l-6,-4v-6l6,-4z" fill="#ffffff"></path>
+										</g>
+									</g>
+								</svg>
+								<div>
+									<p>Via: Zoom Meeting</p>
+									<p>Narasumber: Ron Ashrovy</p>
+									<p>HTM: FREE</p>
+								</div>
+							</li>
 
-    <!-- info sec start -->
-    <section class="info-sec">
-      <div class="container">
-        <div class="info-countdown" style="background-image: url(assets/img/shape/bg.png);">
-          <div class="countdown counter-box d-flex justify-content-between" data-count="2024/08/30">
-            <div>
-              <h3>%d</h3>
-              <h4>Days</h4>
-            </div>
-            <div>
-              <h3>%h</h3>
-              <h4>Hours</h4>
-            </div>
-            <div>
-              <h3>%m</h3>
-              <h4>Minutes</h4>
-            </div>
-            <div>
-              <h3>%s</h3>
-              <h4>Seconds</h4>
-            </div>
-          </div>
-          <div class="dots img-moving-anim2">
-            <img src="assets/img/shape/dots3.png" alt="Shadow Image">
-          </div>
-        </div>
-        <div class="information-area">
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="600">
-              <div class="mail">
-                <div class="icon"><i class='bx bxs-envelope'></i></div>
-                <a href="#" class="mail-link">hello@dialogika.co</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="800">
-              <div class="location">
-                <div class="icon"><i class='bx bxs-map'></i></div>
-                <a href="#" class="location-link">Zoom Meeting</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-duration="1000">
-              <div class="number">
-                <div class="icon"><i class='bx bxl-whatsapp'></i></div>
-                <a href="#" class="number-link">+62 857-8000-7799</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- info sec end -->
+							<li class="list__itema">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-link-45deg" viewBox="0 0 16 16">
+									<path
+										d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+									<path
+										d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+								</svg>
+								<p>Link Pendaftaran : <a href="#uploadForm">CLICK ME</a>
+								</p>
+							</li>
+						</ul>
 
-   <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container-fluid">
+						<!-- End of List -->
+						<!-- List -->
+						<ul class="list list--boxes ">
+							<li class="list__item">
+								<!-- Box -->
+								<div class="box">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffd400"
+										class="bi bi-phone box__icon" viewBox="0 0 16 16">
+										<path
+											d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+										<path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+									</svg>
+								</div>
+								<!-- End of Box -->
+							</li>
 
-        <div class="row">
-          <div class="col-xl-6 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
-          </div>
+							<li class="list__item">
+								<!-- Box -->
+								<div class="box  ">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+										class="bi bi-watch" viewBox="0 0 16 16">
+										<path d="M8.5 5a.5.5 0 0 0-1 0v2.5H6a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5z" />
+										<path
+											d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A6 6 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a6 6 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A6 6 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0" />
+									</svg>
+									<!-- End of Box -->
+							</li>
+							<li class="list__item">
+								<!-- Box -->
+								<div class="box  ">
+									<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+										class="bi bi-laptop" viewBox="0 0 16 16">
+										<path
+											d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+									</svg>
+									<!-- End of Box -->
+							</li>
+						</ul>
+						<!-- End of List -->
+					</div>
+					<div class="col-lg-12 col-md-11 col-md-offset-1 col-lg-offset-0 right-duocard">
+						<!-- Screens Preview -->
+						<div class="screens-preview screens-preview--right  ">
+							<img src="assets/img/vsapp/duocard1.webp" class="screens-preview__primary"
+								alt="Primary Screenshot">
+							<img src="assets/img/vsapp/duocard1-2.webp" class="screens-preview__secondary"
+								alt="Secondary Screenshot">
+						</div>
+						<!-- End of Screens Preview -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-13 col-md-13 left-duocard">
+						<!-- Screens Preview -->
+						<div class="screens-preview  ">
+							<img src="assets/img/vsapp/duocard2.webp" class="screens-preview__primary"
+								alt="Primary Screenshot">
+							<img src="assets/img/vsapp/duocard2-2.webp" class="screens-preview__secondary"
+								alt="Secondary Screenshot">
+						</div>
+						<!-- End of Screens Preview -->
+					</div>
+					<div class="col-lg-11 col-md-10 col-lg-offset-0 col-md-offset-1" style="margin: 0; padding: 0;">
+						<!-- Push -->
+						<div class="push push--100  "> </div>
+						<!-- End of Push -->
+						<!-- Section Title -->
+						<h2 class="section-title "> Poin-poin pembahasan webinar </h2>
+						<!-- End of Section Title -->
+						<!-- Section Subtitle -->
+						<p class="section-subtitle "> Berikut merupakan hal-hal yang akan dipelajari</p>
+						<!-- End of Section Subtitle -->
+						<!-- Accordion -->
+						<ul class="accordion js-accordion">
+							<li class="accordion__item">
+								<h3 class="accordion__title">
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="blue"
+											class="bi bi-chat-dots" viewBox="0 0 16 16">
+											<path
+												d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+											<path
+												d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2" />
+										</svg>
+									</div>
+									<p style="padding: 0; margin: 0; width: 100%;">What is an impromptu?</p>
+									<div class="accordion__icon-wrapper">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+										</svg>
+									</div>
+								</h3>
+								<div class="accordion__content">
+									<p>Di bagian awal, kamu akan mempelajari apa itu impromptu dan bagaimana sebuah
+										public speaking dianggap impromptu
 
-          <div class="col-xl-6 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-            <div class="col-md-8">
+									</p>
+								</div>
+							</li>
 
-              <div class="section-title">
-                <h3>Overcoming Your Fear of <span>Public Speaking</span></h3>
-                <p><strong>Ngga gugup lagi kalau mau bicara depan umum!</strong></p>
-                <hr/>
-              </div>
-              
-              <p>
-                Khusus buat kamu yang sering merasa cemas dan tidak percaya diri saat harus berbicara di depan umum, kami mengadakan event khusus <span class="badge text-bg-success">gratis</span> untuk membantumu mengatasi masalah ini.
-              </p>
-              <ul>
-                <li>Tanggal: Jumat, 30 Agustus 2024</li>
-                <li>Jam: 19.00-20.30</li>
-                <li>Via: Zoom Meeting</li>
-                <li>Narasumber: Kak Ron Ashrovy (CEO Dialogika)</li>
-                <li>Audience: All member, all intern and team, dan terbuka untuk umum</li>
+							<li class="accordion__item">
+								<h3 class="accordion__title">
+									<div>
+										<svg fill="#F6B12B" height="200px" width="200px" version="1.1" id="Layer_1"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 508 508"
+											xml:space="preserve">
+											<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+											<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+												stroke-linejoin="round"></g>
+											<g id="SVGRepo_iconCarrier">
+												<g>
+													<g>
+														<path
+															d="M409.8,220.9C403.3,149.6,341.4,79.2,254,79.2c-86.4,0-156.6,70.3-156.6,156.6c0,61.7,36.8,118,92.6,143v16h-0.2 c-7.8,0-14.1,6.3-14.1,14.1S182,423,189.8,423h0.2v16.5h-0.2c-7.8,0-14.1,6.3-14.1,14.1s6.3,14.1,14.1,14.1h4.8 C204,491.3,227,508,253.9,508s49.9-16.7,59.3-40.3h4.9c7.8,0,14.1-6.3,14.1-14.1c0-7.8-6.3-14.1-14.1-14.1h-0.3V423h0.3 c7.8,0,14.1-6.3,14.1-14.1c0-7.8-6.3-14.1-14.1-14.1h-0.3v-16C378.6,351.6,416.1,288.1,409.8,220.9z M298.8,356.1 c-5.5,2.1-9.2,7.3-9.2,13.2V444c0,19.7-16,35.7-35.7,35.7c-19.7,0-35.7-16-35.7-35.7v-74.7c0-5.9-3.7-11.2-9.2-13.2 c-49.9-18.6-83.5-67-83.5-120.3c0-70.8,57.6-128.4,128.4-128.4c68.3,0,122.4,57.7,127.8,116.1 C387.2,281.4,353.1,335.9,298.8,356.1z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M325.3,184.1c-5.5-5.6-14.4-5.6-19.9-0.1l-73.8,73.8l-29-29c-5.5-5.5-14.4-5.5-20,0c-5.5,5.5-5.5,14.4,0,20l39,39 c2.8,2.8,6.4,4.1,10,4.1c3.6,0,7.2-1.4,10-4.1l83.7-83.7C330.8,198.6,330.8,189.7,325.3,184.1z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M61.3,221.7h-29c-7.8,0-14.1,6.3-14.1,14.1s6.3,14.1,14.1,14.1h29c7.8,0,14.1-6.3,14.1-14.1S69.1,221.7,61.3,221.7z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M475.7,221.7h-29c-7.8,0-14.1,6.3-14.1,14.1s6.3,14.1,14.1,14.1h29c7.8,0,14.1-6.3,14.1-14.1 C489.8,228,483.5,221.7,475.7,221.7z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M254,0c-7.8,0-14.1,6.3-14.1,14.1v29c0,7.8,6.3,14.1,14.1,14.1s14.1-6.3,14.1-14.1v-29C268.1,6.3,261.8,0,254,0z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M127.7,89.5L107.2,69c-5.5-5.5-14.4-5.5-20,0c-5.5,5.5-5.5,14.4,0,20l20.5,20.5c5.6,5.5,14.5,5.5,20,0 S133.2,95.1,127.7,89.5z">
+														</path>
+													</g>
+												</g>
+												<g>
+													<g>
+														<path
+															d="M420.7,69c-5.5-5.4-14.4-5.4-19.9,0.1l-20.5,20.5c-5.5,5.5-5.5,14.4,0,20c5.5,5.5,14.4,5.5,20,0L420.7,89 C426.2,83.5,426.2,74.6,420.7,69z">
+														</path>
+													</g>
+												</g>
+											</g>
+										</svg>
 
-              </ul>
-              <div class="text-end">
-                <a href="#contact" class="more-btn">Daftar Sekarang</a>
-              </div>
+									</div>
+									<p style="padding: 0; margin: 0; width: 100%;">Why it’s so important?</p>
+									<div class="accordion__icon-wrapper">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+										</svg>
+									</div>
+								</h3>
+								<div class="accordion__content">
+									<p>Selanjutnya, kamu akan mengetahui pentingnya menguasai kemampuan berbicara
+										impromptu
+									</p>
+								</div>
+							</li>
 
-            </div>
-          </div>
+							<li class="accordion__item">
+								<h3 class="accordion__title">
+									<div><svg height="200px" width="200px" version="1.1" id="Capa_1"
+											xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 26 26"
+											xml:space="preserve" fill="#F6B12B">
+											<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+											<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+												stroke-linejoin="round"></g>
+											<g id="SVGRepo_iconCarrier">
+												<g>
+													<path style="fill:#F6B12B;"
+														d="M19,24.968v1H7v-1c0-0.551,0.449-1,1-1h2.013c0.053-1.248,0.863-2.29,1.987-2.689V9.554 c-0.527-0.333-0.88-0.917-0.88-1.587H12h2h0.88c0,0.67-0.353,1.254-0.88,1.587v11.724c1.124,0.399,1.934,1.441,1.987,2.689H18 C18.551,23.968,19,24.417,19,24.968z M26,15.967c-0.733,2.064-2.685,3.553-5,3.553s-4.267-1.49-5-3.553h1.154l3.378-8.953 c0.146-0.39,0.789-0.39,0.936,0l3.378,8.953H26z M23.777,15.967L21,8.608l-2.777,7.36H23.777z M5,5.978 c0.453,0,0.822-0.303,0.95-0.714c0.331-0.126,0.67-0.296,1.018-0.472C7.733,4.406,8.6,3.967,9.5,3.967 c0.864,0,1.404,0.399,1.713,0.739c-0.012,0.086-0.026,0.172-0.026,0.261c0,1.001,0.812,1.813,1.813,1.813s1.813-0.812,1.813-1.813 c0-0.089-0.014-0.174-0.026-0.26c0.308-0.339,0.848-0.74,1.713-0.74c0.9,0,1.767,0.438,2.531,0.824 c0.349,0.176,0.688,0.346,1.019,0.472c0.128,0.411,0.497,0.714,0.95,0.714c0.558,0,1.01-0.452,1.01-1.01s-0.452-1.01-1.01-1.01 c-0.288,0-0.545,0.124-0.729,0.318c-0.247-0.104-0.514-0.237-0.789-0.376c-0.864-0.437-1.843-0.932-2.982-0.932 c-0.996,0-1.69,0.379-2.161,0.787c-0.211-0.233-0.481-0.407-0.788-0.506c0.373-0.2,0.635-0.581,0.635-1.032 C14.186,1.561,13,0.032,13,0.032s-1.186,1.529-1.186,2.184c0,0.452,0.262,0.832,0.635,1.032c-0.307,0.098-0.577,0.273-0.788,0.506 C11.19,3.346,10.496,2.967,9.5,2.967c-1.139,0-2.119,0.495-2.983,0.932C6.242,4.039,5.976,4.172,5.729,4.275 C5.545,4.082,5.288,3.957,5,3.957c-0.558,0-1.01,0.452-1.01,1.01S4.442,5.978,5,5.978z M5,19.521c-2.315,0-4.267-1.49-5-3.553 h1.154l3.378-8.953c0.146-0.39,0.789-0.39,0.936,0l3.378,8.953H10C9.267,18.031,7.315,19.521,5,19.521z M7.777,15.967L5,8.608 l-2.777,7.36H7.777z">
+													</path>
+												</g>
+											</g>
+										</svg>
+									</div>
+									<p style="padding: 0; margin: 0; width: 100%;">
+										How it can help or hurt you?
+									</p>
+									<div class="accordion__icon-wrapper">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+										</svg>
+									</div>
+								</h3>
+								<div class="accordion__content">
+									<p>Pada bagian ini, akan dipaparkan bagaimana kemampuan impromptu dapat membantu
+										dirimu dalam kehidupan sehari-hari
+									</p>
+								</div>
+							</li>
 
-        </div>
-      </div>
-    </section><!-- End About Section -->
+							<li class="accordion__item">
+								<h3 class="accordion__title">
+									<div>
+										<svg fill="#F6B12B" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+											xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 88.468 88.468"
+											xml:space="preserve">
+											<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+											<g id="SVGRepo_tracerCarrier" stroke-linecap="round"
+												stroke-linejoin="round"></g>
+											<g id="SVGRepo_iconCarrier">
+												<g>
+													<path
+														d="M29.827,49.725l10.294,10.293L19.768,80.374L9.473,70.079L29.827,49.725z M52.47,27.078l-5.631,5.63l10.295,10.294 l5.633-5.63L52.47,27.078z M67.672,1.492H56.685l-6.717,6.771v10.988l20.623,20.741h10.986l6.891-6.832V22.172L67.672,1.492z M61.296,53.359l-27.85-27.854c1.538-4.928,0.833-10.499-2.396-15.071c-3.739-5.297-9.1-8.419-16.073-7.078l8.16,11.557 l-3.747,8.715l-9.467,0.614L1.645,12.516c-2.315,5.136-2.467,12.283,1.368,17.713c4.69,6.644,13.288,8.893,20.533,5.963 l26.95,26.95c-2.182,5.205-1.768,11.371,1.661,16.371c3.668,5.349,9.821,7.967,15.851,7.381l-8.003-11.67l3.865-8.664l9.475-0.48 l8.119,11.838c2.938-5.479,2.799-12.363-0.959-17.845C76.151,53.723,68.291,51.215,61.296,53.359z">
+													</path>
+												</g>
+											</g>
+										</svg>
+									</div>
+									<p style="padding: 0; margin: 0; width: 100%;">
+										How you can successfully build this skill
+									</p>
+									<div class="accordion__icon-wrapper">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+											<path
+												d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+										</svg>
+									</div>
+								</h3>
+								<div class="accordion__content">
+									<p>Setelah mengetahui semua tentang impromptu, kamu akan diajarkan bagaimana langkah
+										yang tepat dalam membangun kemampuan tersebut
+									</p>
+								</div>
+							</li>
+						</ul>
 
-    <!-- Schedule Section Start -->
-    <section id="schedule" class="schedule-sec section-bg">
-      <div class="container">
-        <div class="section-title text-center col-xl-8 m-auto mb-5">
-          <h6>Schedule</h6>
-          <h2>Agenda Event</h2>
-        </div>
-        <div class="schedule-content-wrap" style="margin-bottom: 75px;">
-          <ul class="nav nav-pills schedule-nav-tab mb-5" id="pills-tab" role="tablist">
-            <li class="nav-item schedule-nav-item" role="presentation">
-              <button class="nav-link active" id="pills-day-1-tab" data-bs-toggle="pill" data-bs-target="#pills-day-1"
-                type="button" role="tab" aria-controls="pills-day-1" aria-selected="true">Day 01</button>
-            </li>
-          </ul>
-          <div class="tab-content schedule-tab-content" id="pills-tabContent">
-            <div class="tab-pane fade show active" id="pills-day-1" role="tabpanel" aria-labelledby="pills-day-1-tab" tabindex="0">
-              <div class="row schedule-item" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000"
-                style="background-image: url(assets/img/shape/schedule1.png);">
-                <div class="col-lg-4">
-                  <div class="d-flex align-items-center justify-content-around">
-                    <div class="card-thumb item-thumb">
-                      <img src="assets/img/team/ron.jpg" alt="Profile 1">
-                    </div>
-                    <div class="card-description">
-                      <span class="name d-block">Ron Ashrovy</span>
-                      <span class="date d-block">CEO</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-8">
-                  <div class="d-flex align-items-center justify-content-between">
-                    <div class="card-title-area col-7">
-                      <h4 class="title">Presentation and Keynotes</h4>
-                      <p class="title-desc">Founder Dialogika, salah satu pakar ilmu komunikasi dan pengembangan diri. Ikuti dan simak eventnya.</p>
-                    </div>
-                    <div class="card-button col-5">
-                      <button class="custom-btn2" onclick="location.href='#contact';">Claim Tickets</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dots img-moving-anim1">
-            <img src="assets/img/shape/dots3.png" alt="Shadow Image">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Schedule Section End -->
+						<!-- End of Accordion -->
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End of Section -->
+		<!-- Section -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-24">
+					<a href="https://www.youtube.com/@dialogika_co" class="section__button section__button--youtube"
+						style="gap: 1rem;display: flex; align-items: center;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="red" class="bi bi-youtube"
+							viewBox="0 0 16 16">
+							<path
+								d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+						</svg>
+						Our channel
+					</a>
+				</div>
+			</div>
+		</div>
+		<section class="section section--grey " id='video'>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-24">
+						<!-- Section Title -->
+						<h2 class="section-title section-title--center "> Take a video tour
+							<span class='section-title__highlight'>of our Activity</span>
+						</h2>
+						<!-- End of Section Title -->
+						<!-- Section Subtitle -->
+						<p class="section-subtitle section-subtitle--center "> Melalui tur video ini, kamu dapat melihat
+							langsung bagaimana acara kami berlangsung dengan penuh semangat dan energi </p>
+						<!-- End of Section Subtitle -->
+					</div>
+				</div>
+			</div>
+			<!-- Video -->
+			<div class="video">
+				<a href="https://www.youtube.com/watch?v=vPhhdWSKmNI" class="video__holder js-video">
+					<img src="assets/img/vsapp/thumbnail.webp" class="video__primary" alt="Primary Video Thumbnail">
+					<img src="assets/img/vsapp/foto-member-kiri.webp" class="video__secondary video__secondary--left"
+						alt="Secondary Video Thumbnail">
+					<img src="assets/img/vsapp/foto-mentor-kanan.webp" class="video__secondary video__secondary--right"
+						alt="Secondary Video Thumbnail">
+					<span class="video__button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" fill="currentColor"
+							class="bi bi-play-circle" viewBox="0 0 16 16">
+							<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+							<path
+								d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+						</svg>
+					</span>
+				</a>
+			</div>
+			<!-- End of Video -->
+		</section>
+		<!-- End of Section clickup-->
+
+		<div class="form-clickup">
+			<section id="contact" class="contact-append section-bg">
+
+				<div class="event-form-section">
+
+					<div class="event-form-title">
+						<h2 class="section-title section-title--center "> Register for
+							<span class='section-title__highlight'>Event </span>Now
+						</h2>
+						<div class="wrap-contact-header">
+
+							<div class="row gy-4 info-wrapper">
+
+								<div class="col-md-6">
+									<div class="info-item" data-aos="fade" data-aos-delay="300">
+										<i class="bi bi-telephone"></i>
+										<h3>Call Us</h3>
+										<p>+62 851 6299 2597</p>
+									</div>
+								</div><!-- End Info Item -->
+
+								<div class="col-md-6">
+									<div class="info-item" data-aos="fade" data-aos-delay="400">
+										<div class="float-right"><i class="bi bi-envelope"></i></div>
+										<h3>Email Us</h3>
+										<p>hello@dialogika.co</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="img-wrapper">
+								<img src="assets/img/vsapp/event-form-banner.webp" alt="Event-Image"
+									style="width: 100%; height: 100%; object-fit: cover;" />
+							</div>
+
+							<!-- <iframe style=" width: 100%; height: 100%;"
+								src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15813.303312562135!2d110.3785878!3d-7.7552251!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a597ab489149d%3A0x9306a2474322de7c!2sDialogika%20Kelas%20Public%20Speaking!5e0!3m2!1sid!2sid!4v1700713315422!5m2!1sid!2sid"
+								frameborder="0" allowfullscreen></iframe> -->
+						</div>
+					</div>
 
 
-    <!-- ======= Theme-Counter Section ======= -->
-    <div class="theme-counter section-bg">
-      <div class="container">
-        <div class="bg">
-          <div class="section-title">
-            <h6>Our Achievement</h6>
-            <h2>Some fun facts about our company</h2>
-          </div>
-          <div class="cunter-wrapper">
-            <div class="row">
-              <div class="col-md-3 col-6">
-                <div class="single-counter-box">
-                  <div class="number"><b><span data-purecounter-start="0" data-purecounter-end="468"
-                        data-purecounter-duration="1" class="purecounter">0</span></b>+</div>
-                  <p class="text-nowrap">Total Classes</p>
-                </div> <!-- /.single-counter-box -->
-              </div> <!-- /.col- -->
-              <div class="col-md-3 col-6">
-                <div class="single-counter-box">
-                  <div class="number"><span data-purecounter-start="0" data-purecounter-end="97"
-                      data-purecounter-duration="1" class="purecounter">0</span>%</div>
-                  <p class="text-nowrap">Client Satisfaction</p>
-                </div> <!-- /.single-counter-box -->
-              </div> <!-- /.col- -->
-              <div class="col-md-3 col-6">
-                <div class="single-counter-box">
-                  <div class="number"><span data-purecounter-start="0" data-purecounter-end="1105"
-                      data-purecounter-duration="1" class="purecounter">0</span>+</div>
-                  <p class="text-nowrap">Total Member</p>
-                </div> <!-- /.single-counter-box -->
-              </div> <!-- /.col- -->
-              <div class="col-md-3 col-6">
-                <div class="single-counter-box">
-                  <div class="number"><span data-purecounter-start="0" data-purecounter-end="11"
-                      data-purecounter-duration="1" class="purecounter">0</span></div>
-                  <p class="text-nowrap">Mentor</p>
-                </div> <!-- /.single-counter-box -->
-              </div> <!-- /.col- -->
-            </div> <!-- /.row -->
-          </div> <!-- /.cunter-wrapper -->
-          <a href="#" class="theme-button-one">Check Google Review</a>
-        </div> <!-- /.bg -->
-      </div> <!-- /.container -->
-    </div> <!-- /.theme-counter -->
+					<div class="event-form-container">
 
-    <section id="contact">
-      <iframe class="clickup-embed clickup-dynamic-height"
-        src="https://forms.clickup.com/2307700/f/26dkm-10282/7TZO7CI41DS6AFVWW6" onwheel="" width="100%" height="100%"
-        style="background: transparent; border: 1px solid #ccc;"></iframe>
-      <script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
-    </section>
+						<div class="form-container">
+							<form id="uploadForm" class="event-form">
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
-    <section id="faq" class="faq section-bg">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="section-title">
-              <h5>Video</h5>
-              <h3>Peek Our Classes</h3>
-            </div>
-            <div class="videos-faq swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="video-bg text-center">
-                    <a class="glightbox" href="https://youtu.be/sSRvEr7M9tw">
-                      <img src="assets/img/home/2.jpg" alt="video-bg" class="rounded img-fluid" />
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video-bg text-center">
-                    <a href="https://youtu.be/vPhhdWSKmNI" class="glightbox">
-                      <img src="assets/img/home/3.jpg" alt="video-bg" class="rounded img-fluid" />
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video-bg text-center">
-                    <a href="https://youtu.be/I6oPwmKLB2k" class="glightbox">
-                      <img src="assets/img/home/4.jpg" alt="video-bg" class="rounded img-fluid" />
-                    </a>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="video-bg text-center">
-                    <a href="https://youtu.be/Q2ZGMIM2-Wc" class="glightbox">
-                      <img src="assets/img/home/1.jpg" alt="video-bg" class="rounded img-fluid" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" style="margin-top:50px;">
-            <div class="section-title">
-              <h6>F.A.Q</h6>
-              <h2>Just Read</h2>
-            </div>
-            <div class="faq-list">
-              <ul>
-                <li data-aos="fade-up">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse"
-                    data-bs-target="#faq-list-1">Bagaimana sistem pengajaran Public Speaking di Dialogika? <i
-                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="faq-list-1" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                      Sistem pembelajaran yang baik adalah disaat Anda diberikan ruang untuk berlatih dan ruang
-                      explorasi diri. Dialogika memberikan akses dan keleluasaan untuk berlatih sepanjang berjalannya
-                      kelas. Bahkan setelah selesai kelas (untuk beberapa program), Dialogika juga memberikan kesempatan
-                      untuk Anda bertanya dengan mentor-mentor yang ada di Dialogika.
-                    </p>
-                  </div>
-                </li>
+								<!-- Name Field -->
+								<div class="name-input-container">
+									<label for="name" class="label-input">Nama Lengkap <span
+											class="required-asterisk">*</span></label>
+									<input type="text" class="form-text-input" autocomplete="off" id="name" name="name"
+										placeholder="Nama " required>
+								</div>
 
-                <li data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2"
-                    class="collapsed">Bagaimana cara Saya tahu bahwa ada peningkatan didalam public speaking Saya? <i
-                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                      Disetiap kali Anda berlatih, mentor akan memberikan Anda Feedback secara langsung mengenai
-                      penampilan Anda. Dari sana Anda akan mengerti peningkatan yang Anda dapatkan setiap kali
-                      pertemuannya.
-                    </p>
-                  </div>
-                </li>
+								<!-- No WA Field -->
+								<div class="phone-input-container">
+									<label for="phone" class="label-input">Nomor Whatsapp <span
+											class="required-asterisk">*</span></label>
+									<input type="tel" id="whatsapp-number" name="whatsapp-number"
+										class="form-text-input" required>
+								</div>
 
-                <li data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3"
-                    class="collapsed">Apakah ada Garansi untuk hasilnya? <i class="bx bx-chevron-down icon-show"></i><i
-                      class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                      Kami menyediakan Garansi untuk beragam program pembelajaran yang kami miliki, mulai dari Basic
-                      Public Speaking, Presentasi, MC, hingga Pitching. Apabila Anda tidak merasa mendapatkan perubahan
-                      bersama kami. Anda GRATIS mengulang kelas TANPA DIPUNGUT BIAYA sepeser pun.
-                    </p>
-                  </div>
-                </li>
+								<!-- Location Field -->
+								<div class="location-input-container">
+									<label for="location" class="label-input">Domisili saat ini <span
+											class="required-asterisk">*</span></label>
+									<input type="text" class="form-text-input" autocomplete="off" id="location"
+										name="location" placeholder="Alamat" required>
+								</div>
 
-                <li data-aos="fade-up" data-aos-delay="300">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4"
-                    class="collapsed">Apakah Anda (Dialogika) pernah menangani semua jenis profesi client? <i
-                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                      Jika Anda serius ingin meningkatkan kemampuan Public Speaking Anda, dan butuh bantuan kami? Kami
-                      bisa membantu Anda.
-                    </p>
-                    <p>Anda seorang introvert dan Anda ingin berani berbicara, dan butuh bantuan kami? Kami bisa
-                      membantu Anda.</p>
-                    <p>Trauma buruk menghantui Anda, tampil dihadapan banyak orang bukanlah diri Anda yang sebenarnya.
-                      Tetapi Anda tahu bahwa Anda perlu menyelesaikan masalah tersebut, Dan Anda butuh bantuan kami?
-                      Kami bisa membantu Anda.</p>
-                    <p>Umur Anda tidak lagi muda, jabatan Anda diperusahaan atau instansi pemerintah cukup tinggi. Gugup
-                      bukan masalah Anda namun Anda tidak bisa memotivasi bawahan Anda, bicara Anda cenderung
-                      melompat-lompat membuat karyawan Anda tidak bisa berkerja sesuai ekspektasi Anda. Kami bisa
-                      membantu Anda.</p>
-                    <p>Anda seorang pengusaha sukses, Anda sering diminta berbicara dihadapan banyak orang. Tetapi Anda
-                      merasa bahwa apa yang didalam pikiran Anda tidak sesuai apa yang mulut Anda ingin katakan, Anda
-                      butuh kami? Kami Bisa membantu Anda.</p>
-                    <p>Saat ini Anda hampir lulus kuliah di Jurusan Kedokteran tetapi karena lidah Anda Jawa, Anda
-                      cenderung Medhok dalam berbicara dan itu terdengar kurang profesional. Anda butuh bantuan? Kami
-                      bisa membantu Anda.</p>
-                    <p>Tidak peduli apapun profesi Anda saat ini, pelajar, mahasiswa, freshgraduate, karyawan,
-                      profesional, freelancer, pimpinan, pengusaha hingga kader partai. Jika Anda ingin meningkatkan
-                      kemampuan Public Speaking, punya masalah di dalam berkomunikasi ataupun sedikit terkait masalah
-                      diri Anda. Kami siap membantu mengatasi masalah Anda.</p>
-                  </div>
-                </li>
+								<!-- Profesi Field -->
+								<div class="profesi-input-container">
+									<label for="job" class="label-input">Profesi:</label>
+									<select id="job" name="job" class="form-text-input">
+										<option value="5acf4769-8efc-4cf7-8c4e-170301ec1fcb">High School</option>
+										<option value="bdad681c-17c2-499b-b2fa-ef3a304b132f">University Student</option>
+										<option value="5d3bdd73-539d-4675-9705-90bc546c6eeb">Freshgraduate</option>
+										<option value="88b999dd-f5e3-4953-b653-d006930e5065">Jobseeker</option>
+										<option value="fc332288-6084-45b3-b74c-0bb0083b96c3">Employee</option>
+										<option value="ba8ca154-7402-4c3d-9cfa-08c96a95fa71">Businessman</option>
+										<option value="7a865fd8-c16e-4c10-944a-9d0c4948cf3d">Parent</option>
+										<option value="50fdbb77-823b-41b3-b4a2-81c786021ba5">Manager</option>
+										<option value="d1fe9fab-37b3-4789-8c94-6bb95a5f1e71">Other</option>
+										<option value="8113f79e-0cfc-4dbf-93e7-92b46d490651">Lecturer</option>
+										<option value="a09e1ac1-fe8e-41ea-81ec-01c35c8b070f">Teacher</option>
+										<option value="3ce4e5d4-4638-4046-958f-5c4c58dccc51">Civil Servant</option>
+										<option value="f200df43-4279-4cc5-910a-af71cbf38446">Honorer</option>
+									</select>
+								</div>
 
-                <li data-aos="fade-up" data-aos-delay="400">
-                  <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5"
-                    class="collapsed">Mengapa Dialogika merupakan lembaga pengajaran Public Speaking terbaik? <i
-                      class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
-                    <p>
-                      Benar ada beragam pelatihan Public Speaking dan tentunya banyak sekali bukan? Ketimbang harus kami
-                      paparkan alasannya lebih baik kami berikan saja Angka. Karena Angka tidak pernah berbohong.
-                    </p>
-                    <p>
-                      <i class="bi bi-check"></i> Total Client 1000 lebih dan terus bertambah setiap harinya.<br />
-                      <i class="bi bi-check"></i> Review Positif 4.9 dari 5 Stars di Google dan mayoritas kelas
-                      online<br />
-                      <i class="bi bi-check"></i> Umur perusahaan 3 tahun
-                    </p>
-                    <p>Jika Anda memiliki visi yang sama dengan Dialogika silahkan perhitungkan Dialogika sebagai teman
-                      untuk mengisi sejarah hidup Anda yang luar biasa.</p>
-                  </div>
-                </li>
+								<!-- Kendala Dalam berkomunikasi -->
+								<div class="note-input-container">
+									<label for="posisi-profesi" class="label-input">Kesulitan di dalam public speaking
+									</label>
+									<textarea class="form-text-input" id="motivate" name="Ket" rows="4"
+										placeholder="Masalah didalam public speaking?" autocomplete="off"> </textarea>
+								</div>
 
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Frequently Asked Questions Section -->
+								<!-- Channel yang sudah di follow Field -->
+								<!-- <div class="channel-container">
+									<label for="channel">Followed Channel:</label>
+									<div id="channel" class="channel-value-wrapper">
 
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
+										<label class="channel-value">
+											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
+											<i class="fab fa-facebook"></i> 
+										</label>
 
-      <div class="container" data-aos="fade-up">
+										<label class="channel-value">
+											<input type="checkbox" name="channel"
+												value="6fe7288e-bde8-481e-a4d6-1a6513d969f0" />
+											<i class="fab fa-whatsapp"></i> 
+										</label>
 
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/corporate/uad.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/corporate/amikom.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/corporate/mercu.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/corporate/polita.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/corporate/uin-suka.png" class="img-fluid" alt=""></div>
+										<label class="channel-value">
+											<input type="checkbox" name="channel"
+												value="b68ee282-0a93-4a66-abf3-eb168d81d4bf" />
+											<i class="fab fa-instagram"></i> 
+										</label>
 
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section><!-- End Clients Section -->
+										<label class="channel-value">
+											<input type="checkbox" name="channel"
+												value="bbbf13c5-c776-43c3-aa4e-52bc2f27272a" />
+											<i class="fab fa-twitter"></i> 
+										</label>
 
-  </main><!-- End #main -->
+										<label class="channel-value">
+											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
+											<i class="fab fa-tiktok"></i> 
+										</label>
 
-  <!-- ======= Footer & Counter Area ======= -->
-  <main-footer></main-footer>
-  <!-- ======= End Footer & Counter Area ======= -->
+										<label class="channel-value">
+											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
+											<i class="fab fa-youtube"></i> 
+										</label>
 
-  <a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bx bxl-whatsapp bx-tada"></i></a>
+										<label class="channel-value">
+											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
+											<i class="fab fa-pinterest"></i> 
+										</label>
 
-  <!-- Modal 2 -->
-  <div class="modal popup-box fade" id="exampleModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog popup-box-dialog modal-dialog-centered">
-      <div class="modal-content popup-box-content">
-        <div class="popup-card" style="width:100%">
-          <button type="button" class="btn popup2-btn ms-auto" data-bs-dismiss="modal"><i
-              class="fa-solid fa-xmark"></i></button>
-          <img src="assets/img/shape/popup.jpg" class="card-img-top" alt=""
-            style="border-top-left-radius: 20px;border-top-right-radius: 20px;border:0px;">
-          <div class="card-body popup-card-body">
-            <div class="popup-title-area">
-              <p class="popup-sub">Isikan Sekarang</p>
-              <h5 class="card-title popup-title">Form Pendaftaran Event Dialogika</h5>
-            </div>
-            <a href="#" class="btn popup-play" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i
-                class="fa-solid fa-play"></i></a>
-          </div>
-          <form action="javascript:void" method="post" id="heroForm" enctype="text/plain" class="popup-form">
-            <div class="row gy-3 mb-3">
-              <div class="col-lg-6">
-                <label for="names" class="form-label">Full Name</label>
-                <input type="text" name="Name" class="form-control" id="names" pattern="[a-zA-Z\s]{3,100}"
-                  placeholder="Nama Lengkap*" required>
-              </div>
-              <div class="col-lg-6">
-                <label for="locations" class="form-label">Domisili</label>
-                <input type="text" class="form-control" name="Location" id="locations" pattern="[a-zA-Z\s]{3,100}"
-                  placeholder="Domisili*" required>
-              </div>
-              <div class="col-lg-6">
-                <label for="whatsapps" class="form-label">Whatsapp</label>
-                <input type="tel" class="form-control" name="Whatsapp" id="whatsapps" pattern="[0-9]{10,15}"
-                  placeholder="Whatsapp*" required="">
-              </div>
-              <div class="col-lg-6">
-                <label for="events" class="form-label">Event</label>
-                <input type="text" name="Event" class="form-control" id="events" placeholder="Nama Event" disabled>
-              </div>
-              <select class="d-none" name="Timestamp">
-                <option id="timestamp"></option>
-              </select>
-            </div>
-            <button class="custom-btn2 send_contact" id="submits" onclick="HeroForm()">Daftar Sekarang</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+										<label class="channel-value">
+											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
+											<i class="fab fa-linkedin"></i> 
+										</label>
 
-  <!-- Part -->
-  <script src="assets/part/counting-down/count.js"></script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+									</div>
+								</div> -->
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/headerfooter.js"></script>
-  <script src="assets/js/timestamp.js"></script>
-  <script src="assets/js/whatsapp.js"></script>
-  <script src="assets/js/main.js"></script>
 
+								<button type="submit" id="submitBtn" class="submitBtn">Register</button>
+								<p class="form-disclaimer"
+									style="font-size: 12px; text-align: center; color: #A1A1A1 ;">Dengan
+									mengirimkan formulir ini anda setuju dengan <a
+										href="https://www.dialogika.co/policy"
+										style="color: #A1A1A1 ; text-decoration: underline;">Kebijakan Privasi</a>
+									kami.</p>
+							</form>
+
+							<!-- Animasi loading di bawah form -->
+							<div id="loading" class="loading" style="display: none;">
+								<div class="loading-spinner"></div>
+								Mengunggah...
+							</div>
+
+							<!-- Tempat untuk animasi sukses -->
+							<div id="success" class="success" style="display: none">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+									<path
+										d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+								</svg>
+								<p>File berhasil diunggah!</p>
+							</div>
+						</div>
+
+					</div>
+			</section>
+		</div>
+
+		<!-- End Contact Section clickup -->
+
+
+		<!-- ======= Footer & Counter Area ======= -->
+		<main-footer></main-footer>
+		<!-- ======= End Footer & Counter Area ======= -->
+
+		<a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
+				class="bx bxl-whatsapp bx-tada"></i></a>
+
+		<!-- Modal 2 -->
+		<div class="modal popup-box fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+			<div class="modal-dialog popup-box-dialog modal-dialog-centered">
+				<div class="modal-content popup-box-content">
+					<div class="popup-card" style="width:100%">
+						<button type="button" class="btn popup2-btn ms-auto" data-bs-dismiss="modal"><i
+								class="fa-solid fa-xmark"></i></button>
+						<img src="assets/img/shape/popup.jpg" class="card-img-top" alt=""
+							style="border-top-left-radius: 20px;border-top-right-radius: 20px;border:0px;">
+						<div class="card-body popup-card-body">
+							<div class="popup-title-area">
+								<p class="popup-sub">Isikan Sekarang</p>
+								<h5 class="card-title popup-title">Form Pendaftaran Event Dialogika</h5>
+							</div>
+							<a href="#" class="btn popup-play" data-bs-toggle="modal"
+								data-bs-target="#staticBackdrop"><i class="fa-solid fa-play"></i></a>
+						</div>
+						<form action="javascript:void" method="post" id="heroForm" enctype="text/plain"
+							class="popup-form">
+							<div class="row gy-3 mb-3">
+								<div class="col-lg-6">
+									<label for="names" class="form-label">Full Name</label>
+									<input type="text" name="Name" class="form-control" id="names"
+										pattern="[a-zA-Z\s]{3,100}" placeholder="Nama Lengkap*" required>
+								</div>
+								<div class="col-lg-6">
+									<label for="locations" class="form-label">Domisili</label>
+									<input type="text" class="form-control" name="Location" id="locations"
+										pattern="[a-zA-Z\s]{3,100}" placeholder="Domisili*" required>
+								</div>
+								<div class="col-lg-6">
+									<label for="whatsapps" class="form-label">Whatsapp</label>
+									<input type="tel" class="form-control" name="Whatsapp" id="whatsapps"
+										pattern="[0-9]{10,15}" placeholder="Whatsapp*" required="">
+								</div>
+								<div class="col-lg-6">
+									<label for="events" class="form-label">Event</label>
+									<input type="text" name="Event" class="form-control" id="events"
+										placeholder="Nama Event" disabled>
+								</div>
+								<select class="d-none" name="Timestamp">
+									<option id="timestamp"></option>
+								</select>
+							</div>
+							<button class="custom-btn2 send_contact" id="submits" onclick="HeroForm()">Daftar
+								Sekarang</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Part -->
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="assets/part/newevent/script.js"></script>
+		<script src="assets/part/counting-down/count.js"></script>
+
+		<script src="assets/part/international-phone-number/intlTelInput.min.js"></script>
+		<script src="assets/part/international-phone-number/script.js"></script>
+
+		<!-- Vendor JS Files -->
+		<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<script src="assets/vendor/php-email-form/validate.js"></script>
+
+		<!-- Template Main JS File -->
+		<script src="assets/js/clickup-task.js"></script>
+		<script src="assets/js/headerfooter.js"></script>
+		<script src="assets/js/timestamp.js"></script>
+		<script src="assets/js/whatsapp.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/button-hover.js"></script>
 
 </body>
 
