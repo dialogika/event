@@ -6,9 +6,9 @@ document
 
     // Mengambil referensi elemen form dan input
     const taskName = document.getElementById("name").value.trim(); // Ambil nama tugas
+    const whatsapp = iti.getNumber(); // Valuenya mengambil dari part/international-phone-number/script.js
     const motivate = document.getElementById("motivate").value.trim();
     const location = document.getElementById("location").value.trim();
-    const whatsapp = iti.getNumber();   // Valuenya mengambil dari part/international-phone-number/script.js
     const jobInputs = document.querySelectorAll("#job"); // Ambil profesi
     const jobs = Array.from(jobInputs)
       .map((input) => {
@@ -16,15 +16,15 @@ document
         return optionId; // Gunakan ID opsi yang valid
       })
       .filter((value) => value);
-
-    console.log(whatsapp);
+    const loading = document.getElementById("loading");
+    const success = document.getElementById("success");
 
     // Validasi input
     if (!taskName) {
       alert("Nama tugas harus diisi.");
       return;
     }
-    if (!job) {
+    if (!jobs) {
       alert("Profesi harus dipilih.");
       return;
     }
@@ -38,6 +38,7 @@ document
     const listId = "900302342659"; // Ganti dengan ID list ClickUp yang sesuai
 
     try {
+      loading.style.display = "flex";
       // Membuat task baru di ClickUp dengan nama tugas dan custom field channels
       const createTaskResponse = await fetch(
         `https://api.clickup.com/api/v2/list/${listId}/task`,
@@ -71,18 +72,61 @@ document
           }),
         }
       );
-
       if (!createTaskResponse.ok) {
-        const error = await createTaskResponse.json();
-        throw new Error(
-          "Kesalahan saat membuat tugas: " +
-            (error.err || "Kesalahan tidak diketahui")
-        );
-      }
+        // Check if response is in JSON format
+        let errorDetails;
+        try {
+          errorDetails = await createTaskResponse.json();
+        } catch (jsonParseError) {
+          errorDetails = { err: "Response is not a valid JSON." };
+        }
 
-      alert("Tugas berhasil dibuat.");
+        // Handle specific HTTP status codes and provide more information
+        switch (createTaskResponse.status) {
+          case 400:
+            throw new Error(
+              "Bad Request: Terdapat data yang tidak valid.Tolong cek ulang data yang anda masukkan."
+            );
+          case 401:
+            throw new Error(
+              "Unauthorized: Invalid API token. Please check your API key and permissions."
+            );
+          case 403:
+            throw new Error(
+              "Forbidden: You do not have permission to create a task in this list. Verify your access rights."
+            );
+          case 404:
+            throw new Error(
+              "Not Found: The list ID is incorrect or the resource could not be found."
+            );
+          case 429:
+            throw new Error(
+              "Too Many Requests: You have hit the rate limit. Please wait a while before trying again."
+            );
+          case 500:
+            throw new Error(
+              "Internal Server Error: There was a problem on Server's side. Please try again later."
+            );
+          default:
+            throw new Error(
+              `Unexpected Error: ${createTaskResponse.status}. ${
+                errorDetails.err || "No additional details available."
+              }`
+            );
+        }
+      }
+      loading.style.display = "none";
+      success.style.display = "flex";
+      setTimeout(() => {
+        success.style.display = "none";
+      }, 3000);
     } catch (error) {
       console.error("Kesalahan:", error);
-      alert("Terjadi kesalahan. Silakan coba lagi.");
+      alert(
+        "Terjadi kesalahan saat membuat tugas: " +
+          (error.message || "Kesalahan tidak diketahui. Silakan coba lagi.")
+      );
+      loading.style.display = "none";
+      success.style.display = "none";
     }
   });
