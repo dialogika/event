@@ -1745,7 +1745,7 @@ section {
   -webkit-box-shadow: 0px 9px 16px -6px rgba(32, 191, 240, 1);
   -moz-box-shadow: 0px 9px 16px -6px rgba(32, 191, 240, 1);
 }
-}
+
 
 @media (max-width: 768px) {
   .doctors .member {
@@ -2344,17 +2344,17 @@ section {
   color: #F9C72E;
 }
 
-#footer. .footer-top. .footer-links .footer-recent-post ul li img.ig-post {
+#footer .footer-top .footer-links .footer-recent-post ul li img.ig-post {
   margin-right: 10px;
 }
 
-#footer. .footer-top. .footer-links .footer-recent-post li .post .date {
+#footer .footer-top .footer-links .footer-recent-post li .post .date {
   font-size: 15px;
   color: #9ca6bf;
   font-style: italic;
   margin-top: 5px;
 }
-#footer. .footer-top. .footer-links .footer-recent-post li .post .date i {
+#footer .footer-top .footer-links .footer-recent-post li .post .date i {
   margin-right: 5px;
   font-size: 14px;
 }
