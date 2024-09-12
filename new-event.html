@@ -262,52 +262,42 @@
 		</div>
 		<!-- End of Hero -->
 		<!-- Section -->
-		<section class="section section--grey " id='download'>
+		<!-- <section class="section section--grey " id='download'>
 			<div class="container">
 				<div class="row" style="display: flex; justify-content: center;">
 					<div class="col-md-24">
-						<!-- Section Title -->
 						<h2 class="section-title section-title--center "> Download this
 							<span class='linemodif'>awesome</span> app
 						</h2>
-						<!-- End of Section Title -->
-						<!-- Section Subtitle -->
 						<p class="section-subtitle section-subtitle--center "> available on all modern operating systems
 						</p>
-						<!-- End of Section Subtitle -->
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-6 col-md-8 col-lg-offset-2" style="margin: 0;">
-						<!-- Download Button -->
 						<a class="download-button  " href="#">
 							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
 							<span class="download-button__platform">Android app on</span>
 							<span class="download-button__store">Google Play</span>
 						</a>
-						<!-- End of Download Button -->
 					</div>
 					<div class="col-lg-6 col-md-8 col-lg-offset-1" style="margin: 0;">
-						<!-- Download Button -->
 						<a class="download-button  " href="#">
 							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
 							<span class="download-button__platform">Desktop app on</span>
 							<span class="download-button__store">Mac App Store</span>
 						</a>
-						<!-- End of Download Button -->
 					</div>
 					<div class="col-lg-6 col-md-8 col-lg-offset-1" style="margin: 0;">
-						<!-- Download Button -->
 						<a class="download-button  " href="#">
 							<img src="assets/img/vsapp/piterst.png" class="download-button__icon" alt="Platform Icon">
 							<span class="download-button__platform">IOS app on</span>
 							<span class="download-button__store">App Store</span>
 						</a>
-						<!-- End of Download Button -->
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!-- End of Section -->
 		<!-- Section -->
 		<section class="section section--skin-1 " id='features'>
@@ -637,7 +627,8 @@
 								<div class="phone-input-container">
 									<label for="phone" class="label-input">Nomor Whatsapp <span
 											class="required-asterisk">*</span></label>
-									<input id="whatsapp-number" name="whatsapp-number" class="form-text-input" required>
+									<input type="tel" id="whatsapp-number" name="whatsapp-number"
+										class="form-text-input" required>
 								</div>
 
 								<!-- Location Field -->
@@ -650,16 +641,29 @@
 
 								<!-- Profesi Field -->
 								<div class="profesi-input-container">
-									<label for="profesi" class="label-input">Profesi <span
-											class="required-asterisk">*</span></label>
-									<input type="text" class="form-text-input" autocomplete="off" id="profesi"
-										name="profesi" placeholder="guru" required>
+									<label for="job" class="label-input">Profesi:</label>
+									<select id="job" name="job" class="form-text-input">
+										<option value="5acf4769-8efc-4cf7-8c4e-170301ec1fcb">High School</option>
+										<option value="bdad681c-17c2-499b-b2fa-ef3a304b132f">University Student</option>
+										<option value="5d3bdd73-539d-4675-9705-90bc546c6eeb">Freshgraduate</option>
+										<option value="88b999dd-f5e3-4953-b653-d006930e5065">Jobseeker</option>
+										<option value="fc332288-6084-45b3-b74c-0bb0083b96c3">Employee</option>
+										<option value="ba8ca154-7402-4c3d-9cfa-08c96a95fa71">Businessman</option>
+										<option value="7a865fd8-c16e-4c10-944a-9d0c4948cf3d">Parent</option>
+										<option value="50fdbb77-823b-41b3-b4a2-81c786021ba5">Manager</option>
+										<option value="d1fe9fab-37b3-4789-8c94-6bb95a5f1e71">Other</option>
+										<option value="8113f79e-0cfc-4dbf-93e7-92b46d490651">Lecturer</option>
+										<option value="a09e1ac1-fe8e-41ea-81ec-01c35c8b070f">Teacher</option>
+										<option value="3ce4e5d4-4638-4046-958f-5c4c58dccc51">Civil Servant</option>
+										<option value="f200df43-4279-4cc5-910a-af71cbf38446">Honorer</option>
+									</select>
 								</div>
 
+								<!-- Kendala Dalam berkomunikasi -->
 								<div class="note-input-container">
 									<label for="posisi-profesi" class="label-input">Kesulitan di dalam public speaking
 									</label>
-									<textarea class="form-text-input" id="messages" name="Ket" rows="4"
+									<textarea class="form-text-input" id="motivate" name="Ket" rows="4"
 										placeholder="Masalah didalam public speaking?" autocomplete="off"> </textarea>
 								</div>
 

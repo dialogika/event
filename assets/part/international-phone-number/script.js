@@ -1,5 +1,5 @@
 const input = document.querySelector("#whatsapp-number");
-window.intlTelInput(input, {
+const iti = window.intlTelInput(input, {
   initialCountry: "id",
   utilsScript:
     "./utils.js",
