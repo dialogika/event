@@ -77,7 +77,7 @@ class Header extends HTMLElement {
         <i class="bi bi-list d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"></i>
        </nav><!-- .navbar -->
 
-      <a href="#contact" class="appointment-btn">Daftar <span class="d-none d-md-inline">Sekarang</span></a>
+      <a href="#uploadForm" class="appointment-btn" id="scroll-link" data-scroll-offset="100">Daftar <span class="d-none d-md-inline">Sekarang</span></a>
 
     </div>
   </header><!-- End Header -->
