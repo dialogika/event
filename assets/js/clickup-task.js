@@ -52,11 +52,23 @@ document
 
       const tasks = await checkTaskResponse.json(); // response data dari clickup
 
-      const existingTask = tasks.tasks.find((task) => task.name === taskName);  // Filter matched data dari clickup
+      const existingTask = tasks.tasks.find((item) => item.name === taskName);
 
-      if (existingTask) {
+      let existingWA = null;
+      let matchedTask = null; // Variable to store the task with matching WhatsApp
+
+      tasks.tasks.forEach((task) => {
+        task.custom_fields.forEach((field) => {
+          if (field.name === "Whatsapp" && field.value === whatsapp) {
+            existingWA = field.value; // Store the WhatsApp number if it matches
+            matchedTask = task; // Store the task with the matched WhatsApp
+          }
+        });
+      });
+
+      if (matchedTask) {
         // Hapus matched task/data yang sama
-        taskId = existingTask.id;
+        taskId = matchedTask.id;
         const deleteTaskResponse = await fetch(
           `https://api.clickup.com/api/v2/task/${taskId}`,
           {
@@ -119,10 +131,11 @@ document
       setTimeout(() => {
         success.style.display = "none";
       }, 3000);
-
     } catch (error) {
       console.error("Kesalahan:", error);
-      alert("Terjadi kesalahan: " + (error.message || "Kesalahan tidak diketahui."));
+      alert(
+        "Terjadi kesalahan: " + (error.message || "Kesalahan tidak diketahui.")
+      );
       loading.style.display = "none";
       success.style.display = "none";
     }
