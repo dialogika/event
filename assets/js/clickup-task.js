@@ -34,7 +34,7 @@ document
     try {
       loading.style.display = "flex";
 
-      // Langkah 1: Cek apakah task dengan nama yang sama sudah ada di ClickUp
+      // Langkah 1: Send GET Request ke Clickup
       const checkTaskResponse = await fetch(
         `https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`,
         {
@@ -52,16 +52,15 @@ document
 
       const tasks = await checkTaskResponse.json(); // response data dari clickup
 
-      const existingTask = tasks.tasks.find((item) => item.name === taskName);
-
+      // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
       let existingWA = null;
-      let matchedTask = null; // Variable to store the task with matching WhatsApp
+      let matchedTask = null; 
 
       tasks.tasks.forEach((task) => {
         task.custom_fields.forEach((field) => {
           if (field.name === "Whatsapp" && field.value === whatsapp) {
-            existingWA = field.value; // Store the WhatsApp number if it matches
-            matchedTask = task; // Store the task with the matched WhatsApp
+            existingWA = field.value; // Simpan nomor whatsapp yang sama
+            matchedTask = task; // Simpan task clickup yang sama
           }
         });
       });
