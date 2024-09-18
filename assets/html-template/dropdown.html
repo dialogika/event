@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/clickup-style.css" rel="stylesheet">
+    <title>dropdown</title>
+</head>
+<body>
+    <form id="uploadForm">
+        <!-- Input untuk Nama Tugas -->
+        <label for="taskName">Nama Tugas:</label>
+        <input type="text" id="taskName" name="taskName" required>
+        <br><br>
+
+        <!-- Pilihan untuk Tipe Kerja (WFO/WFH) -->
+        <label for="workType">WFO/WFH:</label>
+        <select id="workType" name="workType" required>
+            <option value="82f98b19-00a7-4a11-b769-d60c49995d75">WFO</option>
+            <option value="ebd50421-4ede-4b59-8a4e-e98a1f747689">WFH</option>
+            <option value="57fa5521-b794-462f-b771-82b0d1c1a773">HYBRID</option>
+        </select>
+        <br><br>
+    
+        <!-- Tombol submit untuk mengirimkan form -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="../js/dokumentasi-clickup-js-file/dropdown-clickup.js"></script>
+</body>
+</html>

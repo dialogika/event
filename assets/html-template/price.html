@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/clickup-style.css" rel="stylesheet">
+    <title>price</title>
+</head>
+<body>
+    <form id="uploadForm">
+
+        <!-- Input untuk Nama Tugas -->
+        <label for="taskName">Nama Tugas:</label>
+        <input type="text" id="taskName" name="taskName" required>
+        <br><br>
+        
+        <label for="price">Price (IDR):</label>
+        <input type="text" id="price" name="price" placeholder="Rp 0" onkeyup="formatCurrency(this)">
+        <br><br>
+        <script>
+            /**
+             * Fungsi untuk memformat input angka menjadi format mata uang Rupiah (IDR)
+             * Fungsi ini langsung mengambil elemen input dengan id 'price'
+             */
+            function formatCurrency() {
+                // 1. Ambil elemen input dengan id 'price'
+                const input = document.getElementById('price');
+                
+                // 2. Menghapus semua karakter non-angka, kecuali tanda koma (,) dan desimal (.).
+                // Gunakan regex untuk menghapus semua karakter selain angka dan koma.
+                let value = input.value.replace(/[^,\d]/g, '');
+        
+                // 3. Pisahkan angka sebelum dan sesudah tanda koma desimal.
+                // Jika ada koma, bagian kiri dari koma dianggap integer (angka bulat) dan bagian kanan dianggap sebagai desimal.
+                const parts = value.split(',');
+        
+                // 4. Format bagian integer (angka sebelum koma desimal) dengan menambahkan titik untuk pemisah ribuan.
+                // Gunakan regex untuk menambahkan titik di antara setiap tiga digit angka dari kanan.
+                let integerPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+        
+                // 5. Gabungkan kembali bagian integer dan desimal (jika ada).
+                // Jika ada bagian desimal setelah koma, kita gabungkan integer yang sudah diformat dengan bagian desimal, dipisahkan oleh koma.
+                if (parts[1] !== undefined) {
+                    // Format dengan desimal, contoh: Rp 1.000,50
+                    input.value = 'Rp ' + integerPart + ',' + parts[1];
+                } else {
+                    // Format tanpa desimal, contoh: Rp 1.000
+                    input.value = 'Rp ' + integerPart;
+                }
+            }
+        </script>
+    
+        <!-- Tombol submit untuk mengirimkan form -->
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="../js/dokumentasi-clickup-js-file/price.js"></script>
+</body>
+</html>
