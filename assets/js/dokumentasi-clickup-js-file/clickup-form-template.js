@@ -11,6 +11,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
     const channels = Array.from(channelCheckboxes).map(checkbox => checkbox.value); // Mengubah checkbox yang dipilih menjadi array nilai
     const birthDate = document.getElementById('birthDate').value;
     const workType = document.getElementById('workType').value; // Tipe pekerjaan yang dipilih dari dropdown
+    const position = document.getElementById('position').value;
     const email = document.getElementById('email').value.trim(); // Alamat email
     const location = document.getElementById('location').value.trim(); // Lokasi pengguna
     const linkedin = document.getElementById('linkedin').value.trim(); // URL LinkedIn
@@ -103,6 +104,10 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
                     {
                         id: '38d27a98-8543-42ac-a039-5763d180d06e', // ID for workType dropdown
                         value: workType // Work type value from dropdown
+                    },
+                    {
+                        id: 'f3c74d35-738f-4d34-bf63-eecaf8e57b84', // ID for Position dropdown
+                        value: position // Position type value from dropdown
                     },
                     {
                         id: '50dc4d2b-8674-4ac3-a8e6-ed6383754dd5', // ID for email field

@@ -4,7 +4,6 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
 
     // Mengambil referensi elemen form dan input
     const taskName = document.getElementById('taskName').value.trim(); // Ambil nama tugas
-    const priority = document.getElementById('priority').value; // Ambil priority
 
     // Validasi input
     if (!taskName) {
@@ -12,12 +11,13 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
         return;
     }
 
+   
     // API Token dan List ID ClickUp
     const apiToken = 'pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N';
     const listId = '901602772763'; // Ganti dengan ID list ClickUp yang sesuai
 
     try {
-        // Membuat task baru di ClickUp dengan nama tugas, email, dan priority
+        // Membuat task baru di ClickUp dengan nama tugas dan custom field umur
         const createTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {
             method: 'POST',
             headers: {
@@ -26,10 +26,9 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
             },
             body: JSON.stringify({
                 name: taskName, // Nama tugas yang diambil dari input
-                description: 'Task dengan field channels',
-                priority: parseInt(priority), // Menambahkan priority ke dalam body
+                description: 'Task dengan field umur',
                 custom_fields: [
-                    { 
+                    {
                         
                     }
                 ]
