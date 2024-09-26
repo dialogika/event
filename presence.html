@@ -146,7 +146,12 @@
           success: function () {
             alert("Mohon Menunggu Download PDF-nya")
             $(function () {
-              window.location.href = 'https://drive.google.com/uc?export=download&id=1ga3nBgs6isQhO85DZnoPU2aT_Vk1G400';
+              const link = document.createElement('a');
+              link.href = 'assets/pdf/PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
+              link.download = 'PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';  
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
             })
           }
         });
