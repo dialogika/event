@@ -54,7 +54,7 @@ document
 
       // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
       let existingWA = null;
-      let matchedTask = null; 
+      let matchedTask = null;
 
       tasks.tasks.forEach((task) => {
         task.custom_fields.forEach((field) => {
@@ -118,9 +118,7 @@ document
         }
       );
 
-      if (!createTaskResponse.ok) {
-        throw new Error("Gagal membuat tugas baru.");
-      }
+      if (!createTaskResponse.ok) throw new Error("Gagal membuat tugas baru.");
 
       const createdTaskData = await createTaskResponse.json();
       taskId = createdTaskData.id; // Simpan task ID yang baru dibuat
@@ -129,6 +127,10 @@ document
       success.style.display = "flex";
       setTimeout(() => {
         success.style.display = "none";
+        window.open(
+          "https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM",
+          "_blank"
+        );
       }, 3000);
     } catch (error) {
       console.error("Kesalahan:", error);
@@ -138,4 +140,41 @@ document
       loading.style.display = "none";
       success.style.display = "none";
     }
+  });
+
+// Function untuk cek id custom field clickup
+document
+  .getElementById("getClickupData")
+  .addEventListener("click", async (event) => {
+    const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
+    const listId = "14355106";
+    let taskId = null; // Variabel untuk menyimpan task ID
+
+    try {
+      loading.style.display = "flex";
+
+      // Langkah 1: Send GET Request ke Clickup
+      const checkTaskResponse = await fetch(
+        `https://api.clickup.com/api/v2/list/${listId}/field`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: apiToken,
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!checkTaskResponse.ok) {
+        throw new Error("Gagal memeriksa duplikasi tugas.");
+      }
+
+      const tasks = await checkTaskResponse.json(); // response data dari clickup
+
+      // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
+      let existingWA = null;
+      let matchedTask = null;
+      console.log("ini response:", checkTaskResponse);
+      console.log("ini tasks :", tasks);
+    } catch {}
   });
