@@ -1,3 +1,7 @@
+$(document).on("click", ".submitBtn", function () {
+  window.open("https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM", "_blank");
+});
+
 document
   .getElementById("uploadForm")
   .addEventListener("submit", async function (event) {
@@ -127,10 +131,6 @@ document
       success.style.display = "flex";
       setTimeout(() => {
         success.style.display = "none";
-        window.open(
-          "https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM",
-          "_blank"
-        );
       }, 3000);
     } catch (error) {
       console.error("Kesalahan:", error);
