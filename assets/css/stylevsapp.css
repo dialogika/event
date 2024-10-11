@@ -9962,7 +9962,7 @@ div.video:before {
 @media all and (max-width: 1199px) {
   .hero {
     min-height: auto;
-    padding-top: 100px;
+    padding-top: 0;
   }
 
   .hero--skin-2 {
