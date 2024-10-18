@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Presensi - Event Kelas Public Speaking Dialogika</title>
-  <meta content="Presensi Event Dialogika" name="description">
+  <title>Review Event - Event Kelas Public Speaking Dialogika</title>
+  <meta content="Review Event Dialogika" name="description">
   <meta content="skill, public speaking, training, kelas, pelatihan, inhouse training" name="keywords">
 
   <!-- Favicons -->
@@ -18,8 +18,8 @@
   <!-- OG Meta Tags to share -->
   <meta property="og:site_name" content="Kelas Public Speaking" />
   <meta property="og:site" content="www.dialogika.co" />
-  <meta property="og:title" content="Presensi | Event Dialogika" />
-  <meta property="og:description" content="Presensi Event Dialogika" />
+  <meta property="og:title" content="Review Event | Event Dialogika" />
+  <meta property="og:description" content="Review Event Dialogika" />
   <meta property="og:image" content="assets/img/hero-bg.webp" />
   <meta property="og:url" content="www.dialogika.co/event" />
   <meta property="og:type" content="page" />
@@ -47,7 +47,6 @@
   <link href="assets/part/breadcrumbs-banner/banner.css" rel="stylesheet">
   <link href="assets/part/course-mentor/course.css" rel="stylesheet">
   <link href="assets/part/team-impact/team.css" rel="stylesheet">
-  <link href="assets/part/counting-down/count.css" rel="stylesheet">
   <link href="assets/part/schedule-event/schedule.css" rel="stylesheet">
   <link href="assets/part/contact-append/contact.css" rel="stylesheet">
   <link href="assets/part/popup-box/popup.css" rel="stylesheet">
@@ -83,7 +82,6 @@
     }
 
     async function SubForm() {
-      const loadingSpinner = document.getElementById('loadingSpinner');
       const whatsAppInput = document.querySelector('input[name="WA"]');
       const emailInput = document.querySelector('input[name="Email"]');
       const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
@@ -148,7 +146,7 @@
             $(function () {
               const link = document.createElement('a');
               link.href = 'assets/pdf/PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
-              link.download = 'PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';  
+              link.download = 'PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);
@@ -272,11 +270,11 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Presensi Event Managing your Anxiety while Presenting</h2>
+        <h2>Review Event ....</h2>
         <ol>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="index.html">Event</a></li>
-          <li>Presensi</li>
+          <!-- <li><a href="../index.html">Home</a></li>
+          <li><a href="index.html">Event</a></li> -->
+          <li>Review</li>
         </ol>
       </div>
 
@@ -420,12 +418,14 @@
 
             <button type="submit" id="submits" onclick="SubForm()" class="presensi-button">Send Form</button>
 
+
             <!-- <button type="button" id="download-ppt"
               onclick="{window.location.href='https://drive.google.com/uc?export=download&id=1ga3nBgs6isQhO85DZnoPU2aT_Vk1G400'}"
               class="presensi-button " style="margin-top: 30px;">Download File</button> -->
 
 
         </form>
+        <button type="button" id="getClickupData" class="presensi-button">Ambil Review Data</button>
       </div>
     </section>
     <!-- ======= Footer & Counter Area ======= -->
@@ -438,18 +438,16 @@
     <!-- Part -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="assets/part/newevent/script.js"></script>
-    <script src="assets/part/counting-down/count.js"></script>
-
+    
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-
+    
     <!-- Template Main JS File -->
+    <script src="assets/js/clickup-task.js"></script>
     <script src="assets/js/headerfooter.js"></script>
-    <script src="assets/js/timestamp.js"></script>
+    <!-- <script src="assets/js/timestamp.js"></script> -->
     <script src="assets/js/whatsapp.js"></script>
     <script src="assets/js/main.js"></script>
 

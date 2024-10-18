@@ -10508,7 +10508,7 @@ select.form-text-input {
 }
 
 /* Gaya untuk tombol submit */
-#submitBtn {
+#eventSubmitBtn {
   display: flex;
   border-radius: 50px;
   height: 50px;
@@ -10532,50 +10532,12 @@ select.form-text-input {
   align-items: center;
 }
 
-#submitBtn:hover {
+#eventSubmitBtn:hover {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(255 212 0);
   background-color: #07276b;
   color: #ffd400;
   text-decoration: none;
   transform: translateY(-2px);
-  background-color: #07276b;
-  color: #ffd400;
-  text-decoration: none;
-  transform: translateY(-2px);
-}
-
-label[for="motivate"],
-label[for="pdf"] {
-  display: none;
-}
-
-/* Style untuk tombol submit */
-#submitBtn {
-  display: flex;
-  border-radius: 50px;
-  height: 50px;
-  width: 100%;
-  background-color: #f6b12b;
-  color: #ffffff;
-  border: none;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  outline: none;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin: 0;
-  padding: 0;
-  line-height: 60px;
-  text-align: center;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),
-    -4px -4px 8px rgba(255, 255, 255, 0.7);
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-  justify-content: center;
-  align-items: center;
-}
-
-#submitBtn:hover {
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(255 212 0);
   background-color: #07276b;
   color: #ffd400;
   text-decoration: none;
