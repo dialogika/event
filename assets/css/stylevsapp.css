@@ -552,33 +552,19 @@ output {
   color: #555555;
 }
 
-.form-control {
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555555;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out 0.15s,
-    -webkit-box-shadow ease-in-out 0.15s;
-  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-}
-
-.form-control:focus {
+.form-control:hover {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
     0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
     0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control:focus {
+  border-color: #0f5ba1;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #0f5ba1;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #0f5ba1;
 }
 
 .form-control::-moz-placeholder {
@@ -10706,4 +10692,24 @@ label[for="pdf"] {
     opacity: 0.8;
     transform: scale(1); /* Kembali ke ukuran normal */
   }
+}
+
+/* ?========================= Style untuk page review event  ==================================? */
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: lightgray;
+  transition: color 0.2s ease-in-out;
+  background: linear-gradient(to bottom, #f5deb3, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.star.hover,
+.star.selected {
+  background: gold;
+  color: gold;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

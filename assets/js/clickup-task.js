@@ -1,12 +1,78 @@
+// resetWarning belum berjalan
+const resetWarnings = () => {
+  const warnings = document.querySelectorAll(".warning");
+  warnings.forEach((warning) => (warning.style.display = "none"));
+};
+
+// Tampilkan error warning bila input tidak valid
+const showWarning = (inputId, warningId) => {
+  const warningText = document.getElementById(warningId);
+  const redInput = document.getElementById(inputId);
+
+  warningText.style.display = "block";
+  redInput.style.border = "solid red";
+};
+
+// Function untuk filter data di clickup dan hapus data lama bila sama dengan data baru
+const deleteExistingTask = async (tasks, whatsapp) => {
+  let taskId = null;
+
+  // Filter dan cari apakah ada whatsapp yang sama
+  tasks.forEach((task) => {
+    task.custom_fields.forEach((field) => {
+      if (field.name === "Whatsapp" && field.value === whatsapp) {
+        taskId = task.id;
+      }
+    });
+  });
+
+  if (taskId) {
+    const deleteResponse = await fetch(
+      `https://api.clickup.com/api/v2/task/${taskId}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: apiToken,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (!deleteResponse.ok) throw new Error("Gagal menghapus task lama.");
+  }
+};
+
+// Function untuk buat data baru
+const createNewTask = async (listId, taskName, customFields, description) => {
+  const createTaskResponse = await fetch(
+    `https://api.clickup.com/api/v2/list/${listId}/task`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: apiToken,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: taskName,
+        description: description,
+        custom_fields: customFields,
+      }),
+    }
+  );
+
+  if (!createTaskResponse.ok)
+    throw new Error("Gagal mengirim data. Harap coba lagi !");
+};
+
+// Buka whatsapp group saat submitBtn di click
 $(document).on("click", ".submitBtn", function () {
   window.open("https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM", "_blank");
 });
 
-// Function untuk kirim data form event ke clickup di  Brand/Event/Register
+const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
+
+// * Function untuk kirim data form event ke clickup di  Brand/Event/Register. Digunakan di index.html
 const handleIndexFormSubmission = async (event) => {
   event.preventDefault();
-
-  console.log("hello world")
 
   const taskName = document.getElementById("name").value.trim();
   const whatsapp = iti.getNumber();
@@ -16,31 +82,40 @@ const handleIndexFormSubmission = async (event) => {
   const jobs = Array.from(jobInputs)
     .map((input) => input.value.trim())
     .filter((value) => value);
+  const description = "Menambahkan data ke Event/Register";
   const loading = document.getElementById("loading");
   const success = document.getElementById("success");
 
+  const listId = "900302342659";
+
+  // gunakan function paling bawah/getClickupData untuk ambil id custom fields, jangan lupa ganti listIdnya ambil dari url tersebut.
+  const customFields = [
+    { id: "218de446-5037-4d3a-9f85-96c047453fe9", value: motivate },
+    { id: "4d4ea89a-2c98-467a-8452-a6d1794036ab", value: location },
+    { id: "41fe905e-8974-4bf3-a871-daddd8c4307a", value: jobs },
+    { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
+  ];
+
+  let isValid = true;
+
+  // resetWarnings();
+
+  // Validate Check
   if (!taskName) {
-    alert("Nama tugas harus diisi.");
-    return;
-  }
-  if (!jobs.length) {
-    alert("Profesi harus dipilih.");
-    return;
+    showWarning("inputName", "nameWarning");
+    isValid = false;
   }
   if (!whatsapp) {
-    alert("Nomor Whatsapp harus diisi.");
-    return;
+    showWarning("whatsapp-number", "whatsappWarning");
+    isValid = false;
   }
 
-  const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
-  const listId = "900302342659";
-  let taskId = null; // Variabel untuk menyimpan task ID
+  if (!isValid) return;
 
+  console.log("hello world2");
   try {
     loading.style.display = "flex";
-
-    // Langkah 1: Send GET Request ke Clickup
-    const checkTaskResponse = await fetch(
+    const getResponse = await fetch(
       `https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`,
       {
         method: "GET",
@@ -51,82 +126,17 @@ const handleIndexFormSubmission = async (event) => {
       }
     );
 
-    if (!checkTaskResponse.ok) {
-      throw new Error("Gagal memeriksa duplikasi tugas.");
-    }
+    if (!getResponse.ok) throw new Error("Gagal terhubung ke server !.");
 
-    const tasks = await checkTaskResponse.json(); // response data dari clickup
+    const tasks = await getResponse.json();
 
-    // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
-    let existingWA = null;
-    let matchedTask = null;
+    if (!getResponse.ok) throw new Error("Gagal terhubung ke server.");
 
-    tasks.tasks.forEach((task) => {
-      task.custom_fields.forEach((field) => {
-        if (field.name === "Whatsapp" && field.value === whatsapp) {
-          existingWA = field.value; // Simpan nomor whatsapp yang sama
-          matchedTask = task; // Simpan task clickup yang sama
-        }
-      });
-    });
+    // Step 1: Delete task lama
+    await deleteExistingTask(tasks.tasks, whatsapp);
 
-    if (matchedTask) {
-      // Hapus matched task/data yang sama
-      taskId = matchedTask.id;
-      const deleteTaskResponse = await fetch(
-        `https://api.clickup.com/api/v2/task/${taskId}`,
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: apiToken,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (!deleteTaskResponse.ok) {
-        throw new Error("Gagal menghapus tugas lama.");
-      }
-    }
-
-    // Langkah 2: Buat task baru setelah task lama dihapus (atau jika task tidak ada)
-    const createTaskResponse = await fetch(
-      `https://api.clickup.com/api/v2/list/${listId}/task`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: apiToken,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: taskName,
-          description: "Task dengan field channels",
-          custom_fields: [
-            {
-              id: "218de446-5037-4d3a-9f85-96c047453fe9", // ID untuk field "motivate"
-              value: motivate,
-            },
-            {
-              id: "4d4ea89a-2c98-467a-8452-a6d1794036ab", // ID untuk field "location"
-              value: location, // Lokasi baru
-            },
-            {
-              id: "41fe905e-8974-4bf3-a871-daddd8c4307a", // ID untuk field "jobs"
-              value: jobs,
-            },
-            {
-              id: "562e180b-6664-483e-8f44-28902bfe4fbe", // ID untuk field "whatsapp"
-              value: whatsapp,
-            },
-          ],
-        }),
-      }
-    );
-
-    if (!createTaskResponse.ok) throw new Error("Gagal membuat tugas baru.");
-
-    const createdTaskData = await createTaskResponse.json();
-    taskId = createdTaskData.id; // Simpan task ID yang baru dibuat
+    // Step 2: Buat task baru dengan data dari form
+    await createNewTask(listId, taskName, customFields, description);
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -134,12 +144,7 @@ const handleIndexFormSubmission = async (event) => {
       success.style.display = "none";
     }, 5000);
   } catch (error) {
-    console.error("Kesalahan:", error);
-    alert(
-      "Terjadi kesalahan: " + (error.message || "Kesalahan tidak diketahui.")
-    );
-    loading.style.display = "none";
-    success.style.display = "none";
+    console.error("Kesalahan:", error.message);
   }
 };
 
@@ -148,20 +153,116 @@ const eventSubmitBtn = document.getElementById("eventSubmitBtn");
 if (eventSubmitBtn)
   eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
 
+// * Function untuk kirim data review event ke clickup di  Brand/Event/Review. Digunakan di review-event.html
+const handleEventReview = async (event) => {
+  event.preventDefault();
 
+  const listId = "900302340074"; // listId untuk Brand/Event/Review
 
-// Function untuk cek id custom field clickup
+  const taskName = document.getElementById("inputName").value.trim();
+  const whatsapp = iti.getNumber();
+  const comment = document.getElementById("inputComment").value.trim();
+  const saran = document.getElementById("inputSaran").value.trim();
+  const starsRating = document.getElementById("inputRating").value.trim();
+  const alasanDaftar = document.getElementById("inputAlasan").value.trim();
+  const inputTeknis = document.getElementById("inputTeknis").value.trim();
+  const description = "Menambahkan data baru ke Event/Review";
+  const loadingSpinner = document.getElementById("loadingSpinner")
+
+  // gunakan function paling bawah/getClickupData untuk ambil id custom fields, jangan lupa ganti listIdnya ambil dari url tersebut.
+  const customFields = [
+    { id: "4a11152c-a34b-4d53-aa86-0a25ccb97009", value: saran },
+    { id: "c45a736a-d30e-45c8-b4ae-070e4b792d47", value: comment },
+    { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
+    { id: "42d9a4fc-e8a3-49bc-9f41-4ef76c6dae94", value: starsRating },
+  ];
+
+  let isValid = true;
+  resetWarnings();
+
+  // Check validasi
+  if (!taskName) {
+    showWarning("inputName", "nameWarning");
+    isValid = false;
+  }
+  if (!whatsapp) {
+    showWarning("whatsapp-number", "whatsappWarning");
+    isValid = false;
+  }
+  if (!comment) {
+    showWarning("inputComment", "commentWarning");
+    isValid = false;
+  }
+  if (!saran) {
+    showWarning("inputSaran", "saranWarning");
+    isValid = false;
+  }
+  if (!alasanDaftar) {
+    showWarning("inputAlasan", "alasanWarning");
+    isValid = false;
+  }
+  if (!inputTeknis) {
+    showWarning("inputTeknis", "teknisWarning");
+    isValid = false;
+  }
+  if (!isValid) return;
+
+  try {
+    loadingSpinner.style.display = "flex"
+    // Ambil data dari clickup
+    const getResponse = await fetch(
+      `https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`,
+      {
+        method: "GET",
+        headers: {
+          Authorization: apiToken,
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    if (!getResponse.ok) throw new Error("Gagal terhubung ke server.");
+
+    const tasks = await getResponse.json();
+
+    // Step 1: Delete task lama
+    await deleteExistingTask(tasks.tasks, whatsapp);
+
+    // Step 2: Buat task baru dengan data dari form
+    await createNewTask(listId, taskName, customFields, description);
+
+    // Step 3: Download kupon setelah mengisi form review
+    const link = document.createElement("a");
+    link.href = "assets/img/vsapp/coupon-basic-play.png";
+    link.download = "basic-play-coupon";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    
+    loadingSpinner.style.display = "none"
+  } catch (error) {
+    console.error("Kesalahan:", error.message);
+  }
+};
+
+// Masukkan function handleEventReview ke element button dengan id eventSubmitBtn
+const reviewSubmitBtn = document.getElementById("reviewSubmitBtn");
+if (reviewSubmitBtn)
+  reviewSubmitBtn.addEventListener("click", handleEventReview);
+
+// !!! Function untuk cek id custom field clickup
 document
   .getElementById("getClickupData")
   .addEventListener("click", async (event) => {
     const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
-    const listId = "14355106";
+    const listId = "900302340074";
     let taskId = null; // Variabel untuk menyimpan task ID
 
     console.log("hello world ini ambil data");
 
     try {
-      loading.style.display = "flex";
+      // loading.style.display = "flex";
 
       // Langkah 1: Send GET Request ke Clickup
       const checkTaskResponse = await fetch(
@@ -186,5 +287,7 @@ document
       let matchedTask = null;
       console.log("ini response:", checkTaskResponse);
       console.log("ini tasks :", tasks);
-    } catch {}
+    } catch (error) {
+      console.log("terjadi kesalahan !", error);
+    }
   });

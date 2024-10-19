@@ -51,6 +51,9 @@
   <link href="assets/part/contact-append/contact.css" rel="stylesheet">
   <link href="assets/part/popup-box/popup.css" rel="stylesheet">
   <link href="assets/part/video-sec/video.css" rel="stylesheet">
+
+  <link href="assets/part/international-phone-number/intlTelInput.css" rel="stylesheet">
+  <link href="assets/part/custom-files/custom-style.css" rel="stylesheet">
   <link href="assets/css/present.css" rel="stylesheet">
 
 
@@ -81,87 +84,23 @@
       });
     }
 
-    async function SubForm() {
-      const whatsAppInput = document.querySelector('input[name="WA"]');
-      const emailInput = document.querySelector('input[name="Email"]');
-      const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
-      const CheckKetersediaanInput = $('#myForm').serializeArray().find(item => item.name === 'Check');
-      const FollowedAccounts = [];
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
-
-
-      // Validasi Input email, whatsapp, dan ketersediaan
-      const validateInput = (input, regex, message) => {
-        if (!regex.test(input.value)) {
-          alert(message);
-          input.style.border = "2px solid red";
-          return false;
+    function SubForm() {
+      $.ajax({
+        url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
+        type: "post",
+        data: $("#myForm").serializeArray(),
+        headers: {
+          accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
+          secretKey: "68a998592183dc30cdc2b07576759f04"
+        },
+        success: function () {
+          alert("Anda Telah Mendaftar :)")
+        },
+        error: function () {
+          alert("There was an error :(")
         }
-        return true;
-      }
-      if (!validateInput(whatsAppInput, phoneRegex, "Nomor tidak valid!") || !validateInput(emailInput, emailRegex, "Email tidak valid!") || !CheckKetersediaanInput) {
-        if (!CheckKetersediaanInput) {
-          alert("Tolong isi apakah anda dapat mengikuti webinar");
-          return;
-        }
-        return;
-      }
-
-      // Filter checked follow boxes
-      const FollowedAccountsString = Array.from(followCheckBoxes)
-        .filter(item => item.checked)
-        .map(item => item.value)
-        .reduce((acc, current) => {
-          if (current === "Belum Semua") {
-            return "Belum Semua";
-          }
-          return acc === "Belum Semua" ? "Belum Semua" : acc + (acc ? ', ' : '') + current; // Bila pilihan "Belum Semua" di check, yang lainnya dihapus
-        }, "");
-
-
-      // Buat hidden input FollowedAccounts 
-      let hiddenFollowedAccountsInput = document.querySelector('input[name="FollowedAccounts"]');
-      if (!hiddenFollowedAccountsInput) {
-        hiddenFollowedAccountsInput = document.createElement('input');
-        hiddenFollowedAccountsInput.type = "hidden";
-        hiddenFollowedAccountsInput.name = 'Follow';  // Namenya harus sama dengan yang di spreadsheet
-        hiddenFollowedAccountsInput.value = FollowedAccountsString; // Set valuenya jadi string. contoh :"Twitter, Facebook, Linkedin"
-      }
-      document.getElementById('myForm').appendChild(hiddenFollowedAccountsInput);
-
-      try {
-        loadingSpinner.style.display = "block";
-        const response = await $.ajax({
-          url: "https://api.apispreadsheets.com/data/OMCD6zs0qSKqCBP2/",
-          type: "post",
-          data: $('#myForm').serializeArray(),
-          headers: {
-            accessKey: "0199751ed76ed58f9b4450ccc61b2db7",
-            secretKey: "20f3c604626ef8b7fe5fee3f5c811d19"
-          },
-          success: function () {
-            alert("Mohon Menunggu Download PDF-nya")
-            $(function () {
-              const link = document.createElement('a');
-              link.href = 'assets/pdf/PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
-              link.download = 'PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            })
-          }
-        });
-      } catch (error) {
-        alert("There was an error :", error);
-      } finally {
-        loadingSpinner.style.display = "none";
-        whatsAppInput.style.border = "solid 0 black";
-        emailInput.style.border = "solid 0 black";
-      }
+      });
     }
-
 
     function Subcription() {
       $.ajax({
@@ -270,7 +209,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2>Review Event ....</h2>
+        <h2>Review Event</h2>
         <ol>
           <!-- <li><a href="../index.html">Home</a></li>
           <li><a href="index.html">Event</a></li> -->
@@ -292,6 +231,25 @@
         <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
       </div>
 
+      <!-- Success indicator -->
+      <!-- <div id="reviewSuccessIndicator"
+        style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
+        <div class="success-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="green" class="bi bi-check-circle-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-4.97-3.03a.75.75 0 1 0-1.08-1.04l-3.992 4.99-1.992-2.49a.75.75 0 1 0-1.176.96l2.5 3.125a.75.75 0 0 0 1.168-.013l4.5-5.5z" />
+          </svg>
+        </div>
+
+        <p style="text-align: center; margin-top: 20px;">
+          Terimakasih atas review Anda. Kami sangat menghargai waktu dan feedback yang Anda berikan.
+          Sebagai apresiasi, Anda akan segera mendapatkan coupon eksklusif.
+        </p>
+        <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5); position: absolute; z-index: -1;"></div>
+      </div> -->
+
+
       <div class="container">
         <form action="javascript:void" method="post" id="myForm" enctype="text/plain" role="form"
           class="php-email-form needs-validation">
@@ -299,124 +257,89 @@
             <div class="card_judul">
               <div class="card-body">
                 <div class="col-sm">
-                  <strong class="fs-5">Silahkan isi presensi untuk event Managing your Anxiety while Presenting.</strong> <br>
-                  <hr>Setelah mengisi form webinar ini kamu akan dapat mengunduh materi.
+                  <strong class="fs-5">Review Event: Managing Your Anxiety While Presenting</strong>
+                  <p class="mt-3">Terima kasih telah mengikuti webinar ini! Mohon berikan review Anda dengan mengisi
+                    form berikut.</p>
                 </div>
               </div>
             </div>
 
             <div class="mb-4">
-              <label for="exampleFormControlInput1" class="form-label"><strong>Nama Lengkap</strong></label>
-              <input type="text" name="Nama" class="form-control" id="exampleFormControlInput1"
-                placeholder="Nama Lengkap">
+
+              <!-- Input Nama -->
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="nameWarning">Nama
+                Harus Diisi</p>
+              <label style="font-weight: 500;" for="inputName" class="form-label text-dark">Nama Lengkap
+              </label>
+              <input type="text" name="inputName" class="form-control" id="inputName" placeholder="Nama Lengkap"
+                required>
             </div>
+
+            <!-- Input Whatsapp -->
             <div class="mb-4">
-              <label for="exampleFormControlInput2" class="form-label"><strong>Nomor Whatsapp</strong></label>
-              <input type="tel" name="WA" class="form-control" id="exampleFormControlInput2" placeholder="625780007799">
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="whatsappWarning">Nomor
+                Whatsapp Harus Diisi dan valid</p>
+              <label style="font-weight: 500;" for="whatsapp-number" class="form-label text-dark">Nomor Whatsapp
+              </label>
+              <input type="tel" name="whatsapp-number" class="form-control" id="whatsapp-number" required>
             </div>
+
+            <!-- Input alasan daftar webinar -->
             <div class="mb-4">
-              <label for="exampleFormControlInput3" class="form-label"><strong>Email Active</strong></label>
-              <input type="email" name="Email" class="form-control" id="exampleFormControlInput3"
-                placeholder="name@example.com">
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="alasanWarning">Berikan alasan
+                mendaftar webinar</p>
+              <label style="font-weight: 500;" for="inputAlasan" class="form-label text-dark">Alasan Mendaftar Webinar
+              </label>
+              <input name="inputAlasan" id="inputAlasan" rows="3" class="form-control"
+                placeholder="Merasa gugup saat presentasi" required>
             </div>
+
+            <!-- Input rating -->
+            <div class="stars mb-4 d-inline-block">
+              <label style="font-weight: 500;" class="form-label text-dark" for="inputRating">Rating</label>
+              <input type="hidden" name="inputRating" id="inputRating" value="0" class="form-control" required>
+              <div>
+                <span class="star" data-value="1">☆</span>
+                <span class="star" data-value="2">☆</span>
+                <span class="star" data-value="3">☆</span>
+                <span class="star" data-value="4">☆</span>
+                <span class="star" data-value="5">☆</span>
+              </div>
+            </div>
+
+            <!-- Input komentar -->
             <div class="mb-4">
-              <label for="exampleFormControlTextarea1" class="form-label"><strong>Tahu Webinar Ini Dari Mana
-                  ?</strong></label>
-              <textarea class="form-control" name="Info" id="exampleFormControlTextarea1" rows="4"
-                placeholder="saya tahu dari..."></textarea>
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="commentWarning">Harap isi
+                komentar tentang webinar</p>
+              <label style="font-weight: 500;" for="inputComment" class="form-label text-dark">Komentar tentang webinar
+              </label>
+              <textarea class="form-control" name="inputComment" id="inputComment" rows="4"
+                placeholder="Webinar kali ini ...." required></textarea>
             </div>
 
+            <!-- Input saran -->
             <div class="mb-4">
-              <label for="" class="form-label"><strong>Akun Yang Sudah Di Follow</strong></label>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Instagram"
-                  value="Instagram">
-                <label class="form-check-label" for="Instagram">Instagram
-                  <a href="https://instagram.com/dialogika.co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Tiktok" value="Tiktok">
-                <label class="form-check-label" for="Tiktok">Tiktok
-                  <a href="https://tiktok.com/@dialogika_co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="LinkedIn"
-                  value="Linkedin">
-                <label class="form-check-label" for="LinkedIn">LinkedIn
-                  <a href="https://linkedin.com/company/dialogika" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Facebook"
-                  value="Facebook">
-                <label class="form-check-label" for="Facebook">Facebook
-                  <a href="https://facebook.com/dialogika.co" target="__blank">(link)</a>
-                </label>
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="saranWarning">Harap isi saran
+                untuk webinar berikutnya</p>
+              <label style="font-weight: 500;" for="inputSaran" class="form-label text-dark">Apakah ada saran terkait
+                topik pembahasan webinar
+                dialogika selanjutnya ? </label>
+              <textarea name="inputSaran" id="inputSaran" rows="3" class="form-control" placeholder="Menurut saya ...."
+                required></textarea>
+            </div>
 
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Youtube"
-                  value="Youtube">
-                <label class="form-check-label" for="Youtube">Youtube
-                  <a href="https://youtube.com/dialogika_co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Twitter"
-                  value="Twitter">
-                <label class="form-check-label" for="Twitter">Twitter
-                  <a href="https://x.com/dialogika_co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Threads"
-                  value="Threads">
-                <label class="form-check-label" for="Threads">Threads
-                  <a href="https://threads.com/dialogika.co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Pinterest"
-                  value="Pinterest">
-                <label class="form-check-label" for="Pinterest">Pinterest
-                  <a href="https://pinterest.com/dialogika_co" target="__blank">(link)</a>
-                </label>
-              </div>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" role="switch" name="Follow" id="Belum"
-                  value="Belum Semua">
-                <label class="form-check-label" for="Belum">Belum Semua</label>
-              </div>
+            <!-- Input saran & kritik teknis -->
+            <div class="mb-4">
+              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="teknisWarning">Harap isi kritik
+                dan saran teknis</p>
+              <label style="font-weight: 500;" for="inputTeknis" class="form-label text-dark">Kritik dan Saran untuk
+                Peningkatan Teknis</label>
+              <textarea name="inputTeknis" id="inputTeknis" rows="3" class="form-control"
+                placeholder="Suaranya jelas/kurang jelas, durasi webinarnya kurang ...." required></textarea>
             </div>
 
 
-            <div class="row mb-4">
-              <label for="" class="form-label"><strong>Apakah Bisa Mengikuti Webinar Ini Sampai Akhir?</strong></label>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck1"
-                  value="Bisa Sampai Akhir">
-                <label class="form-check-label" for="defaultCheck1">
-                  Bisa Sampai Akhir
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck2"
-                  value="Bisa Sampai Pertengahan">
-                <label class="form-check-label" for="defaultCheck2">
-                  Sampai Pertengahan
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck3" value="Masih Labil">
-                <label class="form-check-label" for="defaultCheck3">
-                  Belum Pasti
-                </label>
-              </div>
-            </div>
-
-            <button type="submit" id="submits" onclick="SubForm()" class="presensi-button">Send Form</button>
+            <button type="submit" id="reviewSubmitBtn" class="presensi-button">Send Review</button>
 
 
             <!-- <button type="button" id="download-ppt"
@@ -425,7 +348,7 @@
 
 
         </form>
-        <button type="button" id="getClickupData" class="presensi-button">Ambil Review Data</button>
+        <button type="button" id="getClickupData" class="presensi-button d-none">Ambil Review Data</button>
       </div>
     </section>
     <!-- ======= Footer & Counter Area ======= -->
@@ -438,16 +361,20 @@
     <!-- Part -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="assets/part/newevent/script.js"></script>
-    
+    <script src="assets/part/custom-files/handleStarsUX.js"></script>
+    <script src="assets/part/international-phone-number/script.js"></script>
+    <script src="assets/part/international-phone-number/intlTelInput.min.js"></script>
+    <script src="assets/part/international-phone-number/utils.js"></script>
+
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
-    
+
     <!-- Template Main JS File -->
     <script src="assets/js/clickup-task.js"></script>
     <script src="assets/js/headerfooter.js"></script>
-    <!-- <script src="assets/js/timestamp.js"></script> -->
+    <script src="assets/js/timestamp.js"></script>
     <script src="assets/js/whatsapp.js"></script>
     <script src="assets/js/main.js"></script>
 

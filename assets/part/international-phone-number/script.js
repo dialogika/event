@@ -1,13 +1,11 @@
-const input = document.querySelector("#whatsapp-number");
-const iti = window.intlTelInput(input, {
-  initialCountry: "id",
-  utilsScript: "./utils.js",
-});
-
-// Guard Clause untuk event form
-
 // Scroll animation
+var iti;
 document.addEventListener("DOMContentLoaded", function () {
+  const input = document.querySelector("#whatsapp-number");
+  iti = window.intlTelInput(input, {
+    initialCountry: "id",
+    utilsScript: "./utils.js",
+  });
   document.querySelectorAll("#scroll-link").forEach((link) => {
     link.addEventListener("click", function (event) {
       event.preventDefault();
