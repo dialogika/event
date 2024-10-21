@@ -228,26 +228,24 @@
       <div id="loadingSpinner" style="display: none;">
         <div class="spinner-border">
         </div>
-        <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
+        <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.7);"></div>
       </div>
 
-      <!-- Success indicator -->
-      <!-- <div id="reviewSuccessIndicator"
-        style="display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative;">
-        <div class="success-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="green" class="bi bi-check-circle-fill"
-            viewBox="0 0 16 16">
-            <path
-              d="M16 8a8 8 0 1 1-16 0 8 8 0 0 1 16 0zm-4.97-3.03a.75.75 0 1 0-1.08-1.04l-3.992 4.99-1.992-2.49a.75.75 0 1 0-1.176.96l2.5 3.125a.75.75 0 0 0 1.168-.013l4.5-5.5z" />
-          </svg>
+      <!-- Success Indicator -->
+      <div id="successIndicator" style="display: none;">
+        <div class="success-content">
+          <div class="success-icon">
+            ✔
+          </div>
+          <h2 class="success-message">Success!</h2>
+          <p>Anda akan segera mengunduh kupon</p>
+          <p>Jika anda belum mendapatkan kupon, <a href="assets/img/vsapp/coupon-basic-play.png" download>tolong
+              click disini !</a></p>
+          <button type="button" class="px-2 h-auto w-auto rounded-2 btn btn-primary"
+            onclick="btnClose('successIndicator')">Close</button>
         </div>
-
-        <p style="text-align: center; margin-top: 20px;">
-          Terimakasih atas review Anda. Kami sangat menghargai waktu dan feedback yang Anda berikan.
-          Sebagai apresiasi, Anda akan segera mendapatkan coupon eksklusif.
-        </p>
-        <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5); position: absolute; z-index: -1;"></div>
-      </div> -->
+      </div>
+      <!-- End of Success Indicator -->
 
 
       <div class="container">
@@ -267,7 +265,7 @@
             <div class="mb-4">
 
               <!-- Input Nama -->
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="nameWarning">Nama
+              <p class="warning" id="nameWarning">Nama
                 Harus Diisi</p>
               <label style="font-weight: 500;" for="inputName" class="form-label text-dark">Nama Lengkap
               </label>
@@ -277,7 +275,7 @@
 
             <!-- Input Whatsapp -->
             <div class="mb-4">
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="whatsappWarning">Nomor
+              <p class="warning" id="whatsappWarning">Nomor
                 Whatsapp Harus Diisi dan valid</p>
               <label style="font-weight: 500;" for="whatsapp-number" class="form-label text-dark">Nomor Whatsapp
               </label>
@@ -286,7 +284,7 @@
 
             <!-- Input alasan daftar webinar -->
             <div class="mb-4">
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="alasanWarning">Berikan alasan
+              <p class="warning" id="alasanWarning">Berikan alasan
                 mendaftar webinar</p>
               <label style="font-weight: 500;" for="inputAlasan" class="form-label text-dark">Alasan Mendaftar Webinar
               </label>
@@ -309,7 +307,7 @@
 
             <!-- Input komentar -->
             <div class="mb-4">
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="commentWarning">Harap isi
+              <p class="warning" id="commentWarning">Harap isi
                 komentar tentang webinar</p>
               <label style="font-weight: 500;" for="inputComment" class="form-label text-dark">Komentar tentang webinar
               </label>
@@ -319,7 +317,7 @@
 
             <!-- Input saran -->
             <div class="mb-4">
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="saranWarning">Harap isi saran
+              <p class="warning" id="saranWarning">Harap isi saran
                 untuk webinar berikutnya</p>
               <label style="font-weight: 500;" for="inputSaran" class="form-label text-dark">Apakah ada saran terkait
                 topik pembahasan webinar
@@ -330,7 +328,7 @@
 
             <!-- Input saran & kritik teknis -->
             <div class="mb-4">
-              <p style="display: none; font-size: 13px; margin: 3px; color: red;" id="teknisWarning">Harap isi kritik
+              <p class="warning" id="teknisWarning">Harap isi kritik
                 dan saran teknis</p>
               <label style="font-weight: 500;" for="inputTeknis" class="form-label text-dark">Kritik dan Saran untuk
                 Peningkatan Teknis</label>
@@ -340,12 +338,7 @@
 
 
             <button type="submit" id="reviewSubmitBtn" class="presensi-button">Send Review</button>
-
-
-            <!-- <button type="button" id="download-ppt"
-              onclick="{window.location.href='https://drive.google.com/uc?export=download&id=1ga3nBgs6isQhO85DZnoPU2aT_Vk1G400'}"
-              class="presensi-button " style="margin-top: 30px;">Download File</button> -->
-
+            <!-- <button type="button" id="getClickupData" class="presensi-button">Get data</button> -->
 
         </form>
         <button type="button" id="getClickupData" class="presensi-button d-none">Ambil Review Data</button>
@@ -361,7 +354,7 @@
     <!-- Part -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="assets/part/newevent/script.js"></script>
-    <script src="assets/part/custom-files/handleStarsUX.js"></script>
+    <script src="assets/part/custom-files/script.js"></script>
     <script src="assets/part/international-phone-number/script.js"></script>
     <script src="assets/part/international-phone-number/intlTelInput.min.js"></script>
     <script src="assets/part/international-phone-number/utils.js"></script>

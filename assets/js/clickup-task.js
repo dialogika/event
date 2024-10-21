@@ -1,7 +1,9 @@
 // resetWarning belum berjalan
 const resetWarnings = () => {
   const warnings = document.querySelectorAll(".warning");
+  const inputBorder = document.querySelectorAll(".form-control")
   warnings.forEach((warning) => (warning.style.display = "none"));
+  inputBorder.forEach((input)=> (input.style.border = "solid 1px #DEE2E6"))
 };
 
 // Tampilkan error warning bila input tidak valid
@@ -167,7 +169,9 @@ const handleEventReview = async (event) => {
   const alasanDaftar = document.getElementById("inputAlasan").value.trim();
   const inputTeknis = document.getElementById("inputTeknis").value.trim();
   const description = "Menambahkan data baru ke Event/Review";
-  const loadingSpinner = document.getElementById("loadingSpinner")
+
+  const loadingSpinner = document.getElementById("loadingSpinner");
+  const successIndicator = document.getElementById("successIndicator");
 
   // gunakan function paling bawah/getClickupData untuk ambil id custom fields, jangan lupa ganti listIdnya ambil dari url tersebut.
   const customFields = [
@@ -175,6 +179,8 @@ const handleEventReview = async (event) => {
     { id: "c45a736a-d30e-45c8-b4ae-070e4b792d47", value: comment },
     { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
     { id: "42d9a4fc-e8a3-49bc-9f41-4ef76c6dae94", value: starsRating },
+    { id: "5c1a365d-2b76-4c6b-a431-9f14d636813d", value: inputTeknis },
+    { id: "0eb65763-45b4-4030-8553-c5cec8f19877", value: alasanDaftar },
   ];
 
   let isValid = true;
@@ -208,7 +214,7 @@ const handleEventReview = async (event) => {
   if (!isValid) return;
 
   try {
-    loadingSpinner.style.display = "flex"
+    loadingSpinner.style.display = "flex";
     // Ambil data dari clickup
     const getResponse = await fetch(
       `https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`,
@@ -239,8 +245,8 @@ const handleEventReview = async (event) => {
     link.click();
     document.body.removeChild(link);
 
-    
-    loadingSpinner.style.display = "none"
+    loadingSpinner.style.display = "none";
+    successIndicator.style.display = "flex";
   } catch (error) {
     console.error("Kesalahan:", error.message);
   }
@@ -250,6 +256,20 @@ const handleEventReview = async (event) => {
 const reviewSubmitBtn = document.getElementById("reviewSubmitBtn");
 if (reviewSubmitBtn)
   reviewSubmitBtn.addEventListener("click", handleEventReview);
+
+const handleSubFooterSubmission = (event) => {
+  event.preventDefault();
+  const inputSubFooterNama = document.getElementById("inputSubFooterNama");
+  const inputSubFooterWhatsapp = subFooterIti.getNumber();
+  const inputSubFooterDomisili = document.getElementById(
+    "inputSubFooterDomisili"
+  );
+
+  const listId = "";
+};
+
+const subFooterBtn = document.getElementById("subFooterBtn");
+if (subFooterBtn) subFooterBtn.addEventListener("click");
 
 // !!! Function untuk cek id custom field clickup
 document

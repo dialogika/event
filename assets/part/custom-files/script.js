@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+ 
+
+  // ! Start of custom stars functions
   const stars = document.querySelectorAll(".star");
   const ratingInput = document.getElementById("inputRating");
 
@@ -34,4 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
       highlightStars(rating, true);
     }
   }
+  // ! End of custom stars functions
 });
+
+ // Function to close/hide an element
+ const btnClose = (elementId) => {
+  const element = document.getElementById(`${elementId}`);
+
+  element.style.display = "none";
+};
