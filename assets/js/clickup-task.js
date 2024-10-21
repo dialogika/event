@@ -199,6 +199,10 @@ const handleEventReview = async (event) => {
     showWarning("inputComment", "commentWarning");
     isValid = false;
   }
+  if(starsRating < 1){
+    showWarning("", "webinarWarning")
+    isValid =false
+  }
   if (!saran) {
     showWarning("inputSaran", "saranWarning");
     isValid = false;
@@ -248,6 +252,7 @@ const handleEventReview = async (event) => {
     loadingSpinner.style.display = "none";
     successIndicator.style.display = "flex";
   } catch (error) {
+    loadingSpinner.style.display = "none";
     console.error("Kesalahan:", error.message);
   }
 };
