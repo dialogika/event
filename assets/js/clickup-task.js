@@ -1,9 +1,9 @@
 // resetWarning belum berjalan
 const resetWarnings = () => {
   const warnings = document.querySelectorAll(".warning");
-  const inputBorder = document.querySelectorAll(".form-control")
+  const inputBorder = document.querySelectorAll(".form-control");
   warnings.forEach((warning) => (warning.style.display = "none"));
-  inputBorder.forEach((input)=> (input.style.border = "solid 1px #DEE2E6"))
+  inputBorder.forEach((input) => (input.style.border = "solid 1px #DEE2E6"));
 };
 
 // Tampilkan error warning bila input tidak valid
@@ -64,11 +64,6 @@ const createNewTask = async (listId, taskName, customFields, description) => {
   if (!createTaskResponse.ok)
     throw new Error("Gagal mengirim data. Harap coba lagi !");
 };
-
-// Buka whatsapp group saat submitBtn di click
-$(document).on("click", ".submitBtn", function () {
-  window.open("https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM", "_blank");
-});
 
 const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
 
@@ -150,10 +145,15 @@ const handleIndexFormSubmission = async (event) => {
   }
 };
 
-// Masukkan function handleIndexFormSubmission ke element button dengan id eventSubmitBtn
+// Masukkan function handleIndexFormSubmission ke element button dengan id eventSubmitBtn dan membuka grup WA CEO Class
 const eventSubmitBtn = document.getElementById("eventSubmitBtn");
-if (eventSubmitBtn)
+if (eventSubmitBtn) {
   eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
+  // Buka whatsapp group saat submitBtn di click
+  $(document).on("click", ".submitBtn", () => {
+    window.open("https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM", "_blank");
+  });
+}
 
 // * Function untuk kirim data review event ke clickup di  Brand/Event/Review. Digunakan di review-event.html
 const handleEventReview = async (event) => {
@@ -199,9 +199,9 @@ const handleEventReview = async (event) => {
     showWarning("inputComment", "commentWarning");
     isValid = false;
   }
-  if(starsRating < 1){
-    showWarning("", "webinarWarning")
-    isValid =false
+  if (starsRating < 1) {
+    showWarning("", "webinarWarning");
+    isValid = false;
   }
   if (!saran) {
     showWarning("inputSaran", "saranWarning");
@@ -273,46 +273,50 @@ const handleSubFooterSubmission = (event) => {
   const listId = "";
 };
 
+// *** Function untuk cek id custom field clickup
+document.addEventListener("DOMContentLoaded", function () {
+  document
+    .getElementById("getClickupData")
+    .addEventListener("click", async (event) => {
+      const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
+      const listId = "14355106";
+      let taskId = null; // Variabel untuk menyimpan task ID
+
+      console.log("hello world ini ambil data");
+
+      try {
+        // loading.style.display = "flex";
+
+        // Langkah 1: Send GET Request ke Clickup
+        const checkTaskResponse = await fetch(
+          `https://api.clickup.com/api/v2/list/${listId}/field`,
+          {
+            method: "GET",
+            headers: {
+              Authorization: apiToken,
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (!checkTaskResponse.ok) {
+          throw new Error("Gagal memeriksa duplikasi tugas.");
+        }
+
+        const tasks = await checkTaskResponse.json(); // response data dari clickup
+
+        // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
+        let existingWA = null;
+        let matchedTask = null;
+        console.log("ini response:", checkTaskResponse);
+        console.log("ini tasks :", tasks);
+      } catch (error) {
+        console.log("terjadi kesalahan !", error);
+      }
+    });
+});
+
+// Function untuk mengirim data saat send button di form di footer
+// !!! Disimpan paling bawah karna menyebabkan error dimana function dibawah ini jadi gak bisa berjalan. Kemungkinan karna addEventListener belum complete
 const subFooterBtn = document.getElementById("subFooterBtn");
 if (subFooterBtn) subFooterBtn.addEventListener("click");
-
-// !!! Function untuk cek id custom field clickup
-document
-  .getElementById("getClickupData")
-  .addEventListener("click", async (event) => {
-    const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
-    const listId = "900302340074";
-    let taskId = null; // Variabel untuk menyimpan task ID
-
-    console.log("hello world ini ambil data");
-
-    try {
-      // loading.style.display = "flex";
-
-      // Langkah 1: Send GET Request ke Clickup
-      const checkTaskResponse = await fetch(
-        `https://api.clickup.com/api/v2/list/${listId}/field`,
-        {
-          method: "GET",
-          headers: {
-            Authorization: apiToken,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (!checkTaskResponse.ok) {
-        throw new Error("Gagal memeriksa duplikasi tugas.");
-      }
-
-      const tasks = await checkTaskResponse.json(); // response data dari clickup
-
-      // Variable sementara untuk menyimpan nomor whatsapp dan task yang sama.
-      let existingWA = null;
-      let matchedTask = null;
-      console.log("ini response:", checkTaskResponse);
-      console.log("ini tasks :", tasks);
-    } catch (error) {
-      console.log("terjadi kesalahan !", error);
-    }
-  });

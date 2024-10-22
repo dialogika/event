@@ -367,7 +367,8 @@
 									<path
 										d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
 								</svg>
-								<p>Link Pendaftaran : <a href="#uploadForm" id="scroll-link"
+								<p>Link Pendaftaran : <a href="#uploadForm"
+										style="text-decoration: underline; font-weight: 600;" id="scroll-link"
 										data-scroll-offset="100">CLICK ME</a>
 								</p>
 							</li>
@@ -781,59 +782,6 @@
 										autocomplete="off"> </textarea>
 								</div>
 
-								<!-- Channel yang sudah di follow Field -->
-								<!-- <div class="channel-container">
-									<label for="channel">Followed Channel:</label>
-									<div id="channel" class="channel-value-wrapper">
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
-											<i class="fab fa-facebook"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel"
-												value="6fe7288e-bde8-481e-a4d6-1a6513d969f0" />
-											<i class="fab fa-whatsapp"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel"
-												value="b68ee282-0a93-4a66-abf3-eb168d81d4bf" />
-											<i class="fab fa-instagram"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel"
-												value="bbbf13c5-c776-43c3-aa4e-52bc2f27272a" />
-											<i class="fab fa-twitter"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
-											<i class="fab fa-tiktok"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
-											<i class="fab fa-youtube"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
-											<i class="fab fa-pinterest"></i> 
-										</label>
-
-										<label class="channel-value">
-											<input type="checkbox" name="channel" value="XXXCHANNELVALUE" />
-											<i class="fab fa-linkedin"></i> 
-										</label>
-
-
-									</div>
-								</div> -->
-
-
 								<button type="submit" id="eventSubmitBtn" class="submitBtn">Daftar & Gabung group
 									Whatsapp</button>
 								<p class="form-disclaimer"
@@ -876,8 +824,46 @@
 		<a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
 				class="bx bxl-whatsapp bx-tada"></i></a>
 
-		<!-- Modal 2 -->
-		<div class="modal popup-box fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+		<!-- Modal subscribe -->
+		<div class="modal fade" id="footerSubModal" tabindex="-1" aria-hidden="true" aria-labelledby="footerSubModal">
+			<div class="modal-dialog popup-box-dialog modal-dialog-centered modal-content" style="background: white; ">
+				<div class="modal-header w-100 position-relative overflow-hidden" style="height: 200px;">
+					<img src="https://i.swncdn.com/media/1200w/via/5519-hands-reach-help-gettyimages-990454406.jpg"
+						alt="background" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover">
+					<div class="z-1">
+						<h2 class="text-black">Hello World</h2>
+					</div>
+				</div>
+				<div class="modal-body w-100">
+					<form class="p-4 ">
+
+						<div class="mb-3 input-sub-footer-wrapper">
+							<label class="form-label" for="inputSubFooterNama">nama</label>
+							<input type="text" placeholder="masukkan nama" id="inputSubFooterNama"
+								name="inputSubFooterNama" />
+						</div>
+						<div class="mb-3 input-sub-footer-wrapper">
+							<label class="form-label" for="inputSubFooterWhatsapp">whatsapp</label>
+							<input type="tel" placeholder="masukkan nomor" id="inputSubFooterWhatsapp"
+								name="inputSubFooterWhatsapp" />
+						</div>
+
+						<div class="mb-3 input-sub-footer-wrapper">
+							<label class="form-label" for="inputSubFooterDomisili">Domisili</label>
+							<input type="text" placeholder="Jln. Ahmad Yani" id="inputSubFooterDomisili"
+								name="inputSubFooterDomisili" />
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer w-100 py-2">
+					<button class="btn-danger btn">Close</button>
+					<button class="btn-primary btn" id="subFooterBtn">Kirim & Gabung group</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="modal fade" id="modalDemo" tabindex="-1" aria-hidden="true" aria-labelledby="modalDemo">
 			<div class="modal-dialog popup-box-dialog modal-dialog-centered">
 				<div class="modal-content popup-box-content">
 					<div class="popup-card" style="width:100%">
