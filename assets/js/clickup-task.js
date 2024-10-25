@@ -325,7 +325,6 @@ const handlePresensiBtn = async (event) => {
     );
 
     // Action setelah upload data yaitu download file pdf
-    alert("Form berhasil dikirim. Mohon Menunggu untuk mendownload PDF-nya.");
     const link = document.createElement("a");
     link.href =
       "assets/pdf/WEBINAR-12-MANAGING-YOUR-ANXIETY-WHILE-PRESENTING.pdf";
@@ -333,6 +332,7 @@ const handlePresensiBtn = async (event) => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    alert("Terimakasih telah presensi. Mohon Menunggu untuk mendownload PDF-nya.");
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {
@@ -353,7 +353,6 @@ const handleGetClickupIds = async (event) => {
   console.log("hello world ini ambil data");
 
   try {
-    // loading.style.display = "flex";
 
     // Langkah 1: Send GET Request ke Clickup
     const checkTaskResponse = await fetch(
