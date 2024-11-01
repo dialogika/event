@@ -38,7 +38,6 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.css" rel="stylesheet">
-  <link href="assets/vendor/international-phone-number/intlTelInput.css" rel="stylesheet">
 
 
 
@@ -54,8 +53,6 @@
   <link href="assets/part/popup-box/popup.css" rel="stylesheet">
   <link href="assets/part/video-sec/video.css" rel="stylesheet">
   <link href="assets/css/present.css" rel="stylesheet">
-  <link href="assets/part/modals/modal.css" rel="stylesheet">
-
 
 
   <!-- Template Main CSS File -->
@@ -84,6 +81,91 @@
         }
       });
     }
+
+    async function SubForm() {
+      const loadingSpinner = document.getElementById('loadingSpinner');
+      const whatsAppInput = document.querySelector('input[name="WA"]');
+      const emailInput = document.querySelector('input[name="Email"]');
+      const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
+      const CheckKetersediaanInput = $('#myForm').serializeArray().find(item => item.name === 'Check');
+      const FollowedAccounts = [];
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+
+
+      // Validasi Input email, whatsapp, dan ketersediaan
+      const validateInput = (input, regex, message) => {
+        if (!regex.test(input.value)) {
+          alert(message);
+          input.style.border = "2px solid red";
+          return false;
+        }
+        return true;
+      }
+      if (!validateInput(whatsAppInput, phoneRegex, "Nomor tidak valid!") || !validateInput(emailInput, emailRegex, "Email tidak valid!") || !CheckKetersediaanInput) {
+        if (!CheckKetersediaanInput) {
+          alert("Tolong isi apakah anda dapat mengikuti webinar");
+          return;
+        }
+        return;
+      }
+
+      // Filter checked follow boxes
+      const FollowedAccountsString = Array.from(followCheckBoxes)
+        .filter(item => item.checked)
+        .map(item => item.value)
+        .reduce((acc, current) => {
+          if (current === "Belum Semua") {
+            return "Belum Semua";
+          }
+          return acc === "Belum Semua" ? "Belum Semua" : acc + (acc ? ', ' : '') + current; // Bila pilihan "Belum Semua" di check, yang lainnya dihapus
+        }, "");
+
+
+      // Buat hidden input FollowedAccounts 
+      let hiddenFollowedAccountsInput = document.querySelector('input[name="FollowedAccounts"]');
+      if (!hiddenFollowedAccountsInput) {
+        hiddenFollowedAccountsInput = document.createElement('input');
+        hiddenFollowedAccountsInput.type = "hidden";
+        hiddenFollowedAccountsInput.name = 'Follow';  // Namenya harus sama dengan yang di spreadsheet
+        hiddenFollowedAccountsInput.value = FollowedAccountsString; // Set valuenya jadi string. contoh :"Twitter, Facebook, Linkedin"
+      }
+      document.getElementById('myForm').appendChild(hiddenFollowedAccountsInput);
+
+      try {
+        loadingSpinner.style.display = "block";
+        const response = await $.ajax({
+          url: "https://api.apispreadsheets.com/data/OMCD6zs0qSKqCBP2/",
+          type: "post",
+          data: $('#myForm').serializeArray(),
+          headers: {
+            accessKey: "0199751ed76ed58f9b4450ccc61b2db7",
+            secretKey: "20f3c604626ef8b7fe5fee3f5c811d19"
+          },
+          success: function () {
+            alert("Mohon Menunggu Download PDF-nya")
+            $(function () {
+              const link = document.createElement('a');
+              link.href = 'assets/pdf/PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
+              link.download = 'PPT-MASTERING-IMPROMPTU-SPEAKING.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            })
+          }
+        });
+      } catch (error) {
+        console.log(error)
+        console.log(error.message)
+        alert("There was an error :", error);
+      } finally {
+        loadingSpinner.style.display = "none";
+        whatsAppInput.style.border = "solid 0 black";
+        emailInput.style.border = "solid 0 black";
+      }
+    }
+
 
     function Subcription() {
       $.ajax({
@@ -192,7 +274,7 @@
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
-        <h2 id="eventTitle">Managing your Anxiety while Presenting</h2>
+        <h2>Presensi Event Managing your Anxiety while Presenting</h2>
         <ol>
           <li><a href="../index.html">Home</a></li>
           <li><a href="index.html">Event</a></li>
@@ -229,14 +311,13 @@
             </div>
 
             <div class="mb-4">
-              <label for="namaInput" class="form-label"><strong>Nama Lengkap</strong></label>
-              <input type="text" name="Nama" class="form-control" id="namaInput" placeholder="Nama Lengkap">
+              <label for="exampleFormControlInput1" class="form-label"><strong>Nama Lengkap</strong></label>
+              <input type="text" name="Nama" class="form-control" id="exampleFormControlInput1"
+                placeholder="Nama Lengkap">
             </div>
             <div class="mb-4">
-              <!-- Menggunakan library assets/vendor/international-phone-number -->
-              <!-- Gunakan iti.getNumber() untuk ambil value -->
-              <label for="whatsapp-number" class="form-label"><strong>Nomor Whatsapp</strong></label>
-              <input type="tel" name="WA" class="form-control" id="whatsapp-number">
+              <label for="exampleFormControlInput2" class="form-label"><strong>Nomor Whatsapp</strong></label>
+              <input type="tel" name="WA" class="form-control" id="exampleFormControlInput2" placeholder="625780007799">
             </div>
             <div class="mb-4">
               <label for="exampleFormControlInput3" class="form-label"><strong>Email Active</strong></label>
@@ -248,15 +329,6 @@
                   ?</strong></label>
               <textarea class="form-control" name="Info" id="exampleFormControlTextarea1" rows="4"
                 placeholder="saya tahu dari..."></textarea>
-            </div>
-
-            <!-- Ketersediaan on-cam -->
-            <div class="note-input-container mb-4">
-              <label for="posisi-profesi" class="label-input">WAJIB Oncam Saat Acara dan KETIK
-                "Saya Bersedia Oncam Selama Zoom Meeting " 👇🏻 <span class="required-asterisk">*</span>
-              </label>
-              <input class="form-control" id="Ketersediaan" name="Ket" rows="1"
-                placeholder="Saya Bersedia Oncam Selama Zoom Meeting" required autocomplete="off" />
             </div>
 
             <div class="mb-4">
@@ -328,30 +400,33 @@
             <div class="row mb-4">
               <label for="" class="form-label"><strong>Apakah Bisa Mengikuti Webinar Ini Sampai Akhir?</strong></label>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="webinarAttendance" id="option1"
+                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck1"
                   value="Bisa Sampai Akhir">
-                <label class="form-check-label" for="option1">
+                <label class="form-check-label" for="defaultCheck1">
                   Bisa Sampai Akhir
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="webinarAttendance" id="option2"
+                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck2"
                   value="Bisa Sampai Pertengahan">
-                <label class="form-check-label" for="option2">
-                  Bisa Sampai Pertengahan
+                <label class="form-check-label" for="defaultCheck2">
+                  Sampai Pertengahan
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="webinarAttendance" id="option3" value="Masih Labil">
-                <label class="form-check-label" for="option3">
+                <input class="form-check-input" type="checkbox" name="Check" id="defaultCheck3" value="Masih Labil">
+                <label class="form-check-label" for="defaultCheck3">
                   Belum Pasti
                 </label>
               </div>
             </div>
 
+            <button type="submit" id="submits" onclick="SubForm()" class="presensi-button">Send Form</button>
 
-            <button type="submit" id="submitPresensi" class="presensi-button">Send Form</button>
-            <!-- <button type="button" id="getClickupData" class="presensi-button">Get data</button> -->
+            <!-- <button type="button" id="download-ppt"
+              onclick="{window.location.href='https://drive.google.com/uc?export=download&id=1ga3nBgs6isQhO85DZnoPU2aT_Vk1G400'}"
+              class="presensi-button " style="margin-top: 30px;">Download File</button> -->
+
 
         </form>
       </div>
@@ -360,9 +435,6 @@
     <main-footer></main-footer>
     <!-- ======= End Footer & Counter Area ======= -->
 
-    <!-- Floating modal untuk form subscribe/gabung komunitas -->
-    <footer-modal></footer-modal>
-
     <a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bx bxl-whatsapp bx-tada"></i></a>
 
@@ -370,11 +442,8 @@
     <script src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="assets/part/newevent/script.js"></script>
     <script src="assets/part/counting-down/count.js"></script>
-    <script src="assets/part/modals/modal-component.js"></script>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/international-phone-number/intlTelInput.min.js"></script>
-    <script src="assets/vendor/international-phone-number/script.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -385,7 +454,6 @@
     <script src="assets/js/headerfooter.js"></script>
     <script src="assets/js/timestamp.js"></script>
     <script src="assets/js/whatsapp.js"></script>
-    <script src="assets/js/clickup-task.js"></script>
     <script src="assets/js/main.js"></script>
 
 

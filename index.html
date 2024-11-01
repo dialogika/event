@@ -38,6 +38,7 @@
 	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 	<link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
 	<link href="assets/vendor/swiper/swiper-bundle.css" rel="stylesheet">
+	<link href="assets/vendor/international-phone-number/intlTelInput.css" rel="stylesheet">
 
 
 	<!-- Part CSS Files -->
@@ -51,8 +52,7 @@
 	<link href="assets/part/contact-append/contact.css" rel="stylesheet">
 	<link href="assets/part/popup-box/popup.css" rel="stylesheet">
 	<link href="assets/part/video-sec/video.css" rel="stylesheet">
-
-	<link href="assets/part/international-phone-number/intlTelInput.css" rel="stylesheet">
+	<link href="assets/part/modals/modal.css" rel="stylesheet">
 
 
 	<!-- Template Main CSS File -->
@@ -731,14 +731,20 @@
 											class="required-asterisk">*</span></label>
 									<input type="text" class="form-text-input" autocomplete="off" id="name" name="name"
 										placeholder="Nama " required>
+									<label for="name" id="nameWarning" style="display: none;"
+										class="warning text-danger fw-normal">Isi nama lengkap Anda</label>
 								</div>
 
 								<!-- No WA Field -->
 								<div class="phone-input-container">
 									<label for="phone" class="label-input">Nomor Whatsapp <span
 											class="required-asterisk">*</span></label>
+									<!-- Menggunakan library assets/vendor/international-phone-number -->
+									<!-- Gunakan iti.getNumber() untuk ambil value -->
 									<input type="tel" id="whatsapp-number" name="whatsapp-number"
 										class="form-text-input" required>
+									<label for="whatsapp-number" id="whatsappWarning" style="display: none;"
+										class="warning text-danger fw-normal">Isi nomor WhatsApp</label>
 								</div>
 
 								<!-- Location Field -->
@@ -747,11 +753,14 @@
 											class="required-asterisk">*</span></label>
 									<input type="text" class="form-text-input" autocomplete="off" id="location"
 										name="location" placeholder="Alamat" required>
+									<label for="location" id="domisiliWarning" style="display: none;"
+										class="warning text-danger fw-normal">Isi domisili/kota anda</label>
 								</div>
 
 								<!-- Profesi Field -->
 								<div class="profesi-input-container">
-									<label for="job" class="label-input">Profesi:</label>
+									<label for="job" class="label-input">Profesi <span
+											class="required-asterisk">*</span></label>
 									<select id="job" name="job" class="form-text-input">
 										<option value="" disabled selected>Pilih Profesi</option>
 										<option value="5acf4769-8efc-4cf7-8c4e-170301ec1fcb">High School</option>
@@ -768,14 +777,30 @@
 										<option value="3ce4e5d4-4638-4046-958f-5c4c58dccc51">Civil Servant</option>
 										<option value="f200df43-4279-4cc5-910a-af71cbf38446">Honorer</option>
 									</select>
+									<label for="job" id="jobWarning" style="display: none;"
+										class="warning text-danger fw-normal">Isi profesi Anda</label>
 								</div>
 
-								<!-- Kendala Dalam berkomunikasi -->
+								<!-- Ketersediaan on-cam -->
+								<div class="note-input-container my-3">
+									<label for="Ketersediaan" class="label-input">WAJIB Oncam Saat Acara dan KETIK
+										"Saya Bersedia Oncam Selama Zoom Meeting " 👇🏻 <span
+											class="required-asterisk">*</span>
+									</label>
+									<input class="form-text-input" id="Ketersediaan" name="Ketersediaan" rows="1"
+										placeholder="Saya Bersedia Oncam Selama Zoom Meeting" required
+										autocomplete="off" />
+									<label for="Ketersediaan" id="ketersediaanWarning" style="display: none;"
+										class="warning text-danger fw-normal">Harap nyatakan anda bersedia on
+										CAM</label>
+								</div>
+
+								<!-- Mendapatkan info webinar berkomunikasi -->
 								<div class="note-input-container">
 									<label for="posisi-profesi" class="label-input">mendapatkan informasi webinar ini
-										dari mana?
+										dari mana? <span class="required-asterisk">*</span>
 									</label>
-									<textarea class="form-text-input" id="motivate" name="Ket" rows="4"
+									<textarea class="form-text-input" id="motivate" name="motivate" rows="4"
 										placeholder="mendapatkan informasi webinar ini dari mana?"
 										autocomplete="off"> </textarea>
 								</div>
@@ -822,62 +847,8 @@
 		<a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
 				class="bx bxl-whatsapp bx-tada"></i></a>
 
-		<!-- Modal subscribe -->
-		<div class="modal fade overflow-hidden" id="footerSubModal" tabindex="-1" aria-hidden="true"
-			aria-labelledby="footerSubModal">
-			<div
-				class="modal-dialog modal-fullscreen-lg-down popup-box-dialog modal-dialog-centered modal-content position-relative overflow-hidden">
-				<div class=" d-flex flex-shrink-0 align-items-center justify-content-between position-relative overflow-hidden"
-					style="height: 200px;">
-					<div class="w-100 ">
-						<img src="assets/img/footer-header-2.webp" alt="background"
-							class=" w-auto h-auto object-fit-contain">
-					</div>
-				</div>
-				<div class="modal-body w-100 h-auto">
-
-					<div id="modal-success-indicator"
-						class="z-2 position-absolute w-100 h-100 text-black d-none flex-column align-items-center justify-content-center"
-						style="background: #eaeaea;">
-						<h2>✔</h2>
-						<h2 style="font-size: 1.75rem; font-weight: 600;">Success</h2>
-						<p class="w-auto" style="font-size: 1rem; font-weight: 400;">Terima kasih telah bergabung dengan
-							komunitas kami !</p>
-						<button class="btn btn-primary" data-bs-toggle="modal"
-							data-bs-target="#footerSubModal">Close</button>
-					</div>
-					<form class="">
-						<div class="mb-3 input-sub-footer-wrapper">
-							<label class="form-label" for="inputSubFooterNama">Nama</label>
-							<input type="text" placeholder="Masukkan nama" id="inputSubFooterNama"
-								name="inputSubFooterNama" />
-						</div>
-						<div class="mb-3 input-sub-footer-wrapper">
-							<label class="form-label" for="inputSubFooterWhatsapp">Whatsapp</label>
-							<input type="tel" id="inputSubFooterWhatsapp" name="inputSubFooterWhatsapp" />
-						</div>
-
-						<div class="mb-3 input-sub-footer-wrapper">
-							<label class="form-label" for="inputSubFooterEmail">Email</label>
-							<input type="text" placeholder="johndoe@gmail.com" id="inputSubFooterEmail"
-								name="inputSubFooterEmail" />
-						</div>
-
-						<div class="mb-3 input-sub-footer-wrapper">
-							<label class="form-label" for="inputSubFooterDomisili">Domisili</label>
-							<input type="text" placeholder="Jln. Ahmad Yani" id="inputSubFooterDomisili"
-								name="inputSubFooterDomisili" />
-						</div>
-					</form>
-				</div>
-				<div class="modal-footer w-100 py-2">
-					<button class="yellow-dialogika-btn" data-bs-toggle="modal"
-						data-bs-target="#footerSubModal">Close</button>
-					<button class="blue-dialogika-btn" id="subFooterBtn">Kirim & Gabung group</button>
-					<!-- <button class="blue-dialogika-btn" id="getClickupData">Get Id</button> -->
-				</div>
-			</div>
-		</div>
+		<!-- Floating modal untuk form subscribe/gabung komunitas -->
+		<footer-modal></footer-modal>
 
 		<div class="modal fade" id="modalDemo" tabindex="-1" aria-hidden="true" aria-labelledby="modalDemo">
 			<div class="modal-dialog popup-box-dialog modal-dialog-centered">
@@ -935,8 +906,7 @@
 		<script src="assets/part/newevent/script.js"></script>
 		<script src="assets/part/counting-down/count.js"></script>
 
-		<script src="assets/part/international-phone-number/intlTelInput.min.js"></script>
-		<script src="assets/part/international-phone-number/script.js"></script>
+		<script src="assets/part/modals/modal-component.js"></script>
 
 		<!-- Vendor JS Files -->
 		<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -944,6 +914,8 @@
 		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 		<script src="assets/vendor/php-email-form/validate.js"></script>
+		<script src="assets/vendor/international-phone-number/intlTelInput.min.js"></script>
+		<script src="assets/vendor/international-phone-number/script.js"></script>
 
 		<!-- Template Main JS File -->
 		<script src="assets/js/clickup-task.js"></script>

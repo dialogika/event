@@ -1,0 +1,43 @@
+/* !============== popup-modal-form subscribe ===============! */
+.input-sub-footer-wrapper {
+  font-family: "Poppins", sans-serif;
+  label {
+    color: black;
+    font-family: inherit;
+    font-weight: 600;
+  }
+  input {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+    background: #ebebeb;
+    border: none;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+/* !============== End of popup-modal-form subscribe ===============! */
+
+/* !============== Footer styles ===============! */
+
+#footer .footer-newsletter form#subcriptions {
+  font-family: "Poppins", sans-serif;
+  /* background: black; */
+}
+#footer .footer-newsletter form#subcriptions .custom-input-footer {
+  /* background: black; */
+  border: none;
+  font-family: inherit;
+}
+#footer .footer-newsletter #subcriptions .custom-input-footer::placeholder {
+  color: black;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+/* !============== End of Footer styles ===============! */
