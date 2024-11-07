@@ -10,7 +10,7 @@ class FooterModal extends HTMLElement {
           <div class="modal-dialog modal-fullscreen-md-down popup-box-dialog modal-dialog-centered modal-content position-relative overflow-hidden">
             <div class="d-flex flex-shrink-0 align-items-center justify-content-between position-relative overflow-hidden" style="height: 200px;">
               <div class="w-100">
-                <img src="assets/img/footer-header-2.webp" alt="Bergabung dengan Komunitas Kami" class="w-auto h-auto object-fit-contain">
+                <img src="assets/img/footer-header-2.webp" alt="Bergabung dengan Komunitas Kami" class="img-fluid">
               </div>
             </div>
             <div class="modal-body w-100 h-auto">

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
  
-
+// javascript untuk handle stars di review event
   // ! Start of custom stars functions
   const stars = document.querySelectorAll(".star");
   const ratingInput = document.getElementById("inputRating");
