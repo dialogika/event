@@ -8205,13 +8205,13 @@ Box
    ========================================================================== */
 .hero {
   padding-bottom: 50px;
-  background-image: url("../img/vsapp/background.png");
+  /* background-image: url("../img/vsapp/background2.webp"); */
   background-size: cover;
   background-position: center center;
 }
 
 .hero--skin-1 {
-  background-image: url("../img/vsapp/background.webp");
+  background-image: url("../img/vsapp/background2.webp");
 }
 
 .hero--center {
