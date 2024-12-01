@@ -230,9 +230,10 @@
 						<!-- End of Push -->
 						<!-- Section Title -->
 						<h2 class="section-title section-title--left section-title--light"> Jurus Sakti Lolos
-							<span>Interview!</span> 
+							<span>Interview!</span>
 						</h2>
-						<h4 class="section-title section-title--left section-title--light">Uncover rahasia gelap lolos interview</h4>
+						<h4 class="section-title section-title--left section-title--light">Uncover rahasia gelap lolos
+							interview</h4>
 						<!-- End of Section Title -->
 						<!-- Section Subtitle -->
 						<p class="section-subtitle section-subtitle--left section-subtitle--hero "> Interview adalah
@@ -249,7 +250,8 @@
 							<!-- End of Button -->
 							<!-- Button -->
 							<div class="button button--small button--inline button--shadow">
-								<a href="assets/pdf/CHEATSHEET-INTERVIEW-DIALOGIKA.pdf" class="button__link" download>Download</a>
+								<a href="assets/pdf/CHEATSHEET-INTERVIEW-DIALOGIKA.pdf" class="button__link"
+									download>Download</a>
 							</div>
 						</div>
 						<!-- End of Button -->
@@ -257,7 +259,8 @@
 					<div class="col-md-10">
 						<!-- Device -->
 						<div class="device device--right  ">
-							<img src="assets/img/vsapp/mockup-hp-brighter.webp" class="device__image" alt="Device Image">
+							<img src="assets/img/vsapp/mockup-hp-brighter.webp" class="device__image"
+								alt="Device Image">
 						</div>
 						<!-- End of Device -->
 					</div>
@@ -671,7 +674,7 @@
 
 								<!-- No WA Field -->
 								<div class="phone-input-container">
-									<label for="phone" class="label-input">Nomor Whatsapp <span
+									<label for="whatsapp-number" class="label-input">Nomor Whatsapp <span
 											class="required-asterisk">*</span></label>
 									<!-- Menggunakan library assets/vendor/international-phone-number -->
 									<!-- Gunakan iti.getNumber() untuk ambil value -->
@@ -715,6 +718,20 @@
 										class="warning text-danger fw-normal">Isi profesi Anda</label>
 								</div>
 
+								<!-- Pernah ikut program dialogika atau tidak  -->
+								<div class="pengalaman-input-container">
+									<label for="experience" class="label-input">apakah kamu pernah mengikuti kelas atau program
+										dari dialogika ? <span class="required-asterisk">*</span></label>
+									<select id="experience" name="experience" class="form-text-input">
+										<option value="" disabled selected>Pilih Pilihan</option>
+										<option value="b8ca6c5d-6b48-428e-812a-102bd372d54c">YA</option>
+										<option value="eaa5ec9a-cb5f-4e41-811e-7357326d1417">TIDAK</option>
+									</select>
+									<label for="experience" id="experienceWarning" style="display: none;"
+										class="warning text-danger fw-normal">Isi input ini</label>
+								</div>
+
+
 								<!-- Ketersediaan on-cam -->
 								<div class="note-input-container my-3">
 									<label for="Ketersediaan" class="label-input">WAJIB Oncam Saat Acara dan KETIK
@@ -741,6 +758,7 @@
 
 								<button type="submit" id="eventSubmitBtn" class="submitBtn">Daftar & Gabung group
 									Whatsapp</button>
+
 								<p class="form-disclaimer"
 									style="font-size: 12px; text-align: center; color: #A1A1A1 ;">Dengan
 									mengirimkan formulir ini anda setuju dengan <a

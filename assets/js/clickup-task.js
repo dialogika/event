@@ -92,6 +92,7 @@ const handleIndexFormSubmission = async (event) => {
   const motivate = document.getElementById("motivate").value.trim();
   const location = document.getElementById("location").value.trim();
   const Ketersediaan = document.getElementById("Ketersediaan").value.trim();
+  const experience = document.getElementById("experience").value.trim();
   const jobInputs = document.querySelectorAll("#job");
   const jobs = Array.from(jobInputs)
     .map((input) => input.value.trim())
@@ -107,6 +108,7 @@ const handleIndexFormSubmission = async (event) => {
     { id: "218de446-5037-4d3a-9f85-96c047453fe9", value: motivate },
     { id: "4d4ea89a-2c98-467a-8452-a6d1794036ab", value: location },
     { id: "41fe905e-8974-4bf3-a871-daddd8c4307a", value: jobs },
+    { id: "c1c0c137-27c5-4d5c-8ef0-408bf8faace9", value: experience },
     { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
   ];
 
@@ -129,6 +131,10 @@ const handleIndexFormSubmission = async (event) => {
   }
   if (!location) {
     showWarning("location", "domisiliWarning");
+    isValid = false;
+  }
+  if (!experience) {
+    showWarning("experience", "experienceWarning");
     isValid = false;
   }
   if (!jobs || jobs <= 1) {
@@ -336,8 +342,7 @@ const handlePresensiBtn = async (event) => {
 
     // Action setelah upload data yaitu download file pdf
     const link = document.createElement("a");
-    link.href =
-      "assets/pdf/PPT-MATERI-WEBINAR.pdf";
+    link.href = "assets/pdf/PPT-MATERI-WEBINAR.pdf";
     link.download = "PPT-MATERI-WEBINAR.pdf";
     document.body.appendChild(link);
     link.click();
@@ -359,7 +364,7 @@ const handlePresensiBtn = async (event) => {
 const handleGetClickupIds = async (event) => {
   event.preventDefault();
   const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
-  const listId = "901602772763"; // Ganti dengan id yng sesuai. Contoh link https://app.clickup.com/2307700/v/li/14355106
+  const listId = "900302342659"; // Ganti dengan id yng sesuai. Contoh link https://app.clickup.com/2307700/v/li/14355106
   let taskId = null; // Variabel untuk menyimpan task ID
 
   console.log("hello world ini ambil data");
