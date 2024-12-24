@@ -342,8 +342,8 @@ const handlePresensiBtn = async (event) => {
 
     // Action setelah upload data yaitu download file pdf
     const link = document.createElement("a");
-    link.href = "assets/pdf/PPT-MATERI-WEBINAR.pdf";
-    link.download = "PPT-MATERI-WEBINAR.pdf";
+    link.href = "assets/pdf/PPT-Webinar-14.0.pdf";
+    link.download = "PPT-Webinar-14.0.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
