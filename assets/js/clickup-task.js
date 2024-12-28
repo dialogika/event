@@ -281,6 +281,10 @@ const handlePresensiBtn = async (event) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
+  //variavble button
+  const submitPresensiButton = document.getElementById("submitPresensi");
+  const reviewEventButton = document.getElementById("reviewEventButton");
+
   // Validate input fields
   const validateInput = (input, regex) => {
     if (!regex.test(input.value)) {
@@ -350,6 +354,19 @@ const handlePresensiBtn = async (event) => {
     alert(
       "Terimakasih telah presensi. Mohon Menunggu untuk mendownload PDF-nya."
     );
+
+    // Pastikan tombol ada di DOM sebelum menambahkan event listener
+    if (submitPresensiButton) {
+      submitPresensiButton.addEventListener("click", function (event) {
+        event.preventDefault(); // Mencegah pengiriman form default
+
+        // Tampilkan tombol Review Event
+        if (reviewEventButton) {
+          reviewEventButton.classList.remove("d-none");
+          reviewEventButton.classList.add("d-block");
+        }
+      });
+    }
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {

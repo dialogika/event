@@ -45,3 +45,5 @@ class FooterModal extends HTMLElement {
 }
 
 customElements.define("footer-modal", FooterModal);
+
+
