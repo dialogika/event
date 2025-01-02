@@ -367,27 +367,6 @@
     <a href="#contact" class="back-to-top d-flex align-items-center justify-content-center"><i
         class="bx bxl-whatsapp bx-tada"></i></a>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const submitPresensiButton = document.getElementById("submitPresensi");
-  const reviewEventButton = document.getElementById("reviewEventButton");
-
-  // Pastikan tombol ada di DOM sebelum menambahkan event listener
-  if (submitPresensiButton) {
-    submitPresensiButton.addEventListener("click", function (event) {
-      event.preventDefault(); // Mencegah pengiriman form default
-
-
-      // Tampilkan tombol Review Event
-      if (reviewEventButton) {
-        reviewEventButton.classList.remove("d-none");
-        reviewEventButton.classList.add("d-block");
-      }
-    });
-  }
-});
-</script>
 
     <!-- Part -->
     <script src="https://maps.googleapis.com/maps/api/js"></script>
