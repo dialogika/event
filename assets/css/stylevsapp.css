@@ -7154,6 +7154,7 @@ body.logged-in .YouTubePopUp-Wrap {
 
 .owl-carousel .owl-stage {
   position: relative;
+  touch-action: pan-y;
   -ms-touch-action: pan-Y;
 }
 
@@ -7169,15 +7170,20 @@ body.logged-in .YouTubePopUp-Wrap {
 .owl-carousel .owl-stage-outer {
   position: relative;
   overflow: hidden;
-  /* fix for flashing background */
+  /*fixforflashingbackground*/
+  transform: translate3d(0px, 0px, 0px);
   -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
 }
 
 .owl-carousel .owl-item {
   position: relative;
   min-height: 1px;
   float: left;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: transparent;
+  -webkit-backface-visibility: transparent;
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
@@ -7185,6 +7191,7 @@ body.logged-in .YouTubePopUp-Wrap {
 .owl-carousel .owl-item img {
   display: block;
   width: 100%;
+  transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
 }
 
@@ -7325,6 +7332,7 @@ body.logged-in .YouTubePopUp-Wrap {
   background: url("owl.video.play.png") no-repeat;
   cursor: pointer;
   z-index: 1;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transition: -webkit-transform 100ms ease;
   transition: transform 100ms ease;
@@ -8906,6 +8914,7 @@ a[href^="https://maps.google.com/maps"]
   background-color: #14171c;
   z-index: 9999;
   display: none;
+  perspective: 1000px;
   -webkit-perspective: 1000px;
 }
 
@@ -10703,6 +10712,7 @@ label[for="pdf"] {
   color: lightgray;
   transition: color 0.2s ease-in-out;
   background: linear-gradient(to bottom, #f5deb3, #000000);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -10711,6 +10721,7 @@ label[for="pdf"] {
 .star.selected {
   background: gold;
   color: gold;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
