@@ -165,7 +165,6 @@ const handleEventReview = async (event) => {
   const listId = "900302340074"; // listId untuk Brand/Event/Review
 
   const taskName = document.getElementById("inputName").value.trim();
-  const whatsapp = iti.getNumber();
   const comment = document.getElementById("inputComment").value.trim();
   const saran = document.getElementById("inputSaran").value.trim();
   const starsRating = document.getElementById("inputRating").value.trim();
@@ -180,11 +179,12 @@ const handleEventReview = async (event) => {
   const customFields = [
     { id: "4a11152c-a34b-4d53-aa86-0a25ccb97009", value: saran },
     { id: "c45a736a-d30e-45c8-b4ae-070e4b792d47", value: comment },
-    { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
     { id: "42d9a4fc-e8a3-49bc-9f41-4ef76c6dae94", value: starsRating },
     { id: "5c1a365d-2b76-4c6b-a431-9f14d636813d", value: inputTeknis },
     { id: "0eb65763-45b4-4030-8553-c5cec8f19877", value: alasanDaftar },
   ];
+
+  console.log("hello world")
 
   let isValid = true;
   resetWarnings();
@@ -192,10 +192,6 @@ const handleEventReview = async (event) => {
   // Check validasi
   if (!taskName) {
     showWarning("inputName", "nameWarning");
-    isValid = false;
-  }
-  if (!whatsapp) {
-    showWarning("whatsapp-number", "whatsappWarning");
     isValid = false;
   }
   if (!comment) {
@@ -224,18 +220,12 @@ const handleEventReview = async (event) => {
   try {
     loadingSpinner.style.display = "flex";
 
-    // Step 1: Ambil data-data dari clickup
-    const tasks = await getClickupResponse(listId);
-
-    // Step 2: Delete task lama
-    await deleteExistingTask(tasks.tasks, whatsapp);
-
-    // Step 3: Buat task baru dengan data dari form
+    // Step 1: Buat task baru dengan data dari form
     await createNewTask(listId, taskName, customFields, description);
 
-    // Step 3: Download kupon setelah mengisi form review
+    // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/voucher-basic-plus.png";
+    link.href = "assets/img/vsapp/voucher-basic-plus-januari.png";
     link.download = "basic-plus-voucher";
     document.body.appendChild(link);
     link.click();
@@ -327,12 +317,11 @@ const handlePresensiBtn = async (event) => {
     // Action setelah upload data yaitu download file pdf
     const link = document.createElement("a");
 
-    console.log("hellow ini tombol review muncul");
     reviewEventButton.classList.remove("d-none");
     reviewEventButton.classList.add("d-block");
 
-    link.href = "assets/pdf/PPT-Webinar-14.pdf";
-    link.download = "PPT-Webinar-14.pdf";
+    link.href = "assets/pdf/14-PPT-Unlock-Your-Inner-Confidence-Mastering-The-Art-Of-Being-An-MC.pdf";
+    link.download = "14-PPT-Unlock-Your-Inner-Confidence-Mastering-The-Art-Of-Being-An-MC.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
