@@ -83,7 +83,7 @@ class Header extends HTMLElement {
         <i class="bi bi-list d-block d-md-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"></i>
        </nav><!-- .navbar -->
 
-      <a href="https://www.dialogika.co/program/" class="appointment-btn">Daftar <span class="d-md-inline">Sekarang</span></a>
+      <a href="#contact" class="appointment-btn scrollto">Daftar <span class="d-md-inline">Sekarang</span></a>
 
     </div>
   </header><!-- End Header -->
