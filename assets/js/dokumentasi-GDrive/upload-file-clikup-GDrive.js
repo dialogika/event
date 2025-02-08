@@ -27,7 +27,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
 
     try {
         // Bagian 1: Membuat tugas di ClickUp
-        const apiToken = 'pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N'; // Ganti dengan token API ClickUp yang sesuai
+        const apiToken = 'pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E'; // Ganti dengan token API ClickUp yang sesuai
         const listId = '901602772763'; // Ganti dengan ID list ClickUp yang sesuai
 
         const createTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {

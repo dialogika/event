@@ -36,7 +36,7 @@ document
     }
 
     // Token API ClickUp dan ID list tempat tugas akan disimpan
-    const apiToken = "pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N";
+    const apiToken = "pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E";
     const listId = "900302342659";
     let taskId = null; // Variabel untuk menyimpan ID tugas jika ditemukan duplikat
 

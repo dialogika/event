@@ -10,7 +10,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
         return;
     }
 
-    const apiToken = 'pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N';
+    const apiToken = 'pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E';
     const listId = '901602772763';
 
     try {

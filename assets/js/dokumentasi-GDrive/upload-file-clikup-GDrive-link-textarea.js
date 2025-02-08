@@ -52,7 +52,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
                 let driveLink = `https://drive.google.com/file/d/${uploadResult}/view?usp=drivesdk/view?usp=sharing`;
 
                 // Bagian 2: Setelah file berhasil diunggah, buat tugas di ClickUp dengan memasukkan link Drive ke dalam custom_fields
-                const apiToken = 'pk_3640079_B56O8X0HW6FAEIZJFFJAQW99IAHQMF8N'; // Ganti dengan token API ClickUp yang sesuai
+                const apiToken = 'pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E'; // Ganti dengan token API ClickUp yang sesuai
                 const listId = '901602772763'; // Ganti dengan ID list ClickUp yang sesuai
 
                 const createTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {
