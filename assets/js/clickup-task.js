@@ -15,7 +15,7 @@ const showWarning = (inputId, warningId) => {
   redInput.style.border = "solid 1px red";
 };
 
-// Function untuk ambil isi data dari clickup. Sangat diperlukan bila ingin menggunakan function deleteExistingTask
+// Function untuk ambil/GET isi data dari clickup. Sangat diperlukan bila ingin menggunakan function deleteExistingTask
 const getClickupResponse = async (listId) => {
   const getResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`, {
     method: "GET",
@@ -53,7 +53,7 @@ const deleteExistingTask = async (tasks, whatsapp) => {
   }
 };
 
-// Function untuk buat data baru
+// Function untuk buat/POST data baru dari form ke clickup
 const createNewTask = async (listId, taskName, customFields, description) => {
   const createTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {
     method: "POST",
@@ -137,13 +137,13 @@ const handleIndexFormSubmission = async (event) => {
   try {
     loading.style.display = "flex";
 
-    // Step 1: Ambil data-data dari clickup
+    // Step 1: Ambil data-data dari clickup (GET)
     const tasks = await getClickupResponse(listId);
 
-    // Step 2: Delete task lama
+    // Step 2: Delete task lama (DELETE)
     await deleteExistingTask(tasks.tasks, whatsapp);
 
-    // Step 3: Buat task baru dengan data dari form
+    // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
 
     loading.style.display = "none";
@@ -183,8 +183,6 @@ const handleEventReview = async (event) => {
     { id: "5c1a365d-2b76-4c6b-a431-9f14d636813d", value: inputTeknis },
     { id: "0eb65763-45b4-4030-8553-c5cec8f19877", value: alasanDaftar },
   ];
-
-  console.log("hello world");
 
   let isValid = true;
   resetWarnings();
