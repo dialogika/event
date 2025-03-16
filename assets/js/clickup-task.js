@@ -318,12 +318,14 @@ const handlePresensiBtn = async (event) => {
     reviewEventButton.classList.remove("d-none");
     reviewEventButton.classList.add("d-block");
 
-    link.href = "assets/pdf/cheatsheet-how-to-become-a-confident-announcer.pdf";
-    link.download = "cheatsheet-how-to-become-a-confident-announcer.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    alert("Terimakasih telah presensi. Mohon Menunggu untuk mendownload PDF-nya.");
+    // Uncomment syntax dibawah ini bila ingin download file ppt kemudian update href dan nama filenya 
+    // link.href = "assets/pdf/cheatsheet-how-to-become-a-confident-announcer.pdf";
+    // link.download = "cheatsheet-how-to-become-a-confident-announcer.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+    // alert("Terimakasih telah presensi. Mohon Menunggu untuk mendownload PDF-nya.");
+
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {
