@@ -223,7 +223,7 @@ const handleEventReview = async (event) => {
 
     // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/voucher-basic-plus-januari.png";
+    link.href = "assets/img/vsapp/voucher-basic-plus-maret.png";
     link.download = "basic-plus-voucher";
     document.body.appendChild(link);
     link.click();
