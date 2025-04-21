@@ -330,6 +330,7 @@ const handlePresensiBtn = async (event) => {
     loadingSpinner.style.display = "block";
 
     await createNewTask(listId, namaInput, customFields, description);
+    submitPresensi.classList.add("d-none");
 
     // Action setelah upload data yaitu download file pdf
     const link = document.createElement("a");
@@ -460,7 +461,7 @@ if (eventSubmitBtn) {
   eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
   // Buka whatsapp group saat submitBtn di click
   $(document).on("click", "#eventSubmitBtn", () => {
-    window.open("https://chat.whatsapp.com/IBRoVRQJYtG2hbZFpdxFkV", "_blank");
+    window.open("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5", "_blank");
   });
 }
 
@@ -492,6 +493,6 @@ const subFooterBtn = document.getElementById("subFooterBtn");
 if (subFooterBtn) {
   subFooterBtn.addEventListener("click", handleSubFooterSubmission);
   $(document).on("click", "#subFooterBtn", () => {
-    window.open("https://chat.whatsapp.com/HMvvH97Mj4p5HSQYDbRnPM", "_blank");
+    window.open("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5", "_blank");
   });
 }
