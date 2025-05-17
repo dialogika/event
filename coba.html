@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Schedule</title>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.webp" rel="icon" />
+    <link href="assets/img/apple-touch-icon.webp" rel="apple-touch-icon" />
+
+    <!-- OG Meta Tags to share -->
+    <meta property="og:site_name" content="Kelas Public Speaking" />
+    <meta property="og:site" content="www.dialogika.co" />
+    <meta
+      property="og:title"
+      content="How to Become a Confident Announcer  | Event Dialogika"
+    />
+    <meta property="og:description" content="Event Dialogika" />
+    <meta property="og:image" content="assets/img/hero-bg.webp" />
+    <meta property="og:url" content="www.dialogika.co/event" />
+    <meta property="og:type" content="page" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/international-phone-number/intlTelInput.css"
+      rel="stylesheet"
+    />
+
+    <!-- Part CSS Files -->
+    <link href="assets/part/theme-counter/theme-counter.css" rel="stylesheet" />
+    <link href="assets/part/testimoni-insurin/testi.css" rel="stylesheet" />
+    <link href="assets/part/breadcrumbs-banner/banner.css" rel="stylesheet" />
+    <link href="assets/part/course-mentor/course.css" rel="stylesheet" />
+    <link href="assets/part/team-impact/team.css" rel="stylesheet" />
+    <link href="assets/part/counting-down/count.css" rel="stylesheet" />
+    <link href="assets/part/schedule-event/schedule.css" rel="stylesheet" />
+    <link href="assets/part/contact-append/contact.css" rel="stylesheet" />
+    <link href="assets/part/popup-box/popup.css" rel="stylesheet" />
+    <link href="assets/part/video-sec/video.css" rel="stylesheet" />
+    <link href="assets/part/modals/modal.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/new.css" rel="stylesheet" />
+    <link href="assets/css/stylevsapp.css" rel="stylesheet" />
+
+    <!--  ========================================================  -->
+    <!-- Spreadsheet API Form Pendaftaran -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function HeroForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
+          type: "post",
+          data: $("#heroForm").serializeArray(),
+          headers: {
+            accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
+            secretKey: "68a998592183dc30cdc2b07576759f04",
+          },
+          success: function () {
+            alert("Anda Telah Mendaftar :)");
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/nFEcActjMjE46FAP/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          headers: {
+            accessKey: "6df7b75d348bfbdfa9684dfc76ed0053",
+            secretKey: "68a998592183dc30cdc2b07576759f04",
+          },
+          success: function () {
+            alert("Anda Telah Mendaftar :)");
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+
+      function Subcription() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/18511/",
+          type: "post",
+          data: $("#subcriptions").serializeArray(),
+          success: function () {
+            // $('#subcription-modal').modal('show');
+            // open("https://link.dialogika.co/open-whatsapp-group");
+            window.location.href =
+              "https://link.dialogika.co/open-whatsapp-group";
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
+    </script>
+    <!-- End Spreadsheet API Form Pendaftaran -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "916674555903437");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=916674555903437&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Pixel Quora -->
+    <!-- DO NOT MODIFY -->
+    <!-- Quora Pixel Code (JS Helper) -->
+    <script>
+      !(function (q, e, v, n, t, s) {
+        if (q.qp) return;
+        n = q.qp = function () {
+          n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments);
+        };
+        n.queue = [];
+        t = document.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = document.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(window, "script", "https://a.quora.com/qevents.js");
+      qp("init", "cae6711903da464ab62f03df5f66aedc");
+      qp("track", "ViewContent");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://q.quora.com/_/ad/cae6711903da464ab62f03df5f66aedc/pixel?tag=ViewContent&noscript=1"
+    /></noscript>
+    <!-- End of Quora Pixel Code -->
+    <script>
+      qp("track", "GenerateLead");
+    </script>
+    <!-- End Pixel Quora -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HV60XT856G"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-148836422-2");
+      gtag("config", "G-HV60XT856G");
+    </script>
+    <!-- End Global site tag (gtag.js) - Google Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KGK9D6H");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Hotjar Tracking Code for https://dialogika.co -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2828594, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+    <!-- End Hotjar -->
+  </head>
+  <body>
+    <section id="schedule" class="schedule section">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Event Schedule<br></h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div><!-- End Section Title -->
+
+        <div class="container">
+
+            <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
+            <li class="nav-item">
+                <button class="tab-button active" onclick="showTab(1, this)">Event 1</button>
+            </li>
+            <li class="nav-item">
+                <button class="tab-button" onclick="showTab(2, this)">Event 2</button>
+            </li>
+            <li class="nav-item">
+                <button class="tab-button" onclick="showTab(3, this)">Event 3</button>
+            </ul>
+
+            <!-- <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200"> -->
+
+            <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+            
+            <div role="tabpanel" class="tab-content active" id="day-1">
+                <section class="section section--skin-1 " id='features'>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <!-- Push -->
+                            <div class="push push--60  "> </div>
+                            <!-- End of Push -->
+                            <!-- Section Title -->
+                            <h2 class="section-title "> Detail Webinar </h2>
+                            <!-- End of Section Title -->
+                            <!-- Section Subtitle -->
+                            <p class="section-subtitle "> Terbuka untuk seluruh intern & team Dialogika, member Dialogika,
+                                dan umum
+                            </p>
+                            <!-- End of Section Subtitle -->
+                            <!-- List -->
+                            <ul class="list list--check">
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-calendar-day" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.684 11.523v-2.3h2.261v-.61H4.684V6.801h2.464v-.61H4v5.332zm3.296 0h.676V8.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a2 2 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43m.094 5.093h.672V7.418h-.672z" />
+                                        <path
+                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                    </svg>
+                                    <div>
+                                        <p> Jumat, 25 April 2025</p>
+                                        <p>19.30-21.00</p>
+                                    </div>
+                                </li>
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                        viewBox="0,0,256,256">
+                                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                            <g transform="scale(5.33333,5.33333)">
+                                                <circle cx="24" cy="24" r="20" fill="#f6b12b"></circle>
+                                                <path d="M29,31h-15c-1.657,0 -3,-1.343 -3,-3v-11h15c1.657,0 3,1.343 3,3z"
+                                                    fill="#ffffff"></path>
+                                                <path d="M37,31l-6,-4v-6l6,-4z" fill="#ffffff"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div>
+                                        <p>Via: Zoom Meeting</p>
+                                        <p>Narasumber: Daniel Ari (Mentor Dialogika) & Kak Ron Ashrovy (Founder Dialogika)
+                                        </p>
+                                        <p>HTM: FREE</p>
+                                    </div>
+                                </li>
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                                    </svg>
+                                    <p>Link Pendaftaran : <a href="#uploadForm" class="text-decoration-underline fw-bold"
+                                            id="scroll-link" data-scroll-offset="100">CLICK ME</a>
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <!-- End of List -->
+                            <!-- List -->
+                            <ul class="list list--boxes ">
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffd400"
+                                            class="bi bi-phone box__icon" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                        </svg>
+                                    </div>
+                                    <!-- End of Box -->
+                                </li>
+
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box  ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+                                            class="bi bi-watch" viewBox="0 0 16 16">
+                                            <path d="M8.5 5a.5.5 0 0 0-1 0v2.5H6a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5z" />
+                                            <path
+                                                d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A6 6 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a6 6 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A6 6 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0" />
+                                        </svg>
+                                        <!-- End of Box -->
+                                </li>
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box  ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+                                            class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                                        </svg>
+                                        <!-- End of Box -->
+                                </li>
+                            </ul>
+                            <!-- End of List -->
+                        </div>
+                        <div class="col-lg-12 col-md-11 col-md-offset-1 col-lg-offset-0 right-duocard">
+                            <!-- Screens Preview -->
+                            <div class="screens-preview screens-preview--right  ">
+                                <img src="assets/img/vsapp/duocard1.webp" class="screens-preview__primary"
+                                    alt="Primary Screenshot">
+                                <img src="assets/img/vsapp/duocard1-2.webp" class="screens-preview__secondary"
+                                    alt="Secondary Screenshot">
+                            </div>
+                            <!-- End of Screens Preview -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-13 col-md-13 left-duocard">
+                            <!-- Screens Preview -->
+                            <div class="screens-preview  ">
+                                <img src="assets/img/vsapp/duocard2.webp" class="screens-preview__primary"
+                                    alt="Primary Screenshot">
+                                <img src="assets/img/vsapp/duocard2-2.webp" class="screens-preview__secondary"
+                                    alt="Secondary Screenshot">
+                            </div>
+                            <!-- End of Screens Preview -->
+                        </div>
+                        <div class="col-lg-11 col-md-10 col-lg-offset-0 col-md-offset-1" style="margin: 0; padding: 0;">
+                            <!-- Push -->
+                            <div class="push push--100  "> </div>
+                            <!-- End of Push -->
+                            <!-- Section Title -->
+                            <h2 class="section-title "> Poin-poin pembahasan webinar </h2>
+                            <!-- End of Section Title -->
+                            <!-- Section Subtitle -->
+                            <p class="section-subtitle "> Berikut merupakan hal-hal yang akan dipelajari</p>
+                            <!-- End of Section Subtitle -->
+                            <!-- Accordion -->
+                            <ul class="accordion js-accordion">
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div>
+
+                                            <img width="65" height="65"
+                                                src="https://img.icons8.com/?size=100&id=132&format=png&color=FAB005"
+                                                alt="micro" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">Kenapa kita sering salah paham?
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="https://img.icons8.com/ios-filled/50/FAB005/scales--v1.png"
+                                                width="16" height="16" fill="currentColor" class="accordion__icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p> Dunia kerja itu cepat, padat, dan seringkali multitasking—nggak heran miskomunikasi jadi hal yang lumrah. Tapi seringkali, bukan pesan yang salah, melainkan cara menyampaikannya. Kita akan bahas contoh nyata miskom yang sering terjadi, dari email yang multitafsir sampai diskusi yang bikin panas suasana 😅
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div>
+                                            <img width="80" height="80"
+                                                src="https://img.icons8.com/?size=100&id=53377&format=png&color=FAB005"
+                                                alt="pointing-at-self" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">Pahami dulu, baru disampaikan.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Miskom bisa dicegah kalau kita melatih dua hal: empati dan active listening. Sebelum buru-buru menanggapi, penting untuk benar-benar hadir dan mendengar. Kita akan kupas teknik active listening—bukan cuma "mendengar", tapi memahami.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div><img width="70" height="70"
+                                                src="https://img.icons8.com/?size=100&id=RXH0x5wZrq5V&format=png&color=FAB005"
+                                                alt="effort" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">
+                                            Berani bicara, tapi tetap santun.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Feedback yang asal ceplas-ceplos bisa bikin suasana kerja jadi tegang. Kita akan belajar cara menyampaikan feedback secara asertif—jujur tapi tetap menghargai, lugas tapi nggak kasar. Ini kunci biar konflik nggak melebar ke mana-mana.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+
+                                        <div>
+                                            <img width="70" height="7	0"
+                                                src="https://img.icons8.com/?size=100&id=73&format=png&color=FAB005"
+                                                alt="movie-theater" />
+                                        </div>
+
+                                        <p style="padding: 0; margin: 0; width: 100%;">
+                                            Bangun ruang aman, bukan zona nyaman.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Tim yang sehat itu bukan yang selalu setuju, tapi yang saling percaya. Kita akan bahas cara menciptakan psychological safety, di mana tiap orang merasa aman untuk berbicara, salah, dan berkembang bareng.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- End of Accordion -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div role="tabpanel" class="tab-content" id="day-2">
+            <section class="section section--skin-1 " id='features'>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <!-- Push -->
+                            <div class="push push--60  "> </div>
+                            <!-- End of Push -->
+                            <!-- Section Title -->
+                            <h2 class="section-title "> Senam Bersama </h2>
+                            <!-- End of Section Title -->
+                            <!-- Section Subtitle -->
+                            <p class="section-subtitle "> Terbuka untuk seluruh intern & team Dialogika, member Dialogika,
+                                dan umum
+                            </p>
+                            <!-- End of Section Subtitle -->
+                            <!-- List -->
+                            <ul class="list list--check">
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-calendar-day" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.684 11.523v-2.3h2.261v-.61H4.684V6.801h2.464v-.61H4v5.332zm3.296 0h.676V8.98c0-.554.227-1.007.953-1.007.125 0 .258.004.329.015v-.613a2 2 0 0 0-.254-.02c-.582 0-.891.32-1.012.567h-.02v-.504H7.98zm2.805-5.093c0 .238.192.425.43.425a.428.428 0 1 0 0-.855.426.426 0 0 0-.43.43m.094 5.093h.672V7.418h-.672z" />
+                                        <path
+                                            d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                    </svg>
+                                    <div>
+                                        <p> Jumat, 25 April 2025</p>
+                                        <p>19.30-21.00</p>
+                                    </div>
+                                </li>
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100"
+                                        viewBox="0,0,256,256">
+                                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                            stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                            stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                            font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                            <g transform="scale(5.33333,5.33333)">
+                                                <circle cx="24" cy="24" r="20" fill="#f6b12b"></circle>
+                                                <path d="M29,31h-15c-1.657,0 -3,-1.343 -3,-3v-11h15c1.657,0 3,1.343 3,3z"
+                                                    fill="#ffffff"></path>
+                                                <path d="M37,31l-6,-4v-6l6,-4z" fill="#ffffff"></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                    <div>
+                                        <p>Via: Zoom Meeting</p>
+                                        <p>Narasumber: Daniel Ari (Mentor Dialogika) & Kak Ron Ashrovy (Founder Dialogika)
+                                        </p>
+                                        <p>HTM: FREE</p>
+                                    </div>
+                                </li>
+
+                                <li class="list__itema">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-link-45deg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
+                                    </svg>
+                                    <p>Link Pendaftaran : <a href="#uploadForm" class="text-decoration-underline fw-bold"
+                                            id="scroll-link" data-scroll-offset="100">CLICK ME</a>
+                                    </p>
+                                </li>
+                            </ul>
+
+                            <!-- End of List -->
+                            <!-- List -->
+                            <ul class="list list--boxes ">
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#ffd400"
+                                            class="bi bi-phone box__icon" viewBox="0 0 16 16">
+                                            <path
+                                                d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                            <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                                        </svg>
+                                    </div>
+                                    <!-- End of Box -->
+                                </li>
+
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box  ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+                                            class="bi bi-watch" viewBox="0 0 16 16">
+                                            <path d="M8.5 5a.5.5 0 0 0-1 0v2.5H6a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5z" />
+                                            <path
+                                                d="M5.667 16C4.747 16 4 15.254 4 14.333v-1.86A6 6 0 0 1 2 8c0-1.777.772-3.374 2-4.472V1.667C4 .747 4.746 0 5.667 0h4.666C11.253 0 12 .746 12 1.667v1.86a6 6 0 0 1 1.918 3.48.502.502 0 0 1 .582.493v1a.5.5 0 0 1-.582.493A6 6 0 0 1 12 12.473v1.86c0 .92-.746 1.667-1.667 1.667zM13 8A5 5 0 1 0 3 8a5 5 0 0 0 10 0" />
+                                        </svg>
+                                        <!-- End of Box -->
+                                </li>
+                                <li class="list__item">
+                                    <!-- Box -->
+                                    <div class="box  ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="blue"
+                                            class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <path
+                                                d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                                        </svg>
+                                        <!-- End of Box -->
+                                </li>
+                            </ul>
+                            <!-- End of List -->
+                        </div>
+                        <div class="col-lg-12 col-md-11 col-md-offset-1 col-lg-offset-0 right-duocard">
+                            <!-- Screens Preview -->
+                            <div class="screens-preview screens-preview--right  ">
+                                <img src="assets/img/vsapp/duocard1.webp" class="screens-preview__primary"
+                                    alt="Primary Screenshot">
+                                <img src="assets/img/vsapp/duocard1-2.webp" class="screens-preview__secondary"
+                                    alt="Secondary Screenshot">
+                            </div>
+                            <!-- End of Screens Preview -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-13 col-md-13 left-duocard">
+                            <!-- Screens Preview -->
+                            <div class="screens-preview  ">
+                                <img src="assets/img/vsapp/duocard2.webp" class="screens-preview__primary"
+                                    alt="Primary Screenshot">
+                                <img src="assets/img/vsapp/duocard2-2.webp" class="screens-preview__secondary"
+                                    alt="Secondary Screenshot">
+                            </div>
+                            <!-- End of Screens Preview -->
+                        </div>
+                        <div class="col-lg-11 col-md-10 col-lg-offset-0 col-md-offset-1" style="margin: 0; padding: 0;">
+                            <!-- Push -->
+                            <div class="push push--100  "> </div>
+                            <!-- End of Push -->
+                            <!-- Section Title -->
+                            <h2 class="section-title "> Poin-poin pembahasan webinar </h2>
+                            <!-- End of Section Title -->
+                            <!-- Section Subtitle -->
+                            <p class="section-subtitle "> Berikut merupakan hal-hal yang akan dipelajari</p>
+                            <!-- End of Section Subtitle -->
+                            <!-- Accordion -->
+                            <ul class="accordion js-accordion">
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div>
+
+                                            <img width="65" height="65"
+                                                src="https://img.icons8.com/?size=100&id=132&format=png&color=FAB005"
+                                                alt="micro" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">Kenapa kita sering salah paham?
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="https://img.icons8.com/ios-filled/50/FAB005/scales--v1.png"
+                                                width="16" height="16" fill="currentColor" class="accordion__icon"
+                                                viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p> Dunia kerja itu cepat, padat, dan seringkali multitasking—nggak heran miskomunikasi jadi hal yang lumrah. Tapi seringkali, bukan pesan yang salah, melainkan cara menyampaikannya. Kita akan bahas contoh nyata miskom yang sering terjadi, dari email yang multitafsir sampai diskusi yang bikin panas suasana 😅
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div>
+                                            <img width="80" height="80"
+                                                src="https://img.icons8.com/?size=100&id=53377&format=png&color=FAB005"
+                                                alt="pointing-at-self" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">Pahami dulu, baru disampaikan.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Miskom bisa dicegah kalau kita melatih dua hal: empati dan active listening. Sebelum buru-buru menanggapi, penting untuk benar-benar hadir dan mendengar. Kita akan kupas teknik active listening—bukan cuma "mendengar", tapi memahami.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+                                        <div><img width="70" height="70"
+                                                src="https://img.icons8.com/?size=100&id=RXH0x5wZrq5V&format=png&color=FAB005"
+                                                alt="effort" />
+                                        </div>
+                                        <p style="padding: 0; margin: 0; width: 100%;">
+                                            Berani bicara, tapi tetap santun.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Feedback yang asal ceplas-ceplos bisa bikin suasana kerja jadi tegang. Kita akan belajar cara menyampaikan feedback secara asertif—jujur tapi tetap menghargai, lugas tapi nggak kasar. Ini kunci biar konflik nggak melebar ke mana-mana.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion__item">
+                                    <h3 class="accordion__title">
+
+                                        <div>
+                                            <img width="70" height="7	0"
+                                                src="https://img.icons8.com/?size=100&id=73&format=png&color=FAB005"
+                                                alt="movie-theater" />
+                                        </div>
+
+                                        <p style="padding: 0; margin: 0; width: 100%;">
+                                            Bangun ruang aman, bukan zona nyaman.
+                                        </p>
+                                        <div class="accordion__icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="accordion__icon" viewBox="0 0 16 16">
+                                                <path
+                                                    d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                            </svg>
+                                        </div>
+                                    </h3>
+                                    <div class="accordion__content">
+                                        <p>
+                                            Tim yang sehat itu bukan yang selalu setuju, tapi yang saling percaya. Kita akan bahas cara menciptakan psychological safety, di mana tiap orang merasa aman untuk berbicara, salah, dan berkembang bareng.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- End of Accordion -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+   
+    </script>
+    <!-- Part -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="assets/part/newevent/script.js"></script>
+    <script src="assets/part/counting-down/count.js"></script>
+
+    <script src="assets/part/modals/modal-component.js"></script>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/international-phone-number/intlTelInput.min.js"></script>
+    <script src="assets/vendor/international-phone-number/script.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/clickup-task.js"></script>
+    <script src="assets/js/headerfooter.js"></script>
+    <script src="assets/js/timestamp.js"></script>
+    <script src="assets/js/whatsapp.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/button-hover.js"></script>
+
+    <script>
+    function showTab(tabNumber, buttonElement) {
+    // Sembunyikan semua konten tab
+    const contents = document.querySelectorAll('.tab-content');
+    contents.forEach(content => content.classList.remove('active'));
+
+    // Hapus "active" dari semua tombol tab
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    // Tampilkan konten tab yang sesuai
+    document.getElementById('day-' + tabNumber).classList.add('active');
+
+    // Tambahkan kelas active ke tombol yang diklik
+    buttonElement.classList.add('active');
+    }
+    </script>
+  </body>
+</html>
