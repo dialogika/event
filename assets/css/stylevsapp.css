@@ -7592,7 +7592,7 @@ Box
    ========================================================================== */
 .accordion__item {
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
 }
 
 .accordion__title {
@@ -7660,7 +7660,7 @@ Box
 }
 
 .accordion__content p:last-child {
-  margin: 0;
+  margin: 40px;
 }
 
 /* ==========================================================================
@@ -7682,20 +7682,20 @@ Box
 
 .button__linkyellow {
   border-radius: 50px;
-  height: 60px;
-  width: 100%;
+  height: 40px; /* was 60px */
+  width: auto; /* or set a smaller fixed width */
   background-color: #f6b12b;
   color: #000000;
   border: none;
-  font-size: 16px;
+  font-size: 14px; /* was 16px */
   font-family: "Poppins", sans-serif;
   outline: none;
   font-weight: 600;
   letter-spacing: 0.01em;
   margin: 0;
-  padding: 0;
-  display: block;
-  line-height: 60px;
+  padding: 0 20px; /* added horizontal padding */
+  display: inline-block; /* changed from block to inline-block for natural size */
+  line-height: 40px; /* match height */
   text-align: center;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgb(9 53 123);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
@@ -7935,7 +7935,7 @@ Box
    Dependencies: no dependencies
    ========================================================================== */
 .device {
-  max-width: 290px;
+  max-width: auto;
 }
 
 .device--right {
@@ -7943,10 +7943,9 @@ Box
 }
 
 .device__image {
-  background: black;
-  border-radius: 40px;
+  /* border-radius: 40px;
   -webkit-box-shadow: 0px 2px 75px 0px rgba(0, 0, 12, 0.5);
-  box-shadow: 3px 3px 9px 6px rgba(0, 0, 12, 0.5);
+  box-shadow: 3px 3px 9px 6px rgba(0, 0, 12, 0.5); */
 }
 /* ==========================================================================
    Block: Download Button
@@ -8230,8 +8229,22 @@ Box
   background-image: url("../img/vsapp/sectin2back.png");
   background-size: cover; /* Ensures the image covers the entire area */
   background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
 }
+
+@media (max-width: 768px) {
+  .section--skin-1 {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-bottom: 5px;
+  }
+}
+
 /* ==========================================================================
    Block: Input
    Dependencies: Fontello.less
@@ -10776,7 +10789,7 @@ label[for="pdf"] {
   box-shadow: 0 4px 10px rgba(241, 172, 21, 0.4),
     0 6px 20px rgba(252, 242, 33, 0.3);
   -webkit-box-shadow: 0 4px 10px rgba(241, 172, 21, 0.4),
-  0 6px 20px rgba(252, 242, 33, 0.3);
+    0 6px 20px rgba(252, 242, 33, 0.3);
   white-space: nowrap;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -10797,4 +10810,175 @@ label[for="pdf"] {
   cursor: pointer;
   box-shadow: 0px 0px 10px 2px #fcf221;
   -webkit-box-shadow: 0px 0px 10px 2px #fcf221;
+}
+/*--------------------------------------------------------------
+# Schedule Section
+--------------------------------------------------------------*/
+.schedule {
+  --background-color: color-mix(
+    in srgb,
+    var(--alt-background-color),
+    transparent 95%
+  );
+  margin-bottom: 10px;
+  font-family: "Poppins";
+}
+
+@media (max-width: 768px) {
+  .schedule {
+    margin-bottom: 0;
+  }
+}
+
+h2 {
+  color: #0a1551;
+  font-size: 2rem;
+}
+
+.schedule .section-title {
+  padding: 40px;
+  /* margin-left: 100px; */
+  text-align: center;
+}
+
+.schedule .nav-tabs {
+  text-align: center;
+  margin: auto;
+  display: block;
+  border-bottom: 0;
+  margin-bottom: 30px;
+}
+
+.schedule .nav-tabs li {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.schedule .nav-tabs a {
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: var(--heading-color);
+  color: var(--contrast-color);
+  padding: 10px 100px;
+}
+
+@media (max-width: 991px) {
+  .schedule .nav-tabs a {
+    padding: 8px 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .schedule .nav-tabs a {
+    padding: 8px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .schedule .nav-tabs a {
+    padding: 8px 30px;
+  }
+}
+
+.schedule .nav-tabs a.active {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.schedule .sub-heading {
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto 30px auto;
+}
+
+@media (min-width: 991px) {
+  .schedule .sub-heading {
+    width: 75%;
+  }
+}
+
+.schedule .tab-pane {
+  transition: ease-in-out 0.2s;
+}
+
+.schedule .schedule-item {
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 85%);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+.schedule .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+.schedule .schedule-item .speaker {
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.schedule .schedule-item .speaker img {
+  height: 100%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  transition: all ease-in-out 0.3s;
+}
+
+.schedule .schedule-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.schedule .schedule-item h4 span {
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.schedule .schedule-item p {
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin-bottom: 0;
+}
+
+.tab-button {
+  margin-left: 25px;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  background: linear-gradient(to bottom, #0f61a8 5%, #0b2b6a 100%);
+  font-family: "Poppins";
+}
+
+.tab-button.active:hover {
+  background: linear-gradient(to bottom, #0b2b6a 5%, #0f61a8 100%);
+  background-color: #0b2b6a;
+  color: #fff;
+  box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+  -webkit-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+  -moz-box-shadow: 0px 0px 4px 2px rgba(114, 4, 207, 0.75);
+}
+
+.tab-content {
+  display: none;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.tab-content.active {
+  display: block;
 }

@@ -498,7 +498,8 @@ h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("https://i.ytimg.com/vi/xLYoj-yJK20/maxresdefault.jpg") top center;
+  background: url("https://i.ytimg.com/vi/xLYoj-yJK20/maxresdefault.jpg") top
+    center;
   background-size: cover;
   margin-bottom: -70px;
   z-index: 2;

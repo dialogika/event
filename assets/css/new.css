@@ -197,6 +197,20 @@ h6 {
   width: 158px;
 }
 
+.hero-image {
+  margin-top: -100px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    margin-top: 0;
+  }
+}
+
 /**
 * Appointment Button *
 */
@@ -486,7 +500,8 @@ h6 {
 #hero {
   width: 100%;
   height: 90vh;
-  background: url("https://www.theladders.com/wp-content/uploads/stress-190717.jpg") top center;
+  background: url("https://www.theladders.com/wp-content/uploads/stress-190717.jpg")
+    top center;
   background-size: cover;
   margin-bottom: -70px;
   z-index: 2;
@@ -615,12 +630,18 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 .section {
-  padding: 60px 0;
+  /* padding: 0px 0; */
   overflow: hidden;
 }
 
 .section-bg {
   background-color: #f1f7fd;
+}
+
+#container-event {
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .section-title h2 {
