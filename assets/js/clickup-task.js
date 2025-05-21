@@ -247,7 +247,7 @@ const handleEventReview = async (event) => {
   }
 };
 
-// ? Function untuk kirim data review event ke clickup di  Brand/Event/Presensi. Digunakan di presence.html
+// ? Function untuk kirim data presensi event ke clickup di  Brand/Event/Presensi. Digunakan di presence.html
 const handlePresensiBtn = async (event) => {
   event.preventDefault();
   const listId = "901604685240";
@@ -353,12 +353,80 @@ const handlePresensiBtn = async (event) => {
   }
 };
 
+// ? Function untuk kirim data presensi event ke clickup di  Brand/Event/Presensi. Digunakan di presence.html
+const handleEventSenam = async (event) => {
+  event.preventDefault();
+  const listId = "901608598330";
+  const loadingSpinner = document.getElementById("loadingSpinner");
+  const whatsAppInput = iti.getNumber();
+  const namaInput = document.getElementById("namaInput").value.trim();
+  const emailInput = document.querySelector('input[name="Email"]');
+  const universityInput = document.getElementById("university");
+  const infoInput = document.getElementById("formInfo");
+  const eventTitle = document.getElementById("eventTitle").innerText.trim();
+  const description = "Mengirim data presensi peserta event webinar !";
+  const FollowedAccounts = [];
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+
+  // Validate input fields
+  const validateInput = (input, regex) => {
+    if (!regex.test(input.value)) {
+      alert("Harap masukkan format yang benar");
+      return false;
+    }
+    return true;
+  };
+
+  const customFields = [
+    {
+      id: "37ed72e4-0702-47ad-baff-8eaaa568b876",
+      value: whatsAppInput,
+    },
+    {
+      id: "083b8a3f-f475-4d47-9590-77b27575f544",
+      value: universityInput.value.trim(),
+    },
+    {
+      id: "50dc4d2b-8674-4ac3-a8e6-ed6383754dd5",
+      value: emailInput.value.trim(),
+    },
+    {
+      id: "083b8a3f-f475-4d47-9590-77b27575f544",
+      value: infoInput.value.trim(),
+    },
+  ];
+
+  try {
+    loadingSpinner.style.display = "block";
+
+    await createNewTask(listId, namaInput, customFields, description);
+
+    // Action setelah upload data yaitu download file pdf
+    const link = document.createElement("a");
+
+    // Uncomment syntax dibawah ini bila ingin download file ppt kemudian update href dan nama filenya
+    // link.href = "assets/pdf/cheatsheet-how-to-become-a-confident-announcer.pdf";
+    // link.download = "cheatsheet-how-to-become-a-confident-announcer.pdf";
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+    window.open("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L","_blank")
+  } catch (error) {
+    alert("Terjadi kesalahan: " + error.message);
+  } finally {
+    loadingSpinner.style.display = "none";
+    emailInput.style.border = "";
+  }
+};
+
 // ? Function untuk cek id custom field clickup. Buka browser dev tool untuk lihat response dan daftar id-idnya.
 // ? Buat button dengan id "getClickupData" untuk menggunakan function ini
 const handleGetClickupIds = async (event) => {
   event.preventDefault();
   const apiToken = "pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E";
-  const listId = "900302342659"; // Ganti dengan id yng sesuai. Contoh link https://app.clickup.com/2307700/v/li/14355106
+  const listId = "901608598330"; // Ganti dengan id yng sesuai. Contoh link https://app.clickup.com/2307700/v/li/14355106
   let taskId = null; // Variabel untuk menyimpan task ID
 
   console.log("hello world ini ambil data");
@@ -473,6 +541,10 @@ if (reviewSubmitBtn)
 // | Masukkan function handlePresensiBtn ke element button dengan id submitPresensi di presence.html
 const presensiBtn = document.getElementById("submitPresensi");
 if (presensiBtn) presensiBtn.addEventListener("click", handlePresensiBtn);
+
+// | Masukkan function handleEventSenam ke element button dengan id submitPresensi di presence.html
+const eventBtn = document.getElementById("submitEventSenam");
+if (eventBtn) eventBtn.addEventListener("click", handleEventSenam);
 
 // | Masukkan function handleGetClickupIds ke element button dengan id getClickupData untuk mengambil id dan value custom_fields clickup
 const getClickupData = document.getElementById("getClickupData");
