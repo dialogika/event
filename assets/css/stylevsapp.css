@@ -8211,7 +8211,7 @@ Box
    Dependencies: no dependencies
    ========================================================================== */
 .hero {
-  padding-bottom: 50px;
+  padding-bottom: 5px;
   /* background-image: url("../img/vsapp/background2.webp"); */
   background-size: cover;
   background-position: center center;
@@ -9286,11 +9286,12 @@ a[href^="https://maps.google.com/maps"]
 .section-title {
   color: black;
   font-family: "Poppins";
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .section-title--center {
   text-align: center;
+  margin-top: 25px;
 }
 
 .section-title--light {
@@ -10301,7 +10302,8 @@ div.video:before {
   }
 
   .section {
-    padding: 60px 0;
+    padding-top: 30px;
+    padding-bottom: 5px;
   }
 
   .slider__title {
