@@ -251,7 +251,6 @@ const handlePresensiBtn = async (event) => {
   const webinarAttendanceValue = Array.from(webinarAttendance).find((radio) => radio.checked)?.value;
   const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
   const description = "Mengirim data presensi peserta event webinar !";
-  const FollowedAccounts = [];
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
@@ -493,13 +492,7 @@ const openWhatsAppInvite = (url) => {
 
 // | Masukkan function handleIndexFormSubmission ke element button dengan id eventSubmitBtn dan membuka grup WA CEO Class
 const eventSubmitBtn = document.getElementById("eventSubmitBtn");
-if (eventSubmitBtn) {
-  eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
-  // Buka whatsapp group saat submitBtn di click
-  $(document).on("click", "#eventSubmitBtn", () => {
-    window.open("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5", "_blank");
-  });
-}
+if (eventSubmitBtn) eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
 
 // | Masukkan function handleEventReview ke element button dengan id eventSubmitBtn di review-event.html
 const reviewSubmitBtn = document.getElementById("reviewSubmitBtn");
