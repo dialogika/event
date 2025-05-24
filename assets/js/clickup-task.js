@@ -145,6 +145,7 @@ const handleIndexFormSubmission = async (event) => {
 
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
+    openWhatsAppInvite("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5");
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -381,7 +382,10 @@ const handleEventSenam = async (event) => {
 
     await createNewTask(listId, namaInput, customFields, description);
 
-    window.open("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L", "_blank");
+    // Di dalam try setelah createNewTask:
+    openWhatsAppInvite("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L");
+
+    // window.open("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L", "_blank");
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {
@@ -475,6 +479,16 @@ const handleSubFooterSubmission = async (event) => {
     alert("Terjadi kesalahan saat mengirim data. Silakan coba lagi.");
     console.error(error);
   }
+};
+
+const openWhatsAppInvite = (url) => {
+  const a = document.createElement("a");
+  a.href = url;
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
 };
 
 // | Masukkan function handleIndexFormSubmission ke element button dengan id eventSubmitBtn dan membuka grup WA CEO Class
