@@ -270,8 +270,33 @@
                 placeholder="saya tahu dari..."></textarea>
             </div>
 
-            <button type="submit" id="submitEventSenam" class="form-event-button">Gabung</button>
+            <button type="submit" id="submitEventSenam" class="form-event-button" data-bs-toggle="modal" data-bs-target="#whatsappFallbackModal">Gabung</button>
             <!-- <button type="button" id="getClickupData" class="form-event-button">Get data</button> -->
+
+            <!-- Modal Fallback WhatsApp -->
+            <div class="modal" id="whatsappFallbackModal" tabindex="-1" aria-labelledby="whatsappFallbackLabel"
+              aria-hidden="true">
+              <div class="position-fixed top-0 left w-100 h-100 z-2 bg-white opacity-50" style="pointer-events: none;">
+              </div>
+              <div class="modal-dialog modal-dialog-centered z-2">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="whatsappFallbackLabel">Gabung Grup WhatsApp</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    Belum mendapatkan link untuk gabung group Whatsapp ? <br />
+                    Klik tombol dibawah ini
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L" target="_blank"
+                      class="btn btn-primary">Buka Link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
         </form>
 
