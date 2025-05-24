@@ -644,6 +644,22 @@ h6 {
   padding-right: 0 !important;
 }
 
+.sub-head {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  color: #0b2b6a;
+}
+
+.sub-sub {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
