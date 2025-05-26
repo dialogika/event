@@ -82,7 +82,7 @@ const handleIndexFormSubmission = async (event) => {
   const motivate = document.getElementById("motivate").value.trim();
   const location = document.getElementById("location").value.trim();
   const Ketersediaan = document.getElementById("Ketersediaan").value.trim();
-  const experience = document.getElementById("experience").value.trim();
+  // const experience = document.getElementById("experience").value.trim();
   const jobInputs = document.querySelectorAll("#job");
   const jobs = Array.from(jobInputs)
     .map((input) => input.value.trim())
@@ -98,7 +98,7 @@ const handleIndexFormSubmission = async (event) => {
     { id: "218de446-5037-4d3a-9f85-96c047453fe9", value: motivate },
     { id: "4d4ea89a-2c98-467a-8452-a6d1794036ab", value: location },
     { id: "41fe905e-8974-4bf3-a871-daddd8c4307a", value: jobs },
-    { id: "c1c0c137-27c5-4d5c-8ef0-408bf8faace9", value: experience },
+    // { id: "c1c0c137-27c5-4d5c-8ef0-408bf8faace9", value: experience },
     { id: "562e180b-6664-483e-8f44-28902bfe4fbe", value: whatsapp },
   ];
 
