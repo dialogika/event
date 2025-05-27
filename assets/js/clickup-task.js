@@ -146,7 +146,7 @@ const handleIndexFormSubmission = async (event) => {
 
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
-    openWhatsAppInvite("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5");
+    openWhatsAppInvite("https://chat.whatsapp.com/FeXk75j2aAq7aqHD12SqN2");
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -526,6 +526,6 @@ const subFooterBtn = document.getElementById("subFooterBtn");
 if (subFooterBtn) {
   subFooterBtn.addEventListener("click", handleSubFooterSubmission);
   $(document).on("click", "#subFooterBtn", () => {
-    window.open("https://chat.whatsapp.com/Leyn23MeonJKASnWM41cd5", "_blank");
+    window.open("https://chat.whatsapp.com/FeXk75j2aAq7aqHD12SqN2", "_blank");
   });
 }
