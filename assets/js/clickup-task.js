@@ -90,6 +90,7 @@ const handleIndexFormSubmission = async (event) => {
   const description = "Menambahkan data ke Event/Register";
   const loading = document.getElementById("loading");
   const success = document.getElementById("success");
+  const whatsappModalFallback = new bootstrap.Modal(document.getElementById("whatsappFallbackModal"));
 
   const listId = "900302342659"; // listId untuk Brand/Event/Register
 
@@ -151,7 +152,8 @@ const handleIndexFormSubmission = async (event) => {
     success.style.display = "flex";
     setTimeout(() => {
       success.style.display = "none";
-    }, 5000);
+      whatsappModalFallback.toggle();
+    }, 3000);
   } catch (error) {
     loading.style.display = "none";
     alert("Gagal mengirim data; harap coba lagi nanti.");
