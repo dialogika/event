@@ -232,6 +232,24 @@
         <div style="width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.5);"></div>
       </div>
 
+      <!-- Success Indicator -->
+      <div id="successIndicator" style="display: none; 
+  background-color: rgba(255, 255, 255, 0.9);">
+        <div class="success-content">
+          <div class="success-icon">
+            ✔
+          </div>
+          <h2 class="success-message">Success!</h2>
+          <p>Terimakasih telah presensi di webinar kali ini 🙏 !</p>
+          <p>Jika anda memiliki masukan atau saran silahkan click link berikut, <a
+              href="https://www.dialogika.co/event/review-event.html" download>Review Event !</a></p>
+          <p>Anda dapat menutup halaman ini dan lanjut mengikuti webinar</p>
+          <button type="button" class="px-2 h-auto w-auto rounded-2 btn btn-primary"
+            onclick="btnClose('successIndicator')">Close</button>
+        </div>
+      </div>
+      <!-- End of Success Indicator -->
+
       <div class="card">
         <form action="javascript:void(0)" method="post" id="myForm" enctype="text/plain" role="form"
           class="php-email-form needs-validation">
@@ -239,7 +257,8 @@
             <div class="card-body">
               <div class="card-header p-10">
                 <div class="">
-                  <strong class="fs-5">Silahkan isi presensi untuk event  Stand Out on LinkedIn: Dapatkan Perhatian, Raih Kesempatan</strong> <br>
+                  <strong class="fs-5">Silahkan isi presensi untuk event Stand Out on LinkedIn: Dapatkan Perhatian, Raih
+                    Kesempatan</strong> <br>
                   <hr>Setelah mengisi form webinar ini kamu akan dapat mengunduh materi.
                 </div>
               </div>
@@ -394,6 +413,7 @@
     <script src="assets/part/newevent/script.js"></script>
     <script src="assets/part/counting-down/count.js"></script>
     <script src="assets/part/modals/modal-component.js"></script>
+    <script src="assets/part/custom-files/script.js"></script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/international-phone-number/intlTelInput.min.js"></script>

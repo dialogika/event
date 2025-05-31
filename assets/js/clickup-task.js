@@ -253,6 +253,7 @@ const handlePresensiBtn = async (event) => {
   const webinarAttendanceValue = Array.from(webinarAttendance).find((radio) => radio.checked)?.value;
   const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
   const description = "Mengirim data presensi peserta event webinar !";
+  const successIndicator = document.getElementById("successIndicator");
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
@@ -280,9 +281,8 @@ const handlePresensiBtn = async (event) => {
     .filter((item) => item.checked)
     .map((item) => item.value)
     .reduce((acc, current) => {
-      if (current === "Belum Semua") {
-        return "Belum Semua";
-      }
+      if (current === "Belum Semua") return "Belum Semua";
+
       return acc === "Belum Semua" ? "Belum Semua" : acc + (acc ? ", " : "") + current;
     }, "");
 
@@ -330,6 +330,7 @@ const handlePresensiBtn = async (event) => {
     // link.click();
     // document.body.removeChild(link);
     // alert("Terimakasih telah presensi. Mohon Menunggu untuk mendownload PDF-nya.");
+    successIndicator.style.display = "flex";
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {
