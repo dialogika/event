@@ -121,14 +121,21 @@
 
 	<!-- Meta Pixel Code -->
 	<script>
-		!function (f, b, e, v, n, t, s) {
-			if (f.fbq) return; n = f.fbq = function () {
+		! function (f, b, e, v, n, t, s) {
+			if (f.fbq) return;
+			n = f.fbq = function () {
 				n.callMethod ?
 					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
 			};
-			if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-			n.queue = []; t = b.createElement(e); t.async = !0;
-			t.src = v; s = b.getElementsByTagName(e)[0];
+			if (!f._fbq) f._fbq = n;
+			n.push = n;
+			n.loaded = !0;
+			n.version = '2.0';
+			n.queue = [];
+			t = b.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = b.getElementsByTagName(e)[0];
 			s.parentNode.insertBefore(t, s)
 		}(window, document, 'script',
 			'https://connect.facebook.net/en_US/fbevents.js');
@@ -143,21 +150,37 @@
 	<!-- DO NOT MODIFY -->
 	<!-- Quora Pixel Code (JS Helper) -->
 	<script>
-		!function (q, e, v, n, t, s) { if (q.qp) return; n = q.qp = function () { n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments); }; n.queue = []; t = document.createElement(e); t.async = !0; t.src = v; s = document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, 'script', 'https://a.quora.com/qevents.js');
+		! function (q, e, v, n, t, s) {
+			if (q.qp) return;
+			n = q.qp = function () {
+				n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments);
+			};
+			n.queue = [];
+			t = document.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = document.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s);
+		}(window, 'script', 'https://a.quora.com/qevents.js');
 		qp('init', 'cae6711903da464ab62f03df5f66aedc');
 		qp('track', 'ViewContent');
 	</script>
 	<noscript><img height="1" width="1" style="display:none"
 			src="https://q.quora.com/_/ad/cae6711903da464ab62f03df5f66aedc/pixel?tag=ViewContent&noscript=1" /></noscript>
 	<!-- End of Quora Pixel Code -->
-	<script>qp('track', 'GenerateLead');</script>
+	<script>
+		qp('track', 'GenerateLead');
+	</script>
 	<!-- End Pixel Quora -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HV60XT856G"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
 		gtag('js', new Date());
 
 		gtag('config', 'UA-148836422-2');
@@ -166,23 +189,37 @@
 	<!-- End Global site tag (gtag.js) - Google Analytics -->
 
 	<!-- Google Tag Manager -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-KGK9D6H');</script>
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-KGK9D6H');
+	</script>
 	<!-- End Google Tag Manager -->
 
 	<!-- Hotjar Tracking Code for https://dialogika.co -->
 	<script>
 		(function (h, o, t, j, a, r) {
-			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
-			h._hjSettings = { hjid: 2828594, hjsv: 6 };
+			h.hj = h.hj || function () {
+				(h.hj.q = h.hj.q || []).push(arguments)
+			};
+			h._hjSettings = {
+				hjid: 2828594,
+				hjsv: 6
+			};
 			a = o.getElementsByTagName('head')[0];
-			r = o.createElement('script'); r.async = 1;
+			r = o.createElement('script');
+			r.async = 1;
 			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
 			a.appendChild(r);
 		})(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
@@ -666,12 +703,9 @@
 										<path
 											d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z" />
 									</svg>
-									<p>Link Pendaftaran : <a href="https://www.dialogika.co/event/scrollback-2025"
-											target="_blank" rel="noopener noreferrer"
-											class="text-decoration-underline fw-bold">
-											Click Me
-										</a>
-
+									<p>Link Pendaftaran : <a href="#uploadFormSenam"
+											class="text-decoration-underline fw-bold" id="scroll-link"
+											data-scroll-offset="100">CLICK ME</a>
 									</p>
 								</li>
 							</ul>
@@ -1141,7 +1175,7 @@
 						</div>
 
 						<div class="img-wrapper">
-							<img src="assets/img/vsapp/event-form-banner.webp" alt="Event-Image"
+							<img src="assets/img/vsapp/senam3-3.jpg" alt="Event-Image"
 								style="width: 100%; height: 100%; object-fit: cover;" />
 						</div>
 
@@ -1154,143 +1188,133 @@
 				<div class="event-form-container">
 
 					<div class="form-container">
-						<form id="uploadForm" class="event-form">
+						<div class="event-form-container">
+							<div class="form-container">
+								<form action="javascript:void" method="post" id="uploadFormSenam" enctype="text/plain"
+									role="form" class="php-email-form event-form needs-validation">
 
-							<!-- Name Field -->
-							<div class="name-input-container">
-								<label for="name" class="label-input">Nama Lengkap <span
-										class="required-asterisk">*</span></label>
-								<input type="text" class="form-text-input" autocomplete="off" id="name" name="name"
-									placeholder="Nama " required>
-								<label for="name" id="nameWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi nama lengkap Anda</label>
+									<!-- Nama Lengkap -->
+									<div class="mb-3">
+										<label for="namaInput" class="label-input">Nama Lengkap <span
+												class="required-asterisk">*</span></label>
+										<input type="text" name="Nama" class="form-text-input form-control"
+											id="namaInput" placeholder="Nama Lengkap" autocomplete="off" required>
+										<div id="namaWarning" style="display: none;"
+											class="warning text-danger fw-normal">
+											Isi nama lengkap Anda
+										</div>
+									</div>
+
+									<!-- Nomor WhatsApp -->
+									<div class="mb-3">
+										<label for="whatsapp-number" class="label-input">Nomor Whatsapp <span
+												class="required-asterisk">*</span></label>
+										<input type="tel" name="WA" class="form-text-input form-control"
+											id="whatsapp-number" required>
+										<div id="waWarning" style="display: none;"
+											class="warning text-danger fw-normal">Isi nomor WhatsApp Anda</div>
+									</div>
+
+									<!-- Email Aktif -->
+									<div class="mb-3">
+										<label for="emailInput" class="label-input">Email Aktif <span
+												class="required-asterisk">*</span></label>
+										<input type="email" name="Email" class="form-text-input form-control"
+											id="emailInput" placeholder="name@example.com" autocomplete="off" required>
+										<div id="emailWarning" style="display: none;"
+											class="warning text-danger fw-normal">
+											Masukkan email aktif Anda
+										</div>
+									</div>
+
+									<!-- Asal Universitas -->
+									<div class="mb-3">
+										<label for="university" class="label-input">Asal Universitas <span
+												class="required-asterisk">*</span></label>
+										<input type="text" name="university" class="form-text-input form-control"
+											id="university" placeholder="Universitas ......." autocomplete="off"
+											required>
+										<div id="univWarning" style="display: none;"
+											class="warning text-danger fw-normal">
+											Isi asal universitas
+										</div>
+									</div>
+
+									<!-- Info Event Dari Mana -->
+									<div class="note-input-container">
+										<label for="formInfo" class="label-input">
+											Mendapatkan informasi webinar ini dari mana? <span
+												class="required-asterisk">*</span>
+										</label>
+										<textarea class="form-text-input" id="formInfo" name="Info" rows="4"
+											placeholder="mendapatkan informasi webinar ini dari mana?"
+											autocomplete="off"></textarea>
+										<div id="infoWarning" style="display: none;"
+											class="warning text-danger fw-normal">
+											Mohon isi informasi ini
+										</div>
+									</div>
+
+									<!-- Tombol Submit -->
+									<button type="submit" id="submitEventSenam" class="form-event-button" data-bs-toggle="modal" data-bs-target="#whatsappFallbackModal">Gabung</button>
+
+
+									<!-- Disclaimer -->
+									<p class="form-disclaimer mt-3"
+										style="font-size: 12px; text-align: center; color: #A1A1A1;">
+										Dengan mengirimkan formulir ini, Anda setuju dengan <a
+											href="https://www.dialogika.co/policy" target="_blank"
+											style="color: #A1A1A1; text-decoration: underline;">Kebijakan Privasi</a>
+										kami.
+									</p>
+
+									<!-- Loading Animation -->
+									<div id="loadingSpinner" class="loading mt-3" style="display: none;">
+										<div class="loading-spinner"></div>
+										Mengunggah...
+									</div>
+
+									<!-- Success Animation -->
+									<div id="success" class="success mt-3" style="display: none;">
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+											<path
+												d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+										</svg>
+										<p>Data berhasil diunggah!</p>
+										<p>Terimakasih telah bergabung 🙏</p>
+									</div>
+								</form>
+
+								<!-- Modal Fallback WhatsApp -->
+								<div class="modal" id="whatsappFallbackModal" tabindex="-1"
+									aria-labelledby="whatsappFallbackLabel" aria-hidden="true">
+									<div class="position-fixed top-0 left-0 w-100 h-100 z-2 bg-white opacity-50"
+										style="pointer-events: none;"></div>
+									<div class="modal-dialog modal-dialog-centered z-2">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="whatsappFallbackLabel">Gabung Grup WhatsApp
+												</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												Belum mendapatkan link untuk gabung group Whatsapp?<br />
+												Klik tombol di bawah ini
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-secondary"
+													data-bs-dismiss="modal">Tutup</button>
+												<a href="https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L"
+													target="_blank" class="btn btn-primary">Buka Link</a>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-
-							<!-- No WA Field -->
-							<div class="phone-input-container">
-								<label for="whatsapp-number" class="label-input">Nomor Whatsapp <span
-										class="required-asterisk">*</span></label>
-								<!-- Menggunakan library assets/vendor/international-phone-number -->
-								<!-- Gunakan iti.getNumber() untuk ambil value -->
-								<input type="tel" id="whatsapp-number" name="whatsapp-number" class="form-text-input"
-									required>
-								<label for="whatsapp-number" id="whatsappWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi nomor WhatsApp</label>
-							</div>
-
-							<!-- Location Field -->
-							<div class="location-input-container">
-								<label for="location" class="label-input">Domisili saat ini <span
-										class="required-asterisk">*</span></label>
-								<input type="text" class="form-text-input" autocomplete="off" id="location"
-									name="location" placeholder="Alamat" required>
-								<label for="location" id="domisiliWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi domisili/kota anda</label>
-							</div>
-
-							<!-- Profesi Field -->
-							<div class="profesi-input-container">
-								<label for="job" class="label-input">Profesi <span
-										class="required-asterisk">*</span></label>
-								<select id="job" name="job" class="form-text-input">
-									<option value="" disabled selected>Pilih Profesi</option>
-									<option value="5acf4769-8efc-4cf7-8c4e-170301ec1fcb">High School</option>
-									<option value="bdad681c-17c2-499b-b2fa-ef3a304b132f">University Student</option>
-									<option value="5d3bdd73-539d-4675-9705-90bc546c6eeb">Freshgraduate</option>
-									<option value="88b999dd-f5e3-4953-b653-d006930e5065">Jobseeker</option>
-									<option value="fc332288-6084-45b3-b74c-0bb0083b96c3">Employee</option>
-									<option value="ba8ca154-7402-4c3d-9cfa-08c96a95fa71">Businessman</option>
-									<option value="7a865fd8-c16e-4c10-944a-9d0c4948cf3d">Parent</option>
-									<option value="50fdbb77-823b-41b3-b4a2-81c786021ba5">Manager</option>
-									<option value="d1fe9fab-37b3-4789-8c94-6bb95a5f1e71">Other</option>
-									<option value="8113f79e-0cfc-4dbf-93e7-92b46d490651">Lecturer</option>
-									<option value="a09e1ac1-fe8e-41ea-81ec-01c35c8b070f">Teacher</option>
-									<option value="3ce4e5d4-4638-4046-958f-5c4c58dccc51">Civil Servant</option>
-									<option value="f200df43-4279-4cc5-910a-af71cbf38446">Honorer</option>
-								</select>
-								<label for="job" id="jobWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi profesi Anda</label>
-							</div>
-
-							<!-- Pernah ikut program dialogika atau tidak  -->
-							<div class="pengalaman-input-container">
-								<label for="experience" class="label-input">apakah kamu pernah mengikuti kelas atau
-									program
-									dari dialogika ? <span class="required-asterisk">*</span></label>
-								<select id="experience" name="experience" class="form-text-input">
-									<option value="" disabled selected>Pilih Pilihan</option>
-									<option value="b8ca6c5d-6b48-428e-812a-102bd372d54c">YA</option>
-									<option value="eaa5ec9a-cb5f-4e41-811e-7357326d1417">TIDAK</option>
-								</select>
-								<label for="experience" id="experienceWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi input ini</label>
-							</div>
-
-
-							<div class="pengalaman-input-container">
-								<label for="experience" class="label-input">event apa yang akan kamu ikuti<span
-										class="required-asterisk">*</span></label>
-								<select id="experience" name="experience" class="form-text-input">
-									<option value="" disabled selected>Pilih Pilihan</option>
-									<option value="">Webinar</option>
-									<option value="">Senam</option>
-								</select>
-								<label for="experience" id="experienceWarning" style="display: none;"
-									class="warning text-danger fw-normal">Isi input ini</label>
-							</div>
-
-							<!-- Ketersediaan on-cam -->
-							<div class="note-input-container my-3">
-								<label for="Ketersediaan" class="label-input">WAJIB Oncam Saat Acara dan KETIK
-									"Saya Bersedia Oncam Selama Zoom Meeting " 👇🏻 <span
-										class="required-asterisk">*</span>
-								</label>
-								<input class="form-text-input" id="Ketersediaan" name="Ketersediaan" rows="1"
-									placeholder="Saya Bersedia Oncam Selama Zoom Meeting" required autocomplete="off" />
-								<label for="Ketersediaan" id="ketersediaanWarning" style="display: none;"
-									class="warning text-danger fw-normal">Harap nyatakan anda bersedia on
-									CAM</label>
-							</div>
-
-							<!-- Mendapatkan info webinar berkomunikasi -->
-							<div class="note-input-container">
-								<label for="posisi-profesi" class="label-input">mendapatkan informasi webinar ini
-									dari mana? <span class="required-asterisk">*</span>
-								</label>
-								<textarea class="form-text-input" id="motivate" name="motivate" rows="4"
-									placeholder="mendapatkan informasi webinar ini dari mana?"
-									autocomplete="off"> </textarea>
-							</div>
-
-							<button type="submit" id="eventSubmitBtn" class=" appointment-btn submitBtn">Daftar & Gabung
-								group
-								Whatsapp</button>
-
-							<p class="form-disclaimer" style="font-size: 12px; text-align: center; color: #A1A1A1 ;">
-								Dengan
-								mengirimkan formulir ini anda setuju dengan <a href="https://www.dialogika.co/policy"
-									style="color: #A1A1A1 ; text-decoration: underline;">Kebijakan Privasi</a>
-								kami.</p>
-						</form>
-
-						<!-- Animasi loading di bawah form -->
-						<div id="loading" class="loading" style="display: none;">
-							<div class="loading-spinner"></div>
-							Mengunggah...
-						</div>
-
-						<!-- Tempat untuk animasi sukses -->
-						<div id="success" class="success" style="display: none">
-							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-								class="bi bi-check-circle-fill" viewBox="0 0 16 16">
-								<path
-									d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-							</svg>
-							<p>Data berhasil diunggah!</p>
-							<p>Terimakasih telah bergabung 🙏</p>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
