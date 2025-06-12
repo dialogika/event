@@ -1025,8 +1025,8 @@
 										class="required-asterisk">*</span></label>
 								<!-- Menggunakan library assets/vendor/international-phone-number -->
 								<!-- Gunakan iti.getNumber() untuk ambil value -->
-								<input type="tel" id="whatsapp-number" name="whatsapp-number" class="form-text-input"
-									required>
+								<input type="tel" id="whatsapp-number-webinar" name="whatsapp_number"
+									class="form-text-input" required>
 								<label for="whatsapp-number" id="whatsappWarning" style="display: none;"
 									class="warning text-danger fw-normal">Isi nomor WhatsApp</label>
 							</div>
@@ -1115,7 +1115,7 @@
 									autocomplete="off"> </textarea>
 							</div>
 
-							<button type="submit" id="eventSubmitBtn" class=" appointment-btn submitBtn">Daftar & Gabung
+							<button type="submit" id="eventSubmitBtn" class="appointment-btn submitBtn">Daftar & Gabung
 								group
 								Whatsapp</button>
 
@@ -1206,13 +1206,15 @@
 									</div>
 
 									<!-- Nomor WhatsApp -->
-									<div class="mb-3">
+									<div class="phone-input-container">
 										<label for="whatsapp-number" class="label-input">Nomor Whatsapp <span
 												class="required-asterisk">*</span></label>
-										<input type="tel" name="WA" class="form-text-input form-control"
-											id="whatsapp-number" required>
-										<div id="waWarning" style="display: none;"
-											class="warning text-danger fw-normal">Isi nomor WhatsApp Anda</div>
+										<!-- Menggunakan library assets/vendor/international-phone-number -->
+										<!-- Gunakan iti.getNumber() untuk ambil value -->
+										<input type="tel" id="whatsapp-number-senam" name="whatsapp_number"
+											class="form-text-input" required>
+										<label for="whatsapp-number" id="whatsappWarning" style="display: none;"
+											class="warning text-danger fw-normal">Isi nomor WhatsApp</label>
 									</div>
 
 									<!-- Email Aktif -->
@@ -1256,7 +1258,8 @@
 									</div>
 
 									<!-- Tombol Submit -->
-									<button type="submit" id="submitEventSenam" class="form-event-button" data-bs-toggle="modal" data-bs-target="#whatsappFallbackModal">Gabung</button>
+									<button type="submit" id="submitEventSenam" class="appointment-btn submitBtn"
+										data-bs-toggle="modal" data-bs-target="#whatsappFallbackModal">Gabung</button>
 
 
 									<!-- Disclaimer -->
@@ -1426,6 +1429,30 @@
 				document.querySelectorAll('.appointment-btn').forEach(btn => btn.classList.remove('active'));
 				buttonElement.classList.add('active');
 			}
+
+			document.addEventListener('DOMContentLoaded', function () {
+				// Inisialisasi untuk form webinar
+				const inputWebinar = document.querySelector("#whatsapp-number-webinar");
+				if (inputWebinar) {
+					window.intlTelInput(inputWebinar, {
+						utilsScript: "assets/vendor/international-phone-number/utils.js",
+						separateDialCode: true,
+						preferredCountries: ['id'],
+						initialCountry: 'id'
+					});
+				}
+
+				// Inisialisasi untuk form senam
+				const inputSenam = document.querySelector("#whatsapp-number-senam");
+				if (inputSenam) {
+					window.intlTelInput(inputSenam, {
+						utilsScript: "assets/vendor/international-phone-number/utils.js",
+						separateDialCode: true,
+						preferredCountries: ['id'],
+						initialCountry: 'id'
+					});
+				}
+			});
 		</script>
 
 
