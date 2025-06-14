@@ -10371,7 +10371,7 @@ div.video:before {
   width: 100%;
 }
 
-.event-form-section .event-form-container .form-container {
+.event-form-section .event-form-container {
   border-radius: 8px;
   background-color: #ffffff;
   width: 100%;
@@ -10379,7 +10379,7 @@ div.video:before {
   flex-direction: column;
 }
 
-.event-form-section .event-form-container .form-container .event-form {
+.event-form-section .event-form-container .event-form {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -10420,7 +10420,7 @@ input::-webkit-inner-spin-button {
   grid-column: span 2;
 }
 
-.event-form-container .form-container .event-form .label-input {
+.event-form-container .event-form .label-input {
   font-size: 1rem;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
@@ -10428,7 +10428,7 @@ input::-webkit-inner-spin-button {
 }
 
 .event-form-container
-  .form-container
+
   .event-form
   .label-input
   .required-asterisk {
@@ -10437,7 +10437,7 @@ input::-webkit-inner-spin-button {
   font-size: bold;
 }
 
-.event-form-container .form-container .event-form .form-text-input {
+.event-form-container .event-form .form-text-input {
   background-color: #edf6ff;
   border: none;
   padding: 10px;
@@ -10593,21 +10593,21 @@ label[for="pdf"] {
 
 /* !========================== Style Formulir untuk ukuran Mobile ==========================!*/
 @media (max-width: 767px) {
-  .event-form-section .event-form-container .form-container .event-form {
+  .event-form-section .event-form-container .event-form {
     padding: 10px;
   }
 
-  .event-form-container .form-container .event-form .label-input {
+  .event-form-container .event-form .label-input {
     font-size: 0.9rem;
   }
 
-  .event-form-container .form-container .event-form .form-text-input,
-  .form-container .event-form .form-select-input {
+  .event-form-container .event-form .form-text-input,
+ .event-form .form-select-input {
     font-size: 0.9rem;
   }
 
   /* Set container checkbox jadi 3 per row */
-  .event-form-container .form-container .event-form .channel-value-wrapper {
+  .event-form-container .event-form .channel-value-wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
@@ -10617,7 +10617,7 @@ label[for="pdf"] {
   }
 
   /* Tombol submit */
-  .event-form-container .form-container .event-form button {
+  .event-form-container .event-form button {
     width: 100%;
   }
 }
@@ -10626,7 +10626,7 @@ label[for="pdf"] {
 
 /* Animasi loading */
 
-.event-form-container .form-container .loading {
+.event-form-container .loading {
   background: white;
   width: 100%;
   z-index: 99;
@@ -10637,7 +10637,7 @@ label[for="pdf"] {
   font-weight: bold;
   color: black;
   text-align: center;
-  margin-top: 20px;
+  margin: 0 0 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10645,7 +10645,7 @@ label[for="pdf"] {
   animation: fadeIn 1s ease;
 }
 
-.event-form-container .form-container .loading-spinner {
+.event-form-container .loading-spinner {
   border: 10px solid #f3f3f3; /* Warna dasar */
   border-top: 10px solid #007bff; /* Warna bagian yang berputar */
   border-radius: 50%;
@@ -10666,7 +10666,7 @@ label[for="pdf"] {
 
 /* Animasi sukses */
 
-.event-form-container .form-container .success {
+.event-form-container .success {
   position: absolute;
   border-radius: 14px;
   min-width: 100px;
@@ -10682,14 +10682,14 @@ label[for="pdf"] {
   z-index: 99;
 }
 
-.event-form-container .form-container .success svg {
+.event-form-container .success svg {
   margin-bottom: 10px;
   fill: white;
   height: 100px;
   width: 100px;
 }
 
-.event-form-container .form-container .success p {
+.event-form-container .success p {
   color: #ffffff;
   font-size: 18px;
   font-weight: bold;

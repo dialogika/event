@@ -17,16 +17,13 @@ const showWarning = (inputId, warningId) => {
 
 // Function untuk ambil/GET isi data dari clickup. Sangat diperlukan bila ingin menggunakan function deleteExistingTask
 const getClickupResponse = async (listId) => {
-  const getResponse = await fetch(
-    `https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`,
-    {
-      method: "GET",
-      headers: {
-        Authorization: apiToken,
-        "Content-Type": "application/json",
-      },
-    }
-  );
+  const getResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task?subtasks=true`, {
+    method: "GET",
+    headers: {
+      Authorization: apiToken,
+      "Content-Type": "application/json",
+    },
+  });
   if (!getResponse.ok) throw new Error("Gagal terhubung ke server !.");
   return getResponse.json();
 };
@@ -45,40 +42,33 @@ const deleteExistingTask = async (tasks, whatsapp) => {
   });
 
   if (taskId) {
-    const deleteResponse = await fetch(
-      `https://api.clickup.com/api/v2/task/${taskId}`,
-      {
-        method: "DELETE",
-        headers: {
-          Authorization: apiToken,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const deleteResponse = await fetch(`https://api.clickup.com/api/v2/task/${taskId}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: apiToken,
+        "Content-Type": "application/json",
+      },
+    });
     if (!deleteResponse.ok) throw new Error("Gagal menghapus task lama.");
   }
 };
 
 // Function untuk buat/POST data baru dari form ke clickup
 const createNewTask = async (listId, taskName, customFields, description) => {
-  const createTaskResponse = await fetch(
-    `https://api.clickup.com/api/v2/list/${listId}/task`,
-    {
-      method: "POST",
-      headers: {
-        Authorization: apiToken,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: taskName,
-        description: description,
-        custom_fields: customFields,
-      }),
-    }
-  );
+  const createTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/task`, {
+    method: "POST",
+    headers: {
+      Authorization: apiToken,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      name: taskName,
+      description: description,
+      custom_fields: customFields,
+    }),
+  });
 
-  if (!createTaskResponse.ok)
-    throw new Error("Gagal mengirim data. Harap coba lagi !");
+  if (!createTaskResponse.ok) throw new Error("Gagal mengirim data. Harap coba lagi !");
 };
 
 const apiToken = "pk_276677813_5LZTC2L1TYHRVBRRRK5BKXBZDVUU2X7E";
@@ -88,7 +78,7 @@ const handleIndexFormSubmission = async (event) => {
   event.preventDefault();
 
   const taskName = document.getElementById("name").value.trim();
-  const whatsapp = iti.getNumber();
+  const whatsapp = iti_webinar.getNumber();
   const motivate = document.getElementById("motivate").value.trim();
   const location = document.getElementById("location").value.trim();
   const Ketersediaan = document.getElementById("Ketersediaan").value.trim();
@@ -100,9 +90,7 @@ const handleIndexFormSubmission = async (event) => {
   const description = "Menambahkan data ke Event/Register";
   const loading = document.getElementById("loading");
   const success = document.getElementById("success");
-  const whatsappModalFallback = new bootstrap.Modal(
-    document.getElementById("whatsappFallbackModal")
-  );
+  const whatsappModalFallback = new bootstrap.Modal(document.getElementById("whatsappFallbackModalWebinar"));
 
   const listId = "900302342659"; // listId untuk Brand/Event/Register
 
@@ -249,6 +237,11 @@ const handleEventReview = async (event) => {
   } catch (error) {
     loadingSpinner.style.display = "none";
     console.error("Kesalahan:", error.message);
+  } finally {
+    loadingSpinner.style.display = "none";
+    setTimeout(() => {
+      successIndicator.style.display = "none";
+    }, 3000);
   }
 };
 
@@ -257,17 +250,13 @@ const handlePresensiBtn = async (event) => {
   event.preventDefault();
   const listId = "901604685240";
   const loadingSpinner = document.getElementById("loadingSpinner");
-  const whatsAppInput = iti.getNumber();
+  const whatsAppInput = iti_presensi.getNumber();
   const namaInput = document.getElementById("namaInput").value.trim();
   const eventTitle = document.getElementById("eventTitle").innerText.trim();
   const emailInput = document.querySelector('input[name="Email"]');
   const webinarAttendance = document.getElementsByName("webinarAttendance");
-  const webinarAttendanceValue = Array.from(webinarAttendance).find(
-    (radio) => radio.checked
-  )?.value;
-  const followCheckBoxes = document.querySelectorAll(
-    ".form-check-input[name='Follow']"
-  );
+  const webinarAttendanceValue = Array.from(webinarAttendance).find((radio) => radio.checked)?.value;
+  const followCheckBoxes = document.querySelectorAll(".form-check-input[name='Follow']");
   const description = "Mengirim data presensi peserta event webinar !";
   const successIndicator = document.getElementById("successIndicator");
 
@@ -285,10 +274,7 @@ const handlePresensiBtn = async (event) => {
     }
     return true;
   };
-  if (
-    !validateInput(emailInput, emailRegex, "Email tidak valid!") ||
-    !webinarAttendanceValue
-  ) {
+  if (!validateInput(emailInput, emailRegex, "Email tidak valid!") || !webinarAttendanceValue) {
     if (!webinarAttendanceValue) {
       alert("Tolong isi apakah Anda dapat mengikuti webinar");
     }
@@ -302,9 +288,7 @@ const handlePresensiBtn = async (event) => {
     .reduce((acc, current) => {
       if (current === "Belum Semua") return "Belum Semua";
 
-      return acc === "Belum Semua"
-        ? "Belum Semua"
-        : acc + (acc ? ", " : "") + current;
+      return acc === "Belum Semua" ? "Belum Semua" : acc + (acc ? ", " : "") + current;
     }, "");
 
   const customFields = [
@@ -344,7 +328,7 @@ const handlePresensiBtn = async (event) => {
       reviewEventButton.classList.add("d-block");
     }
 
-    // Uncomment syntax dibawah ini bila ingin download file ppt kemudian update href dan nama filenya
+    // ============== Uncomment syntax dibawah ini bila ingin download file ppt kemudian update href dan nama filenya
     // link.href = "assets/pdf/cheatsheet-how-to-become-a-confident-announcer.pdf";
     // link.download = "cheatsheet-how-to-become-a-confident-announcer.pdf";
     // document.body.appendChild(link);
@@ -357,6 +341,9 @@ const handlePresensiBtn = async (event) => {
   } finally {
     loadingSpinner.style.display = "none";
     emailInput.style.border = "";
+    setTimeout(() => {
+      successIndicator.style.display = "none";
+    }, 3000);
   }
 };
 
@@ -365,22 +352,21 @@ const handleEventSenam = async (event) => {
   event.preventDefault();
   const listId = "901608598330";
   const loadingSpinner = document.getElementById("loadingSpinner");
-  const whatsAppInput = iti.getNumber();
-  const namaInput = document.getElementById("namaInput").value.trim();
+  const whatsAppInput = iti_senam.getNumber();
+  const namaInput = document.getElementById("input-nama-senam").value.trim();
   const emailInput = document.querySelector('input[name="Email"]');
   const universityInput = document.getElementById("university");
   const infoInput = document.getElementById("formInfo");
-  const eventTitle = document.getElementById("eventTitle").innerText.trim();
+  // const eventTitle = document.getElementById("eventTitle").innerText.trim();
   const description = "Mengirim data presensi peserta event webinar !";
+  const whatsappModalFallback = new bootstrap.Modal(document.getElementById("whatsappFallbackModalSenam"));
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const phoneRegex = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
   // Validate input fields
   const validateInput = (input, regex) => {
-    if (!regex.test(input.value))
-      return alert("Harap masukkan format yang benar");
-
+    if (!regex.test(input.value)) return alert("Harap masukkan format yang benar");
     return true;
   };
 
@@ -404,14 +390,17 @@ const handleEventSenam = async (event) => {
   ];
 
   try {
-    loadingSpinner.style.display = "block";
+    loadingSpinner.style.display = "flex";
 
     await createNewTask(listId, namaInput, customFields, description);
 
     // Di dalam try setelah createNewTask:
     openWhatsAppInvite("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L");
 
-    // window.open("https://chat.whatsapp.com/GEH72ZRx03r2Rpk8906l2L", "_blank");
+    setTimeout(() => {
+      success.style.display = "none";
+      whatsappModalFallback.toggle();
+    }, 3000);
   } catch (error) {
     alert("Terjadi kesalahan: " + error.message);
   } finally {
@@ -432,16 +421,13 @@ const handleGetClickupIds = async (event) => {
 
   try {
     // Langkah 1: Send GET Request ke Clickup
-    const checkTaskResponse = await fetch(
-      `https://api.clickup.com/api/v2/list/${listId}/field`,
-      {
-        method: "GET",
-        headers: {
-          Authorization: apiToken,
-          "Content-Type": "application/json",
-        },
-      }
-    );
+    const checkTaskResponse = await fetch(`https://api.clickup.com/api/v2/list/${listId}/field`, {
+      method: "GET",
+      headers: {
+        Authorization: apiToken,
+        "Content-Type": "application/json",
+      },
+    });
 
     if (!checkTaskResponse.ok) {
       throw new Error("Gagal memeriksa duplikasi tugas.");
@@ -462,18 +448,11 @@ const handleGetClickupIds = async (event) => {
 // ? Function untuk kirim data user yang subscribe lewat footer dan gabung ke grup WA CEO Class.
 const handleSubFooterSubmission = async (event) => {
   event.preventDefault();
-  const inputSubFooterNama = document
-    .getElementById("inputSubFooterNama")
-    .value.trim();
+  const inputSubFooterNama = document.getElementById("inputSubFooterNama").value.trim();
   const inputSubFooterWhatsapp = subFooterIti.getNumber();
-  const inputSubFooterDomisili = document
-    .getElementById("inputSubFooterDomisili")
-    .value.trim();
-  const inputSubFooterEmail = document
-    .getElementById("inputSubFooterEmail")
-    .value.trim();
-  const description =
-    "Menambahkan member grup CEO Class melalui form subscribe";
+  const inputSubFooterDomisili = document.getElementById("inputSubFooterDomisili").value.trim();
+  const inputSubFooterEmail = document.getElementById("inputSubFooterEmail").value.trim();
+  const description = "Menambahkan member grup CEO Class melalui form subscribe";
   const success = document.getElementById("successOverlay");
 
   const listId = "901602772763";
@@ -494,13 +473,8 @@ const handleSubFooterSubmission = async (event) => {
     alert("Nama harus diisi.");
     return;
   }
-  if (
-    !inputSubFooterWhatsapp ||
-    !/^\+?\d{10,15}$/.test(inputSubFooterWhatsapp)
-  ) {
-    alert(
-      "Nomor WhatsApp tidak valid. Pastikan hanya angka dan panjang yang sesuai."
-    );
+  if (!inputSubFooterWhatsapp || !/^\+?\d{10,15}$/.test(inputSubFooterWhatsapp)) {
+    alert("Nomor WhatsApp tidak valid. Pastikan hanya angka dan panjang yang sesuai.");
     return;
   }
   if (!inputSubFooterEmail) {
@@ -534,13 +508,11 @@ const openWhatsAppInvite = (url) => {
 
 // | Masukkan function handleIndexFormSubmission ke element button dengan id eventSubmitBtn dan membuka grup WA CEO Class
 const eventSubmitBtn = document.getElementById("eventSubmitBtn");
-if (eventSubmitBtn)
-  eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
+if (eventSubmitBtn) eventSubmitBtn.addEventListener("click", handleIndexFormSubmission);
 
 // | Masukkan function handleEventReview ke element button dengan id eventSubmitBtn di review-event.html
 const reviewSubmitBtn = document.getElementById("reviewSubmitBtn");
-if (reviewSubmitBtn)
-  reviewSubmitBtn.addEventListener("click", handleEventReview);
+if (reviewSubmitBtn) reviewSubmitBtn.addEventListener("click", handleEventReview);
 
 // | Masukkan function handlePresensiBtn ke element button dengan id submitPresensi di presence.html
 const presensiBtn = document.getElementById("submitPresensi");
@@ -552,8 +524,7 @@ if (eventBtn) eventBtn.addEventListener("click", handleEventSenam);
 
 // | Masukkan function handleGetClickupIds ke element button dengan id getClickupData untuk mengambil id dan value custom_fields clickup
 const getClickupData = document.getElementById("getClickupData");
-if (getClickupData)
-  getClickupData.addEventListener("click", handleGetClickupIds);
+if (getClickupData) getClickupData.addEventListener("click", handleGetClickupIds);
 
 // Direct user ke halam review-event
 // Function untuk mengirim data saat send button di form di footer
