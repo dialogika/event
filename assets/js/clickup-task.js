@@ -226,8 +226,8 @@ const handleEventReview = async (event) => {
 
     // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/voucher-juni.png";
-    link.download = "basic-plus-voucher";
+    link.href = "assets/img/vsapp/Coupon-Webinar-20.0.png";
+    link.download = "basic-play-voucher";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
