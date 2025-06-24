@@ -146,7 +146,7 @@ const handleIndexFormSubmission = async (event) => {
 
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
-    openWhatsAppInvite("https://chat.whatsapp.com/FeXk75j2aAq7aqHD12SqN2");
+    openWhatsAppInvite("https://chat.whatsapp.com/HzmHKVzmDPa84nyFcvwvtc ");
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -275,9 +275,8 @@ const handlePresensiBtn = async (event) => {
     return true;
   };
   if (!validateInput(emailInput, emailRegex, "Email tidak valid!") || !webinarAttendanceValue) {
-    if (!webinarAttendanceValue) {
-      alert("Tolong isi apakah Anda dapat mengikuti webinar");
-    }
+    if (!webinarAttendanceValue) alert("Tolong isi apakah Anda dapat mengikuti webinar");
+
     return;
   }
 
@@ -525,15 +524,6 @@ if (eventBtn) eventBtn.addEventListener("click", handleEventSenam);
 // | Masukkan function handleGetClickupIds ke element button dengan id getClickupData untuk mengambil id dan value custom_fields clickup
 const getClickupData = document.getElementById("getClickupData");
 if (getClickupData) getClickupData.addEventListener("click", handleGetClickupIds);
-
-// Direct user ke halam review-event
-// Function untuk mengirim data saat send button di form di footer
-const reviewEventButton = document.getElementById("reviewEventButton");
-if (reviewEventButton) {
-  reviewEventButton.addEventListener("click", function () {
-    window.location.href = "www.dialogika.co/event/review-event.html";
-  });
-}
 
 // Function untuk mengirim data saat send button di form di footer
 const subFooterBtn = document.getElementById("subFooterBtn");
