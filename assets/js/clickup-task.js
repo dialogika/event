@@ -124,10 +124,6 @@ const handleIndexFormSubmission = async (event) => {
     showWarning("location", "domisiliWarning");
     isValid = false;
   }
-  if (!experience) {
-    showWarning("experience", "experienceWarning");
-    isValid = false;
-  }
   if (!jobs || jobs <= 1) {
     showWarning("job", "jobWarning");
     isValid = false;
@@ -146,7 +142,7 @@ const handleIndexFormSubmission = async (event) => {
 
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
-    openWhatsAppInvite("https://chat.whatsapp.com/HzmHKVzmDPa84nyFcvwvtc ");
+    openWhatsAppInvite("https://chat.whatsapp.com/CSbhMSXUEBr5aTvBjTPJfp?mode=ac_t ");
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -226,7 +222,7 @@ const handleEventReview = async (event) => {
 
     // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/Coupon-Webinar-20.0.png";
+    link.href = "assets/img/vsapp/Kupon-Webinar-21.0.jpg";
     link.download = "basic-play-voucher";
     document.body.appendChild(link);
     link.click();
@@ -239,9 +235,6 @@ const handleEventReview = async (event) => {
     console.error("Kesalahan:", error.message);
   } finally {
     loadingSpinner.style.display = "none";
-    setTimeout(() => {
-      successIndicator.style.display = "none";
-    }, 3000);
   }
 };
 
@@ -340,9 +333,6 @@ const handlePresensiBtn = async (event) => {
   } finally {
     loadingSpinner.style.display = "none";
     emailInput.style.border = "";
-    setTimeout(() => {
-      successIndicator.style.display = "none";
-    }, 3000);
   }
 };
 
@@ -517,7 +507,7 @@ if (reviewSubmitBtn) reviewSubmitBtn.addEventListener("click", handleEventReview
 const presensiBtn = document.getElementById("submitPresensi");
 if (presensiBtn) presensiBtn.addEventListener("click", handlePresensiBtn);
 
-// | Masukkan function handleEventSenam ke element button dengan id submitPresensi di presence.html
+// | Masukkan function handleEventSenam ke element button dengan id submitEventSenam di index.html
 const eventBtn = document.getElementById("submitEventSenam");
 if (eventBtn) eventBtn.addEventListener("click", handleEventSenam);
 
