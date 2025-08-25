@@ -142,7 +142,7 @@ const handleIndexFormSubmission = async (event) => {
 
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
-    openWhatsAppInvite("https://chat.whatsapp.com/CSbhMSXUEBr5aTvBjTPJfp?mode=ac_t ");
+    openWhatsAppInvite("https://chat.whatsapp.com/K1xrFPtl6M9G3DOxZMysU1");
 
     loading.style.display = "none";
     success.style.display = "flex";
@@ -222,7 +222,7 @@ const handleEventReview = async (event) => {
 
     // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/Kupon-Webinar-21.0.jpg";
+    link.href = "assets/img/vsapp/Kupon Webinar 22.0.png";
     link.download = "basic-play-voucher";
     document.body.appendChild(link);
     link.click();
