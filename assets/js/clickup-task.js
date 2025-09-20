@@ -222,7 +222,7 @@ const handleEventReview = async (event) => {
 
     // Step 2: Download kupon setelah mengisi form review
     const link = document.createElement("a");
-    link.href = "assets/img/vsapp/Kupon Webinar 22.0.png";
+    link.href = "assets/img/vsapp/WEBINAR-23.0.png";
     link.download = "basic-play-voucher";
     document.body.appendChild(link);
     link.click();
