@@ -2508,3 +2508,71 @@ h6 {
 /*--------------------------------------------------------------
 # new
 --------------------------------------------------------------*/
+
+/* Make webinar preview image proportionate to the text column */
+#features .right-duocard .screens-preview {
+  max-width: 620px;
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: 2%;
+}
+
+#features .right-duocard .screens-preview__primary {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#features .right-duocard .screens-preview__secondary {
+  width: 64%;
+  right: -12%;
+}
+
+#features .left-duocard .screens-preview {
+  max-width: 560px;
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  margin-right: auto;
+  margin-left: 2%;
+}
+
+#features .left-duocard .screens-preview__primary {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#features .left-duocard .screens-preview__secondary {
+  width: 64%;
+  left: -12%;
+  right: auto;
+}
+
+@media all and (max-width: 768px) {
+  #features .right-duocard .screens-preview,
+  #features .right-duocard .screens-preview.screens-preview--right {
+    scale: 0.78;
+    left: 0;
+    right: 0;
+    margin: 0 auto 20px auto;
+  }
+
+  #features .right-duocard .screens-preview--right .screens-preview__secondary {
+    right: -22%;
+  }
+
+  #features .left-duocard .screens-preview,
+  #features .left-duocard .screens-preview.screens-preview--right {
+    scale: 0.78;
+    left: 0;
+    right: 0;
+    margin: 0 auto 20px auto;
+  }
+
+  #features .left-duocard .screens-preview__secondary {
+    left: -22%;
+  }
+}
