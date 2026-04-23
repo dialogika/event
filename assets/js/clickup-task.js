@@ -155,7 +155,7 @@ const handleIndexFormSubmission = async (event) => {
     // Step 3: Buat task baru dengan data dari form (POST)
     await createNewTask(listId, taskName, customFields, description);
     openWhatsAppInvite(
-      "https://chat.whatsapp.com/Ib9r4aKykW37X46Z8oVKe9"
+      "https://chat.whatsapp.com/J8X5GfRM3VV5pXniG4YMvJ"
     );
 
     loading.style.display = "none";
